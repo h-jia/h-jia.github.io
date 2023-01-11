@@ -1,842 +1,1420 @@
+
 <!DOCTYPE html>
-<html>
-    
-    <head>
-        <meta charset="utf-8"/>
-        <title>[ Hong Jia ]</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        
-        <!-- Font Awesome Icons -->
-        <link rel="stylesheet" href="css/font-awesome.min.css"/>
-        
-        <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet"/>
-        <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
-        
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-         <script src="js/html5shiv.js"></script>
-         <script src="js/respond.min.js"></script>
-         <![endif]-->
-        
-        
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <!-- http://getbootstrap.com/customize/ change "@screen-sm" -> "@screen-md" in @grid-float-breakpoint -->
-        <script src="js/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/menucollapse.js"></script>
-        <!-- <script type="text/javascript" src="js/arrow78.js"></script> -->
-        <!-- <script type="text/javascript" src="js/custom.js"></script> -->
-    </head>
-    
-    <body id="page-top" class="index">
-        
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"  data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="glyphicon glyphicon-search"></span>
-                    </button>
-                    <button id="button2" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- <span><a href="#"><img border="0" width="170" src="images/cambridge.png"/></a></span> -->
-                </div>
-                
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                Home<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a onclick="javascript:reset_menus();$('#tab-intro-content').show();" href="#intro">Introduction</a></li>
-                                <li><a href="bio.html">Biography</a></li>
-                                <li><a href="cv.html">CV (Web)</a></li>
-                                <li><a target="_blank" href="zeinalipour.pdf">CV (PDF)</a></li>
-                            </ul>
-                        </li>
-                        <li class="page-scroll">
-                            <a onclick="javascript:reset_menus();$('#tab-news-content').show();" href="#news">News</a>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                Publications<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a onclick="javascript:reset_menus();$('#tab-publications-content').show();" href="#publications">Selected</a></li>
-                                <li><a href="publications/">All</a></li>
-                            </ul>
-                        </li>
-                        <li class="page-scroll">
-                            <a onclick="javascript:reset_menus();$('#tab-awards-content').show();" href="#awards">Awards</a>
-                        </li>
-                        <li class="page-scroll">
-                            <a href="talks/">Talks</a>
-                        </li>
-                        <li class="page-scroll">
-                            <a onclick="javascript:reset_menus();$('#tab-courses-content').show();" href="#courses">Courses</a>
-                        </li>
-                 <!--        <li class="page-scroll">
-                            <a onclick="javascript:reset_menus();$('#tab-systems-content').show();" href="#systems">Systems</a>
-                        </li>
- -->                        <li class="page-scroll">
-                            <a onclick="javascript:reset_menus();$('#tab-service-content').show();" href="#service">Service</a>
-                        </li>
-                  <!--       <li class="page-scroll">
-                            <a onclick="javascript:reset_menus();$('#tab-advising-content').show();" href="#advising">Advising</a>
-                        </li> -->
-                        
-                      <!--   <li class="page-scroll">
-                            <a onclick="javascript:reset_menus();$('#tab-contact-content').show();" href="#contact">Contact</a>
-                        </li>
- -->                        <li class="page-scroll">
-                            <a onclick="javascript:reset_menus();$('#bs-example-navbar-collapse-2').toggle();">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </a>
-                        </li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-                
-                <!-- search box submenu -->
-                <div class="collapse" id="bs-example-navbar-collapse-2">
-                    <gcse:search></gcse:search>
-                        </div>
-                
-            </div><!-- /.container-fluid -->
-        </nav>
-        
-        <section>
-            <!-- Place this tag where you want the search results to render -->
-            <gcse:searchresults-only></gcse:searchresults-only>
-                </section>
-        
-        <!-- Home Section -->
-        <section  name="home" id="home" style="margin-top:40px">
-            <div class="container">
-                <div align="left" class="col-md-3">
-                    <a target="_blank" href="images/hong2.jpg">
-                        <img id="mobile-img" src="images/hong2.small.jpg" width="200" border="0" height="250" alt=""></a>
-                </div>
-                <div align="left" class="col-md-4">
-                    <h2>Hong Jia
-                        <h5><i>PhD, UNSW, 2021</i></h5>
-                    </h2>
-                    
-                    <h4>Research Associate<br>
-                        <a href="https://www.cst.cam.ac.uk">Computer Laboratory</a><br>
-                        <a href="https://www.cam.ac.uk">University of Cambridge</a><br>
-                        <!--
-                         P.O. Box 20537<br>
-                         1678 Nicosia, Cambrige<br>-->
-                        Tel/Fax: <a href="tel:+447827123768">+447-827123768</a><a href="tel:+447827123768"></a><br/>
-                        Email: hj359 AT cam.ac.uk
-                        <script language="JavaScript">
-                            
-                            document.write("&nbsp;");
-                            spiderjam('hj359','cam.ac.uk');
-                            
-                            </script><br/>
-                        <!-- Lab: <a target="_blank" href="https://dmsl.cs.ucy.ac.cy/">http://dmsl.cs.ucy.ac.cy/</a><br> -->
-                        <!-- Directions: <a target="_blank" href="https://goo.gl/FQCHMl">http://goo.gl/FQCHMl</a> -->
-                    </h4>
-                    <!-- <h4><i>Expertise: Data Management in Computer Systems &amp; Networks</i> <a href="#intro" onclick="javascript:reset_menus();$('#tab-intro-content').show();" class="btn-primary btn-xs">&raquo;</a><br></h4> -->
-                    
-                </div>
-                
-<!--                 <i class="twittertop" style="display:none;" id="t1">
-                    <div id="news" tyle="text-align: left"  class="col-md-5">&nbsp;
-                        <center><a class="twitter-timeline" href="https://twitter.com/dmslucy" data-chrome="nofooter" data-widget-id="346662554203992065" data-width="900"
-                            data-height="300">Tweets
-                            by @dmslucy</a>
-                        <script>!function (d, s, id) {
-                            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-                            if (!d.getElementById(id)) {
-                                js = d.createElement(s);
-                                js.id = id;
-                                js.src = p + "://platform.twitter.com/widgets.js";
-                                fjs.parentNode.insertBefore(js, fjs);
-                            }
-                        }(document, "script", "twitter-wjs");</script></center>
-                    </div>
-                </i>
-                 -->
-                <!--<p><a href="#" class="btn btn-primary">More &raquo;</a></p>-->
-                <b class="expandshow" style="display:none;" id="tab-1">
-                    <button class="btn btn-primary btn-lg btn-block" style="width: 100%;" onclick="javascript:$('.allshow').show();$('.noshow').hide();$('.collapseshow').show();$('.expandshow').hide();">EXPAND ALL SECTIONS <span class="glyphicon glyphicon-chevron-down"></span></button>
-                </b>
-                <b class="collapseshow" style="display:none;" id="tab-1">
-                    <button class="btn btn-primary btn-lg btn-block" style="display: block; width: 100%;" onclick="javascript:$('.allshow').hide();$('.noshow').show();$('.expandshow').show();$('.collapseshow').hide();">COLLAPSE ALL SECTIONS <span class="glyphicon glyphicon-chevron-up"></span></button>
-                </b>
-                
-            </div>
-        </section>
-        
-        <!-- Home Section -->
-        <section name="intro" id="intro">
-            <div class="container lead">
-                <div style="text-align: left; margin-top:10px" class="col-md-12">
-                    <!--<h2>Welcome!</h2>-->
-                    
-                    <b class="noshow" style="display:none;" id="tab-1">
-                        <button class="btn btn-default btn-lg btn-block" style="display: block; width: 100%;" onclick="javascript:$('#tab-intro-content').toggle();">Introduction <span class="glyphicon glyphicon-chevron-down"></span></button>
-                    </b>
-                    
-                    <div class="allshow" style="display:none;" id="tab-intro-content">
-                        <hr class="star-primary">
-                        
-                        <p class="lead">
-                        Hong Jia is an Research Associate of <a target="_blank" href="https://www.cam.ac.uk/">Computer Science</a> at the <a target="_blank" href="https://wwww.cam.ac.uk/">University of Cambrige</a>, <!-- where he founded and directs the <a target="_blank" href="https://dmsl.cs.ucy.ac.cy/">Data Management Systems Laboratory (DMSL)</a>. He holds a Ph.D. (2005) and M.Sc. (2003) in Computer Science and Engineering from the <a href="https://www.cs.ucr.edu/" target="_blank">University of California - Riverside</a>, CA, USA and a B.Sc. in Computer Science from the <a href="https://www.cs.ucy.ac.cy/" target="_blank">University of Cambrige</a> (2000). Before his current appointment, he served the <a target="_blank" href="https://www.cs.ucy.ac.cy/">University of Cambrige</a> as an Assistant Professor and Lecturer and also the <a href="https://www.ouc.ac.cy/" target="_blank">Open University of Cambrige</a> as a Lecturer. He has held short-term research visits at  <a href="http://www.akamai.com/" target="_blank">Akamai Technologies</a>, Cambridge, MA, USA (2004), the <a href="http://www.di.uoa.gr/eng" target="_blank">University of Athens</a>, Greece (2007) as a Marie-Curie Fellow and the <a href="http://www.cs.pitt.edu/">University of Pittsburgh</a>, PA, USA (2015). During 2016-2017, he was a Humboldt Fellow at the <a target="_blank" href="https://www.mpi-inf.mpg.de/home/">Max Planck Institute for Informatics</a>, Saarbrücken, Germany. He is an <a href="https://speakers.acm.org/speakers/zeinalipour-yazti_7903">ACM Distinguished Speaker</a> (2017-2020), a Senior Member of <a href="https://www.acm.org/" target="_blank">ACM</a> (also of <a href="https://www.sigmod.org/" target="_blank">ACM SIGMOD</a>), a Senior Member of IEEE</a> (also of <a href="https://www.computer.org/" target="_blank">IEEE Computer Society</a>, <a href="http://tab.computer.org/tcde/">IEEE Technical Committee on Data Engineering</a> and <a href="http://bigdata.ieee.org/">IEEE Big Data Initiative</a>), and a Member of <a href="https://www.usenix.org/" target="_blank">USENIX</a>. He serves on the editorial board of <a target="_blank" href="https://www.springer.com/computer/database+management+%26+information+retrieval/journal/10619">Distributed and Parallel Databases</a> (Springer), <a target="_blank" href="https://www.journals.elsevier.com/big-data-research">Big Data Research</a> (Elsevier) and is an independent evaluator for the European Commission (<a href="https://ec.europa.eu/programmes/horizon2020/en/h2020-section/marie-sklodowska-curie-actions">Marie Skłodowska-Curie</a> and <a target="_blank" href="https://www.cost.eu/cost-actions/what-are-cost-actions/">COST</a> actions). -->
-                        
-                        <!-- </p> -->
-                        <!-- <p> -->
-                        <!-- His primary research interests include <b>Data Management in Computer Systems and  Networks</b>, particularly <i>Mobile and Sensor Data Management; Big Data Management in Parallel and Distributed Architectures; Spatio-Temporal Data Management; Network and Telco Data Management; Crowd, Web 2.0 and Indoor Data Management; Data Privacy Management.</i>
-                         -->
-                        
-              <!--           <p><a href="bio.html" class="btn-sm btn-primary">Biography &raquo;</a>
-                        <a href="cv.html" class="btn-sm btn-primary">CV (Web)&raquo;</a>
-                        <a href="zeinalipour.pdf" class="btn-sm btn-primary">CV (PDF)&raquo;</a>
- -->                    </div>
-        
-                </div>
-            </div>
-        </section>
-        
- <!--        <div class="twitterlow" style="display:none;" id="t1">
-            <!-- News Section -->
-            <section  name="news"  id="news">
-                <div class="container lead">
-                    <div style="text-align: left; margin-top:10px" class="col-md-12">
-                        
-                        <b class="noshow" style="display:none;" id="tab-2">
-                            <button class="btn btn-default btn-lg btn-block" style="display: block; width: 100%;" onclick="javascript:$('#tab-news-content').toggle();">News  <span class="glyphicon glyphicon-chevron-down"></span></button>
-                        </b>
-                        <b class="allshow" style="display:none;" id="tab-news-content">
-                            
-                            <hr class="star-primary">
-                            
-                            <h2>News</h2>
-                            <center><a class="twitter-timeline" href="https://twitter.com/dmslucy" data-chrome="nofooter" data-widget-id="346662554203992065">Tweets
-                                by @dmslcy</a>
-                            <script>!function (d, s, id) {
-                                var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-                                if (!d.getElementById(id)) {
-                                    js = d.createElement(s);
-                                    js.id = id;
-                                    js.src = p + "://platform.twitter.com/widgets.js";
-                                    fjs.parentNode.insertBefore(js, fjs);
-                                }
-                            }(document, "script", "twitter-wjs");
-                            </script>
-                            </center>
-                        </b>
-                    </div>
-                </div>
-            </section>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Academic website of Dimitris Spathis, Ph.D.
+  student at the University of Cambridge.">
+  <meta name="author" content="Dimitris Spathis">
+  <link rel="shortcut icon" href="https://www.cl.cam.ac.uk/favicon.ico" type="image/x-icon">
+  <title>Dimitris Spathis — AI Researcher </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/6294d10de4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+
+    <div class="row" style="padding:20px">
+
+      <!-- we hide the navbar in xs and sm breakpoints  -->
+       <div class="hidden-xs hidden-sm col-sm-3 col-md-2" id="sidebar" role="navigation" style="margin-top:170px">
+        <hr>
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#about">About</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="#talks">Talks</a></li>
+          <li><a href="#press">Press</a></li>
+          <li><a href="#teaching">Mentoring</a></li>
+          <li><a href="#projects">Playground</a></li>
+          <li><a href="#personal">Personal</a></li>
+
+        </ul>
+      </div>
+
+      <div class="col-xs-12 col-sm-9 col-md-9">
+
+        <div class="row">
+
+          <div class="col-sm-3">
+
+          <!-- we place the img -15px left to align with the divider  -->
+          <img src="img/photo.jpg" class="pull-left" style="margin:20px
+          20px 20px -15px; height:auto; width:130px; border-radius:50%"/>
+          
+          </div>
+
+          <div class="col-sm-7">
+            <h3><a name="about"></a>Hi 👋 I’m Dimitris Spathis</h3>
+          <p class="lead">
+            AI Researcher <br>
+            Nokia Bell Labs<br>
+            <a href="mailto:ds806@cam.ac.uk" title="Academic email" class="icon">
+              <i class="fa fa-envelope fa-lg" data-toggle="tooltip" data-placement="bottom" title="Email"></i>
+            </a>
+            &nbsp;
+            <a href="https://scholar.google.com/citations?user=rzKYYlUAAAAJ" title="Google Scholar (publications list)" class="icon">
+              <i class="fa fa-graduation-cap fa-lg" data-toggle="tooltip" data-placement="bottom" title="Google Scholar"></i>
+            </a>
+            &nbsp;
+            <a href="https://github.com/sdimi" title="Github (code repository)" class="icon">
+              <i class="fa fa-github fa-lg" data-toggle="tooltip" data-placement="bottom" title="Github"></i>
+            </a>
+            &nbsp;
+            <a href="https://twitter.com/spdimitris" title="Twitter" class="icon">
+              <i class="fa fa-twitter fa-lg" data-toggle="tooltip" data-placement="bottom" title="Twitter"></i>
+            </a>
+            &nbsp;
+            <a href="https://medium.com/@dimitrisspathis" title="Medium (blog)" class="icon">
+              <i class="fa fa-medium fa-lg" data-toggle="tooltip" data-placement="bottom" title="Medium (blog)"></i>
+            </a>
+            &nbsp;
+            <a href="https://linkedin.com/in/dispathis" title="Linkedin (professional profile)" class="icon">
+              <i class="fa fa-linkedin fa-lg" data-toggle="tooltip" data-placement="bottom" title="Linkedin"></i>
+            </a>
+           
+          </p>
+          </div>
+
+          <!-- we hide the img in xs and sm breakpoints  -->
+          
+          <div class="col-sm-2 hidden-xs hidden-sm">
+          <a href="https://www.bell-labs.com">
+          <img  src="img/logo-bl.png" class="pull-right" style="margin:20px -33px 0px 0px;height:auto; width:144px; border-style: none"/>
+          </a>
+          
+          </div>
+
+          <div class="col-sm-2 hidden-xs hidden-sm">
+          <a href="https://www.cst.cam.ac.uk/">
+          <img  src="img/unilogo.png" class="pull-right" style="margin:-4px -18px 0px 0px;;height:auto; width:116px; border-style: none"/>
+          </a>
+          
+          </div>
+          
+
+
         </div>
- -->        
-        <!-- Research Section -->
-        <section  name="publications" id="publications">
-            <div class="container lead">
-                <div style="text-align: left; margin-top:10px" class="col-md-12">
-                    
-                    <b class="noshow" style="display:none;" id="tab-3">
-                        <button class="btn btn-default btn-lg btn-block" style="display: block; width: 100%;" onclick="javascript:$('#tab-publications-content').toggle();">Publications  <span class="glyphicon glyphicon-chevron-down"></span></button>
-                    </b>
-                    <div class="allshow" style="display:none;" id="tab-publications-content">
-                        <hr class="star-primary">
-                        
-                        <h2>Selected Publications <a href="publications/" class="btn btn-primary">All Publications&raquo;</a></h2>
-<!--                         <h4>
-                            <span class="label label-warning">
-                                <a target="_blank" href="https://en.wikipedia.org/wiki/H-index"><font color=white>h-index</font></a>: 25
-                            </span>&nbsp;
-                            <span class="label label-warning">
-                                <a target="_blank" href="https://scholar.google.com/citations?user=HCxwGIkAAAAJ&hl=en"><font color=white>Citations</font></a>: 2867
-                            </span>&nbsp;
-                            <span class="label label-warning">
-                                <a target="_blank" href="https://en.wikipedia.org/wiki/Erd&ouml;s_number"><font color="white">Erd&ouml;s #</font></a>: 3
-                            </span>&nbsp;
-                            <span class="label label-default">
-                                <a target="_blank" href="https://orcid.org/0000-0002-7239-2387"><font color="white">ORCID</font></a>
-                            </span>&nbsp;
-                            <span class="label label-default">
-                                <a target="_blank" href="https://www.scopus.com/authid/detail.uri?authorId=35176841800"><font color="white">Scopus</font></a>
-                            </span>&nbsp;
-                            <span class="label label-default">
-                                <a target="_blank" href="https://www.researcherid.com/rid/O-2301-2016"><font color="white">ResearcherID</font></a>
-                            </span>
-                            
-                             -->
-                        <!-- </h4> -->
+
+        <div class="row">
+          <hr>
+
+          <p>
+            I am a research scientist at <a href="https://www.bell-labs.com/">Nokia Bell Labs</a> and a visiting researcher at the <a href="https://www.cst.cam.ac.uk/">University of Cambridge</a>. My work enables AI to make the most out of real-world data (e.g. timeseries, audio, mobile sensors, or other modalities), through data-efficient and robust models. I am particularly interested in the following paradigms:
+
+            <ul>
+              <li><strong>Self-supervision</strong>. Contrastive, masked, or generative - what comes after that?</li>
+              <li><strong>Transfer learning</strong>. How can models generalize out of distribution - what are their limits? </li>
+              <li><strong>Multi-modality/tasking</strong>. How to merge modalities in a data-agnostic way?</li>
+            </ul>
+
+          </p>
+          <p>
+              Previously, I completed a PhD in Computer Science at the <a href="https://www.cst.cam.ac.uk/">University of Cambridge</a> working with Prof. <a href="http://www.cl.cam.ac.uk/~cm542/">Cecilia Mascolo</a>. During my studies, I was fortunate to work in diverse industries and companies including <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/">Microsoft Research</a>, <a href="https://www.telefonica.com/en/web/innovation/core-innovation/research">Telefonica Research</a>, <a href="https://www.ocadogroup.com/technology/technology-pioneers">Ocado</a>, <a href="http://qustodio.com">Qustodio</a> (acquired for $50M), and research labs.
+
+          </p>
+
+          <p>
+          My research has been published in top venues in artificial intelligence, ML for health, human-computer interaction, and signal processing. Further, I am part of <a href="https://www.covid-19-sounds.org">COVID-19 Sounds</a>, an audio-AI study which builds predictive models for COVID-19 using smartphone respiratory recordings. Recent projects have been featured in international media such as the BBC, CNN, Forbes, Financial Times, and Guardian (see more <a href="#press">below</a>).
+          </p>
+
+          <p>
+           <a href="cv.pdf"
+              class="btn btn-default">CV <i class="fa fa fa-file-pdf-o fa-lg"></i></a>
+          </p>
+          
 
 
-                      <!--   <ul>
-                            <li><span class="label label-success">IEEE ICDE'19</span> <a target="_blank" href="#">"Bridging Quantities in Tables and Text"</a>,Yusra Ibrahim, Mirek Riedewald, Gerhard Weikum and Demetrios Zeinalipour-Yazti, Proceedings of the <b>35th IEEE International Conference on Data Engineering (ICDE'19)</b>, IEEE Computer Society, Macau SAR, China, 8-12 April 2019. <font color="red">(accepted!)</font></li>
-                            </li>
-                          <li><span class="label label-success">ACM TOIT'18</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/toit18-grap.pdf">"IoT Data Prefetching in Indoor Navigation SOAs"</a>, Andreas Konstantinidis, Panagiotis Irakleous, Zacharias Georgiou,  Demetrios Zeinalipour-Yazti and Panos K. Chrysanthis, <b>ACM Transactions on Internet Technology (TOIT'18)</b>,  Vol. 19, Iss. 1, Article 10, pp. 10:1-10:21, 2018. </li>
-                          <li><span class="label label-success">IEEE MDM'18</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/mdm18-dp.pdf">"Decaying Telco Big Data with Data Postdiction"</a>, Constantinos Costa, Andreas Charalampous, Andreas Konstantinidis, Demetrios Zeinalipour-Yazti and Mohamed F. Mokbel, <b>19th IEEE International Conference on Mobile Data Management (MDM'18)</b>, ISBN: 978-1-5386-4133-0, pp. 106--115, June 25 - June 28, 2018, AAU, Aalborg, Denmark, 2018. <font color="red">(Best of MDM'18 / Geoinformatica Invitation!)</font></li>
-                            <li><span class="label label-success">IEEE IC'17</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/ic16-iin.pdf">"Internet-Based Indoor Navigation Services"</a>, Demetrios Zeinalipour-Yazti, Christos Laoudias, Kyriakos Georgiou, Georgios Chatzimilioudis, <b>IEEE Internet Computing (IC'17)</b>, vol. 21, no. 4, pp. 54-63, July 2017, doi:10.1109/MIC.2017.2911420, IEEE Computer Society, 2017.
-                            </li>
-                            <li><span class="label label-success">IEEE MDM'17</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/mdm17-acces.pdf">"Indoor Localization Accuracy Estimation from Fingerprint Data"</a>, Artyom Nikitin, Georgios Chatzimilioudis, Christos Laoudias, Panagiotis Karras and Demetrios Zeinalipour-Yazti, Proceedings of the <b>18th IEEE International Conference on Mobile Data Management (MDM'17)</b>, pp. 196--205, IEEE Press, KAIST, Daejeon, South Korea, May 29 - June 1, 2017. <font color="red">(Honorable Mention Award!)</font>.
-                            </li>
-                            <li><span class="label label-success">IEEE ICDE'17</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/icde17-spate.pdf">"Efficient Exploration of Telco Big Data with Compression and Decaying"</a>, Constantinos Costa, Georgios Chatzimilioudis, Demetrios Zeinalipour-Yazti, Mohamed F. Mokbel, Proceedings of the <b>33rd IEEE International Conference on Data Engineering (ICDE'17)</b>, IEEE Computer Society, pp. 1332--1343, April 19-22, 2017, San Diego, CA, USA, ISBN: 978-1-5090-6543-1, 2017.
-                            </li>
-                            <li><span class="label label-success">Elsevier InfoSys'17</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/infosys16-proxplus.pdf">"Crowdsourcing Emergency Data in Non-Operational Cellular Networks"</a>, Georgios Chatzimilioudis, Constantinos Costa, Demetrios Zeinalipour-Yazti and Wang-Chien Lee, <b>Information Systems (InfoSys'17)</b>, Special Issue on Large-Scale Data Management for Mobile Applications, Vol. 64, pp. 292 - 302, Oxford, UK, 2017. </li>
-                            <li><span class="label label-success">IEEE TKDE'16</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/tkde16-spitfire.pdf">"Distributed In-Memory Processing of All k Nearest Neighbor Queries"</a>, Georgios Chatzimilioudis, Constantinos Costa, Demetrios Zeinalipour-Yazti, Wang-Chien Lee and Evaggelia Pitoura, <b>IEEE Transactions on Knowledge and Data Engineering (TKDE'16)</b>, IEEE Computer Society, Vol. 28, Iss. 4, pp. 925-938, 2016.</li>
-                            <li><span class="label label-success">Springer DAPD'16</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/dapd14-bigmobile.pdf">"Managing Big Data Experiments on Smartphones"</a>, Georgios Larkou, Marios Mintzis, Panayiotis G. Andreou, Andreas Konstantinidis and Demetrios Zeinalipour-Yazti, <b>Distributed and Parallel Databases (DAPD'16)</b>, Special Issue on Large-Scale Data Management for Mobile Applications, Springer US, Vol. 34, Iss. 1, pp. 33-64, 2016.</li>
-                            <li><span class="label label-success">IEEE TKDE'15</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/tkde15-tvm.pdf">"Privacy-Preserving Indoor Localization on Smartphones"</a>, Andreas Konstantinidis, Georgios Chatzimilioudis, Demetrios Zeinalipour-Yazti, Paschalis Mpeis, Nikos Pelekis, Yannis Theodoridis, <b>IEEE Transactions on Knowledge and Data Engineering (TKDE'15)</b>, IEEE Computer Society, Vol. 27, Iss. 11, pp. 3042-3055, Los Alamitos, CA, USA, 2015.</li>
-                            <li><span class="label label-success">IEEE MDM'15</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/mdm15-preloc.pdf">"Radiomap Prefetching for Indoor Navigation in Intermittently Connected Wi-Fi Networks"</a>, Andreas Konstantinidis, George Nikolaides, Georgios Chatzimilioudis, Giannis Evagorou, Demetrios Zeinalipour-Yazti and Panos K. Chrysanthis, Proceedings of the <b>16th IEEE International Conference on Mobile Data Management (MDM'15)</b>, IEEE Press, Vol.1, pp. 34-43, Pittsburgh, PA, USA, 2015.</li>
-                            <li><span class="label label-success">USENIX LISA'13</span> <a target="_blank" href="https://www.usenix.org/conference/lisa13/technical-sessions/papers/larkou">"Managing Smartphone Testbeds with SmartLab"</a>, G. Larkou, C. Costa, P. Andreou, A. Konstantinidis, D. Zeinalipour-Yazti, Proceedings of the <b>27th USENIX Large Installation System Administration Conference (LISA'13)</b>, Washington D.C., USA, pp. 115-132, ISBN: 978-1-931971-05-8, 2013</li>
-                            <li><span class="label label-success">IEEE TKDE'13</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/tkde13-st.pdf">"Crowdsourced Trace Similarity with Smartphones"</a>, Demetrios Zeinalipour-Yazti and Christos Laoudias and Constandinos Costa and Michail Vlachos and Maria I. Andreou and Dimitrios Gunopulos, <b>IEEE Transactions on Knowledge and Data Engineering (TKDE'13)</b>, IEEE Computer Society, Vol. 25, Iss. 6, pp. 1240-1253, Los Alamitos, CA, USA, 2013.</li>
-                            <li><span class="label label-success">IEEE IC'12</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/ic12-crowdsourcing.pdf">"Crowdsourcing with smartphones"</a>, Georgios Chatzimiloudis, Andreas Konstantinidis, Christos Laoudias and Demetrios Zeinalipour-Yazti, <b>IEEE Internet Computing (IC'12)</b>, Special Issue: Sep/Oct 2012 - Crowdsourcing, May 2012. IEEE Press, Vol. 16, Iss. 5, pp. 36-44, 2012.</li>
-                            <li><span class="label label-success">IEEE MDM'12</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/mdm12-proximity.pdf">"Continuous all k-nearest neighbor querying in smartphone networks"</a>, Georgios Chatzimilioudis, Demetrios Zeinalipour-Yazti, Wang-Chien Lee, Marios D. Dikaiakos, Proceedings of the <b>13th IEEE International Conference on Mobile Data Management (MDM'12)</b>, IEEE Computer Society, pp. 79-88, Bangalore, India, ISBN: 978-0-7695-4713-8, 2012.</li>
-                            <li><span class="label label-success">Springer DAPD'11</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/dapd10-kspot.pdf">"Power efficiency through tuple ranking in wireless sensor network monitoring"</a>, Panayiotis Andreou, Demetrios Zeinalipour-Yazti, Panos K. Chrysanthis and George Samaras, <b>Distributed and Parallel Databases (DAPD'11)</b>, Springer Press, Vol. 29, Iss. 1, pp. 113-150, 2011.</li>
-                            <li><span class="label label-success">Elsevier InfoSys'11</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/infosys10-micropulse.pdf">"Optimized query routing trees for wireless sensor networks"</a>, Panayiotis Andreou, Demetrios Zeinalipour-Yazti, Andreas Pamboris, Panos K. Chrysanthis, George Samaras, <b>Information Systems (InfoSys'11)</b>, Elsevier Science Ltd., Vol. 36, Iss. 2, pp. 267-291, Oxford UK, 2011.</li>
-                            <li><span class="label label-success">IEEE MDM'11</span><a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/mdm11-st.pdf">"Disclosure-Free GPS Trace Search in Smartphone Networks"</a>, Demetrios Zeinalipour-Yazti, Christos Laoudias, Maria I. Andreou, Dimitrios Gunopulos, Proceedings of the <b>12th IEEE International Conference on Mobile Data Management (MDM'11)</b>, IEEE Computer Society, pp. 78-87, Washington DC, USA, ISBN: 978-0-7695-4436-6, 2011.</li>
-                            <li><span class="label label-success">Elsevier ComNet'09</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/comnet09-tja.pdf">"Finding the K highest-ranked answers in a distributed network"</a>, Demetrios Zeinalipour-Yazti, Zografoula Vagena, Dimitrios Gunopulos and Vana Kalogeraki, Vassilis Tsotras, Michail Vlachos, Nick Koudas, Divesh Srivastava, <b>Computer Networks (ComNet'09)</b>, Elsevier North-Holland Inc., Vol.53, Iss. 9, pp. 1431-1449, New York, NY, USA, 2009.</li>
-                            <li><span class="label label-success">IEEE MDM'08</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/mdm08-micropulse.pdf">"Workload-Aware Query Routing Trees in Wireless Sensor Networks"</a>, Panayiotis Andreou, Demetrios Zeinalipour-Yazti, Panos K. Chrysanthis and George Samaras, Proceedings of the <b>9th IEEE International Conference on Mobile Data Management (MDM'08)</b>, IEEE Computer Society, pp. 189--196, Washington DC, USA, ISBN: 978-0-7695-3154-0, 2008.</li>
-                            <li><span class="label label-success">IEEE TPDS'07</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/tpds06-zeinalipour.pdf">"pFusion: a P2P Architecture for Internet-Scale Content-Based Search and Retrieval"</a>, Demetrios Zeinalipour-Yazti, Vana Kalogeraki, and Dimitrios Gunopulos, <b>IEEE Transaction on Parallel and Distributed Systems (TPDS'07)</b>, IEEE Press, Vol.18, Iss. 6, pp. 804-817, Piscataway, NJ, USA, 2007.</li>
-                            <li><span class="label label-success">ACM TOS'06</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/zeinalip-tosj.pdf">"Efficient indexing data structures for flash-based sensor devices"</a>, Song Lin, Demetrios Zeinalipour-Yazti, Vana Kalogeraki, Dimitrios Gunopulos, and Walid A. Najjar, <b>ACM Transactions on Storage (TOS'06)</b>, ACM, Vol. 2, Iss. 4,  pp. 468-503, New York, NY, USA, 2006.</li>
-                            <li><span class="label label-success">ACM CIKM'06</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/cikm06-ubk-ublbk.pdf">"Distributed Spatio-Temporal Trajectory Retrieval"</a>, Demetrios Zeinalipour-Yazti, Song Lin, Dimitrios Gunopulos, Proceedings of the <b>15th ACM Conference on Information and Knowledge Management (CIKM'06)</b>, ACM Press, Arlington, VA, USA, 2006.</li>
-                            <li><span class="label label-success">Elsevier ComNet'06</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/comnet06-ddno.pdf">Structuring topologically aware overlay networks using domain names</a>, Demetrios Zeinalipour-Yazti and Vana Kalogeraki, <b>Computer Networks (ComNet'06)</b>, Elsevier North-Holland Inc., Vol. 50, Iss. 16, pp. 3064-3082, New York NY, USA, 2006.</li>
-                            <li><span class="label label-success">USENIX FAST'05</span> <a target="_blank" href="https://www.usenix.org/legacy/event/fast05/tech/full_papers/zeinalipour-yazti/zeinalipour-yazti.pdf">"Microhash: an efficient index structure for flash-based sensor devices"</a>, Demetrios Zeinalipour-Yazti, Song Lin, Vana Kalogeraki, Dimitrios Gunopulos, Walid Najjar, Proceedings of the <b>4th USENIX Conference on File and Storage Technologies (FAST'05)</b>, San Francisco, CA, USENIX Association, pp. 31-44, Berkeley CA, USA, 2005.</li>
-                            <li><span class="label label-success">Elsevier InfoSys'05</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/papers/infosys05-ism.pdf">"Exploiting locality for scalable information retrieval in peer-to-peer networks"</a>, Demetrios Zeinalipour-Yazti, Vana Kalogeraki and Dimitrios Gunopulos, <b>Information Systems (InfoSys'05)</b>, Elsevier Science Ltd., Vol. 30, Iss. 4, pp. 277-298, Oxford UK, 2005.
-                                <li><span class="label label-success">ACM CIKM'02</span> <a target="_blank" href="http://alumni.cs.ucr.edu/~csyiazti/downloads/papers/cikm02/cikm02.pdf">"A local search mechanism for peer-to-peer networks"</a>, Vana Kalogeraki, Dimitrios Gunopulos and Demetrios Zeinalipour-Yazti, Proceedings of <b>11th ACM Conference on Information and Knowledge Management (CIKM'02)</b>, McLean, Virginia, USA, ACM, pp. 300-307, New York, NY, USA, ISBN: 1-58113-492-4, 2002.</li>
-                                </ul>
-                        <p><a href="publications/" class="btn btn-primary">All Publications &raquo;</a>
-                        </p> -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-    
- 
-         <!-- Courses Section -->
-         <section  name="awards" id="awards">
-             <div class="container lead">
-                 <div style="text-align: left; margin-top:10px" class="col-md-12">
-                     
-                     <b class="noshow" style="display:none;" id="tab-6">
-                         <button class="btn btn-default btn-lg btn-block"  style="display: block; width: 100%;" onclick="javascript:$('#tab-awards-content').toggle();">Awards  <span class="glyphicon glyphicon-chevron-down"></span></button>
-                     </b>
-                     <div class="allshow" style="display:none;" id="tab-awards-content">
-                         
-                         <hr class="star-primary">
-                         <h2>Awards and Honors <a href="cv.html#SECTION00040000000000000000" class="btn btn-primary">More &raquo;</a></h2>
-                         <ul>
-                             <li>
-                                 <span class="label label-success">IEEE MDM'18</span> <a target="_blank" href="https://mdmconferences.org/mdm2018/">Best of MDM 2018</a>,  ``Decaying Telco Big Data with Data Postdiction'', 19th IEEE International Conference on Mobile Data Management (MDM'18), Aalborg, Denmark, June 26 - June 28, 2018 (Geinformatica - Springer - journal invitation).</span>
-                             </li>
-                             <li>
-                                 <span class="label label-success">IEEE MDM'18</span> <a target="_blank" href="https://mdmconferences.org/mdm2018/">Best Demo Award</a>,  ``FMS: Managing Crowdsourced Indoor Signals with the Fingerprint Management Studio'', 19th IEEE International Conference on Mobile Data Management (MDM'18), Aalborg, Denmark, June 26 - June 28, 2018.</span>
-                             </li>
-                             <li>
-                                 <span class="label label-success">IEEE MDM'17</span> <a target="_blank" href="https://mdmconferences.org/mdm2017/">Honorable Mention Award</a>,  ``Indoor Localization Accuracy Estimation from Fingerprint Data'', 18th IEEE International Conference on Mobile Data Management (MDM'17), KAIST, Daejeon, South Korea, May 29 - June 1, 2017.</span>
-                             </li>
-                             <li>
-                                 <span class="label label-success">ACM DSP'17</span> <a target="_blank" href="https://dsp.acm.org/view_lecturer.cfm?lecturer_id=7903">ACM Distinguished Speaker</a>, Association for Computing Machinery, New York, NY, USA, 2017-2020.</span>
-                             </li>
-                             <li>
-                                 <span class="label label-success">ACM SENIOR'16</span> <a target="_blank" href="https://awards.acm.org/award_winners/zeinalipour_1835156.cfm">ACM Senior Member</a>, Association for Computing Machinery, New York, NY, USA, 2016.</span>
-                             </li>
-                             <li>
-                                 <span class="label label-success">IEEE SENIOR'16</span> <a target="_blank" href="https://www.ieee.org/membership_services/membership/senior/index.html">IEEE Senior Member</a>, Institute of Electrical and Electronics Engineers, Piscataway, NJ, USA, 2016.</span>
-                             </li>
-                             <li>
-                                 <span class="label label-success">HUMBOLDT'16</span> <a target="_blank" href="https://www.humboldt-foundation.de/web/home.html">Humboldt Fellow</a>, Alexander von Humboldt Foundation, Bonn, Germany, 2016.</span>
-                             </li>
-                             <li>
-                                 <span class="label label-success">EVARILOS'14</span> <a target="_blank" href="http://www.evarilos.eu/open-challenge.php">Best Demo Award</a>, EVARILOS Open Challenge, FP7 Project (#317989), European Union, Berlin, Germany, 2014.</span>
-                             </li>
-                             <li>
-                                 <span class="label label-success">ACM/IEEE IPSN'14</span> <a target="_blank" href="https://research.microsoft.com/en-us/events/ipsn2014indoorlocalizatinocompetition/">2nd Best Demo Award</a>, Microsoft Indoor Localization Competition 2014, collocated with 13th ACM/IEEE International Conference on Information Processing in Sensor Networks (IPSN'14), April 15-17, Berlin, Germany, 2014.</span>
-                             </li>
-                             <li>
-                                 <span class="label label-success">APPCAMPUS'13</span> <a target="_blank" href="https://blogs.windows.com/bloggingwindows/2013/11/11/5-top-apps-from-the-appcampus-program-for-windows-phone/">Appcampus Award</a>, ``Rayzit: Crowd Messaging'', Microsoft, Nokia and Aalto University, Finland, 2013.</span>
-                             </li>
-                             
-                             <li>
-                                 <span class="label label-success">IEEE MDM'12</span> <a target="_blank" href="https://mdmconferences.org/mdm2012/">Best Demo Award</a>,  ``The Airplace Indoor Positioning Platform for Android Smartphones'', 13th IEEE International Conference on Mobile Data Management (MDM'12), Bangalore, India, July 23-26, 2012.</span>
-                             </li>
-                             
-                             <li>
-                                 <span class="label label-success">COREGRID'06</span> <a target="_blank" href="https://mdmconferences.org/mdm2012/">Best Demo Award</a>, ``ICGrid: Intensive Care Grid'', CoreGRID Industrial Conference, Sophia Antipolis, France, Nov. 2006.</span>
-                             </li>
-                         </ul>
-                     </div>
-                 </div>
-             </div>
-         </section>
+          <div class="alert alert-warning" id="news" role="alert">
+          <p class="collapse" id="collapseExample" aria-expanded="false">
 
+            <strong><font class="caps">december 2022</font></strong> • 
 
-        <!-- Courses Section -->
-        <section  name="courses" id="courses">
-            <div class="container lead">
-                <div style="text-align: left; margin-top:10px" class="col-md-12">
-                    
-                    <b class="noshow" style="display:none;" id="tab-5">
-                        <button class="btn btn-default btn-lg btn-block"  style="display: block; width: 100%;" onclick="javascript:$('#tab-courses-content').toggle();">Courses  <span class="glyphicon glyphicon-chevron-down"></span></button>
-                    </b>
-                    <div class="allshow" style="display:none;" id="tab-courses-content">
-                        <hr class="star-primary">
-                        <h2>Courses <a href="cv.html#SECTION000110000000000000000" class="btn btn-primary">More &raquo;</a></h2>
-                        <ul>
-                            <li><span class="label label-success">EPL646</span> <a href="https://www.cs.ucy.ac.cy/~dzeina/courses/epl646/">Advanced Topics in Databases</a> (Winter)</li>
-                            <li><span class="label label-default">EPL446</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/courses/epl446/">Advanced Database Systems</a></li>
-                            <li><span class="label label-success">EPL371</span> <a href="https://www.cs.ucy.ac.cy/~dzeina/courses/epl371">Systems Programming</a> (Spring) </li>
-                            <li><span class="label label-default">EPL342</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/courses/epl342/">Databases</a></li>
-                            <li><span class="label label-success">EPL232</span> <a href="https://www.cs.ucy.ac.cy/~dzeina/courses/epl232">Programming Techniques and Tools</a> (Winter) [formely EPL132]</li>
-                            <li><span class="label label-default">EPL111</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/courses/epl111">Discrete Structures in Computer Science and Computation</a></li>
-                            <li><span class="label label-default">EPL035</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/courses/epl035">Data Structures and Algorithms for ECE</a></li>
-                            <li><span class="label label-default">EPL032</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~dzeina/courses/epl032">Introduction to Programming and Problem Solving</a></li>
-                            <li><span class="label label-default">EPL003</span> Computer Science and Information Systems</li>
-                            <li><span class="label label-default">EPL001</span> Introduction to Computer Science</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        
-        <!-- Service Section -->
-        <section name="service" id="service">
+            A paper on fitness prediction with wearables appeared in  <a href="https://www.nature.com/articles/s41746-022-00719-1">Nature Digital Medicine</a> and was covered by the <a href="https://www.cam.ac.uk/research/news/fitness-levels-can-be-accurately-predicted-using-wearable-devices-no-exercise-required">University of Cambridge</a>  and the <a href="https://cacm.acm.org/careers/267362-wearable-devices-accurately-predict-fitness-levels/">Communications of the ACM.</a> I was also invited to present this line of work at the Precision Health Informatics Data Lab of <a href="https://www.kcl.ac.uk/mental-health-and-psychological-sciences/about/departments/biostatistics-and-health-informatics?">King's College London.</a>
+
+             <br><br>
+
+            <strong><font class="caps">november 2022</font></strong> • 
+
+            Presented a <a href="https://arxiv.org/abs/2205.13398">paper</a> on out-of-distribution detection and a <a href="https://arxiv.org/abs/2211.10475">paper</a> on domain adaptation in <a href="https://ml4health.github.io/2022/">ML4H 2022</a> (co-located with NeurIPS 2022 in New Orleans), where I also served as a senior panel/roundtable  <a href="https://ml4health.github.io/2022/research_roundtables.html">chair.</a>   
+
+             <br><br>
+
+             <strong><font class="caps">september 2022</font></strong> • Organized and co-chaired <a href="https://wellcomp-workshop.github.io/2022/">WellComp 2022,</a> held in conjunction with <a href="https://ubicomp.org/ubicomp2022/">Ubicomp 2022</a> in Cambridge. Our paper <i>"Investigating Domain-agnostic Performance in Activity Recognition using Accelerometer Data"</i> was <a href="https://mobile-systems.cl.cam.ac.uk/papers/hasca22.pdf">published</a> at the HASCA workshop of the same conference. I will also serve on the organizing committee of <a href="https://www.chilconference.org/">CHIL 2023</a> as track chair -consider submitting your best works! 
+
             
-            <div class="container lead">
-                <div style="text-align: left; margin-top:10px" class="col-md-12">
-                    
-                    <b class="noshow" style="display:none;" id="tab-7">
-                        <button class="btn btn-default btn-lg btn-block"  style="display: block; width: 100%;" onclick="javascript:$('#tab-service-content').toggle();">Service  <span class="glyphicon glyphicon-chevron-down"></span></button>
-                    </b>
-                    <div class="allshow" style="display:none;" id="tab-service-content">
-                        
-                        <hr class="star-primary">
-                        <h2>Professional Service <a href="cv.html#SECTION00080000000000000000" class="btn btn-primary">More &raquo;</a></h2>
-                        <p>
-                        <span class="label label-success">Editorial Boards</span>
-                        
-                        <ul>
-                            <li><b>Associate Editor</b>, <a target="_blank" href="https://link.springer.com/journal/10619"><b> Distributed and Parallel Databases</b></a> journal, Editors-in-Chief: <a target="_blank" href="http://www-users.cs.umn.edu/~mokbel/">Mohamed Mokbel</a> and <a target="_blank" href="hhttps://www.cs.ucsb.edu/~agrawal/">Divyakant Agrawal</a>, <b>Springer US Press</b>, NY, USA. (05/2017 - 04/2023)
-                                <br><img width="200" src="images/springer.png"/>
-                            </li>
-                            <li><b>Associate Editor</b>, <a target="_blank" href="http://www.journals.elsevier.com/big-data-research"><b>Big Data Research</b></a> journal, Editors-in-Chief: Z. Wu, <a target="_blank" href="http://www.mi.parisdescartes.fr/~themisp/">Themis Palpanas</a>, <b>Elsevier Press</b>, Amsterdam, Netherlands. (04/2016 - current)
-                                <br><img width="100" src="images/elsevier.png"/>
-                            </li>
-                        </ul>
-                        </span>
-                        </p>
-                        
-                        <p>
-                        <span class="label label-success">Conference Committees</span>
-                        <ul>
-                            <li>
-                                <b>ACM SIGMOD:</b>
-                                <a href="http://www.sigmod2018.org/org_sigmod_demo_pc.shtml" target="_blank"><b>2018</b></a>,
-                                <a href="http://www.sigmod2015.org/org_sigmod_pc.shtml" target="_blank">2015</a>,
-                                <a href="http://www.sigmod2014.org/org_sigmod_demo_pc.shtml" target="_blank">2014</a>,
-                                <a href="http://www.sigmod.org/2013/org_sigmod_demo_pc.shtml" target="_blank">2013</a>,
-                                <a href="http://www.sigmod.org/2012/org_sigmod_demo_pc.shtml" target="_blank">2012</a>
-                                <i>[ACM's Management of Data Conference]</i>
-                            </li>
-                            <li>
-                                <b>VLDB:</b>
-                                <a href="https://vldb2019.github.io/" target="_blank"><b>2019</b></a>,
-                                <a href="http://vldb2016.persistent.com/call_demonstrations.html" target="_blank">2016</a>,
-                                <a href="http://www.vldb.org/2014/call_demonstrations.html" target="_blank">2014</a>,
-                                <a href="http://vldb.org/2013/call_demonstrations.html" target="_blank">2013</a>
-                                <i>[Intl. Conference on Very Large Data Bases]</i>
-                            </li>
-                            <li>
-                                <b>ACM SIGKDD:</b>
-                                 <a href="https://www.kdd.org/kdd2019/" target="_blank">2019</a>
-                                <a href="https://www.kdd.org/kdd2011/" target="_blank">2011</a>
-                                <i>[ACM's Intl. Knowledge Discovery and Data Mining Conference]</i>
-                            </li>
-                            <li>
-                                <b>ACM CIKM:</b>
-                                <a href="http://www.cikm2018.units.it/" target="_blank"><b>2018</b></a>,
-                                <a href="http://www.yorku.ca/cikm10/" target="_blank">2010</a>
-                                <i>[ACM's Intl. Conference on Information and Knowledge Management]</i>
-                            </li>
-                            <li>
-                                <b>IEEE ICDE:</b> <a href="http://www.icde2018.org/" target="_blank"><b>2018</b></a>
-                                (<font color="red"><b>Area PC Vice-Chair</b></font> for "Temporal, Spatial, Mobile, and Multimedia Data.")</a>,
-                                <a href="http://icde2016.fi/committees.php" target="_blank"><b>2016</b></a>,
-                                <a href="http://ieee-icde2014.eecs.northwestern.edu/pc.html" target="_blank">2014</a>,
-                                <a href="http://www.icde2013.org/" target="_blank">2013</a>,
-                                <a href="http://www.icde2011.org/" target="_blank">2011</a>,
-                                <a href="http://i.cs.hku.hk/icde2009/" target="_blank">2009</a>
-                                <i>[IEEE's Intl. Conference on Data Engineering]</i>
-                            </li>
-                            <li>
-                                <b>IEEE ICDCS:</b>
-                                <a href="http://www-higashi.ist.osaka-u.ac.jp/icdcs2016/" target="_blank">2016</a>
-                                <i>[IEEE's Intl. Conference on Distributed Computing Systems]</i>
-                            </li>
-                            <li>
-                                <b>IEEE MDM:</b>
-                                <a href="https://www.comp.hkbu.edu.hk/mdm2019//committees.php" target="_blank"><b>2019</b></a> (<font color="red"><b>PC Co-Chair</b></font> with <a href="https://hbku.edu.qa/en/staff/mohamed-mokbel" target="_blank">Mohamed F. Mokbel</a> and <a href="https://www.comp.hkbu.edu.hk/~xujl/" target="_blank">Jianliang Xu</a>),
-                                <a href="https://mdmconferences.org/mdm2018/committees.html" target="_blank"><b>2018</b></a> (and <font color="green">Panel Co-Chair</font>),
-                                <a href="https://mdmconferences.org/mdm2016/#committees" target="_blank"><b>2016</b></a>
-                                (and <font color="green">Tutorials Co-Chair</font> with <a href="https://www.cs.ualberta.ca/~mn/" target="_blank">Mario Nascimento</a>),
-                                <a href="https://mdmconferences.org/mdm2015/committees.html"><b>2015</b></a>
-                                (and <font color="green">Workshops Co-Chair</font> with <a href="http://www.cse.psu.edu/%7Ewlee/" target="_blank">Wang-Chien Lee</a>),
-                                <a href="https://mdmconferences.org/mdm2014/">2014</a></b>
-                                (and <font color="green">Panel Co-Chair</font> with <a href="http://www.csse.monash.edu.au/%7Eshonali/" target="_blank">Shonali Krishnaswamy</a>),
-                                <a href="http://mdm2013.dico.unimi.it/">2013</a></b>
-                                (and <font color="green">Demo Co-Chair</font> with <a href="http://www.cse.unt.edu/%7Ehuangyan/" target="_blank">Yan Huang</a>),
-                                <a href="https://mdmconferences.org/mdm2012/">2012</a></b>,
-                                <a href="https://mdmconferences.org/mdm2011/">2011</a></b>,
-                                <a href="http://www.sce.umkc.edu/mdm2010/">2010</a></b>
-                                (<font color="red"><b>PC Co-Chair</b></font> with <a href="http://sce2.umkc.edu/csee/kumarv/" target="_blank">Vijay Kumar</a> and <a href="http://www-nishio.ist.osaka-u.ac.jp/%7Ehara/" target="_blank">Takahiro Hara</a>),
-                                <a href="http://idke.ruc.edu.cn/mdm2008/">2008</a></b>
-                                <i>[IEEE's Intl. Conference on Mobile Data Management]</i>
-                            </li>
-                            <li>
-                                <b>IEEE ICBK:</b>
-                                <a href="http://icbk2017.bigke.org/" target="_blank"><b>2017</b></a>
-                                <i>[IEEE's Intl. Conference on Big Knowledge ]</i>
-                            </li>
-                            <li>
-                                <b>IEEE ICDM:</b>
-                                <a href="http://datamining.it.uts.edu.au/icdm10/" target="_blank">2010</a>
-                                (and <font color="green">Contest Chair</font>)
-                                <i>[IEEE's Intl. Conference of Data Mining]</i>
-                            </li>
-                            <li>
-                                <b>EDBT:</b>
-                                <a href="http://edbticdt2018.at/?EDBT18_Committee" target="_blank"><b>2018</b></a>,
-                                <a href="http://edbticdt2017.unive.it/?EDBT17_Committee" target="_blank">2017</a>,
-                                <a href="http://edbticdt2016.labri.fr/?EDBT16_Commitee" target="_blank">2016</a>
-                                <i>[Intl. Conference on Extending Database Technology]</i>
-                            </li>
-                            <li>
-                                <b>ECML/PKDD:</b>
-                                <a href="http://www.ecmlpkdd2015.org/" target="_blank">2016</a>,
-                                <a href="http://www.ecmlpkdd2016.org/" target="_blank">2015</a>,
-                                <a href="http://www.ecmlpkdd2014.org/" target="_blank">2014</a>,
-                                <a href="http://www.ecmlpkdd2011.org/" target="_blank">2011</a>
-                                <i>[European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases]</i>
-                            </li>
-                            <li>
-                                <b>SSDBM:</b>
-                                <a href="http://www.ssdbm2013.org/" target="_blank">2013</a>
-                                <i>[Intl. Conference on Scientific and Statistical Data Management]</i>
-                            </li>
-                            <li>
-                                <b>APWeb-WAIM:</b>
-                                <a href="http://conferences.cis.umac.mo/apwebwaim2018/program.html" target="_blank"><b>2018</b> </a>(<font color="green">Senior TPC Member</font>)
-                                <i>[Joint Conference on Web and Big Data]</i>
-                            </li>
-                            
-                        </ul>
-                        
-                        <span class="label label-success">Workshop and Symposia Committees</span>
-                        <ul>
-                            <li>
-                                <b>ACM ExploreDB:</b>
-                                <a href="https://sites.google.com/a/unitn.it/exploredb18/organisation-1" target="_blank"><b>2018</b></a>,
-                                <a href="https://sites.google.com/a/unitn.it/exploredb-2017/" target="_blank">2017</a>,
-                                <a href="https://sites.google.com/site/exploredb2016/organization" target="_blank">2016</a>,
-                                <a href="https://sites.google.com/site/exploredb2015/organization" target="_blank">2015</a>,
-                                <a href="https://sites.google.com/site/exploredb2014/organization" target="_blank">2014</a>
-                                <i>[Intl. Workshop on Exploratory Search in Databases and the Web @ ACM SIGMOD]</i>
-                            </li>
-                            <li>
-                                <b>ACM GeoRich:</b>
-                                <a href="http://www.dbs.ifi.lmu.de/georich16/organizer.php" target="_blank"><b>2016</b></a>
-                                <i>[Intl. Workshop on Managing and Mining Enriched Geo-Spatial Data @ ACM SIGMOD]</i>
-                            </li>
-                            <li>
-                                <b>ACM ISA:</b>
-                                
-                                <a href="https://sites.google.com/site/indoorspatialawareness2018/committee" target="_blank"><b>2018</b></a>
-                                <a href="https://sites.google.com/site/indoorspatialawareness2016/committee" target="_blank">2016</a>
-                                <a href="http://stem.cs.pusan.ac.kr/isa2015/committee.html" target="_blank">2015</a>
-                                <i>[Intl. Workshop Indoor Spatial Awareness @ ACM SIGSPATIAL]</i>
-                            </li>
-                            <li>
-                                <b>ACM BigMine:</b>
-                                <a href="http://bigmine.github.io/bigmine16/" target="_blank"><b>2016</b></a>,
-                                <a href="http://bigdata-mining.org/organization/" target="_blank">2013</a>,
-                                <a href="http://bigdata-mining.org/organization/" target="_blank">2012</a>
-                                <i>[Intl. Workshop on Big Data, Streams and Heterogeneous Source Mining: Algorithms, Systems, Programming Models and Applications @ ACM SIGKDD]</i>
-                            </li>
-                            <li>
-                                <b>ACM MobiDE:</b>
-                                <a href="http://pages.cs.brandeis.edu/%7Emobide12/" target="_blank">2012</a>,
-                                <a href="http://archive.itee.uq.edu.au/%7Emobide11/" target="_blank">2011</a>
-                                (and <font color="green">Steering Committee</font>),
-                                <a href="http://www.softnet.tuc.gr/mobide10/" target="_blank">2010</a>
-                                (and <font color="green">General Co-Chair</font> with <a href="http://www.pittsburgh.intel-research.net/people/gibbons/" target="_blank">Phillip B. Gibbons</a>),
-                                <a href="http://www.cs.fsu.edu/mobide09/Organization.html" target="_blank">2009</a>
-                                (<font color="red"><b>PC Co-Chair</b></font> with <a href="http://www.cs.ou.edu/%7Edatabase/faculty.htm" target="_blank">Le Gruenwald</a>),
-                                <a href="https://www.cs.ucy.ac.cy/mobide08/" target="_blank">2008</a>
-                                (and <font color="green">Publicity Chair</font>),
-                                <a href="http://www.cse.psu.edu/mobide07/" target="_blank">2007</a>,
-                                <i>[Intl. Workshop on Data Engineering for Wireless and Mobile Access @ ACM SIGMOD]</i>
-                            </li>
-                            <li>
-                                <b>IEEE ALIAS:</b>
-                                <a href="https://alias19.cs.ucy.ac.cy/" target="_blank"><b>2019</b></a>
-                                (<font color="red"><b>PC Co-Chair</b></font> with <a href="https://sites.google.com/site/profdshan/" target="_blank">Dong-Soo Han</a>, <a href="https://goo.gl/zC4usu/" target="_blank">Andreas S. Panayides</a> and <a href="https://agora.bourges.univ-orleans.fr/ramdani/" target="_blank">Nacim Ramdani</a>),
-                                <i>[Intl. Workshop on ALgorithms for Indoor Architectures and Systems @ IEEE MDM]</i>
-                            </li>
-                            <li>
-                                <b>IEEE HuMoComP:</b>
-                                <a href="https://humocomp15.cs.ucy.ac.cy/" target="_blank"><b>2015</b></a>
-                                (<font color="red"><b>PC Co-Chair</b></font> with <a href="http://www.pitt.edu/~kpele/" target="_blank">Konstantinos Pelechrinis</a>, <a href="http://people.cs.pitt.edu/~adamlee/" target="_blank">Adam J. Lee</a> and <a href="http://web.imis.athena-innovation.gr/~mter/" target="_blank">Manolis Terrovitis</a>),
-                                <i>[Intl. Workshop On Human Mobility Computing And Privacy @ IEEE MDM]</i>
-                            </li>
-                            <li>
-                                <b>IEEE Mobisocial:</b>
-                                <a href="http://www.iis.sinica.edu.tw/%7Ednyang/mobisocial" target="_blank"><b>2015</b></a>,
-                                <a href="http://www.iis.sinica.edu.tw/%7Ednyang/mobisocial" target="_blank">2014</a>,
-                                <a href="http://www.iis.sinica.edu.tw/%7Ednyang/mobisocial" target="_blank">2013</a>,
-                                <i>[Intl. Workshop on Mobile Data Management, Mining, and Computing on Social Networks  @ IEEE MDM]</i>
-                            </li>
-                            <li>
-                                <b>VLDB's DMSN:</b>
-                                <a href="http://www.softnet.tuc.gr/dmsn11/" target="_blank">2011</a>
-                                (and <font color="green">General Co-Chair</font> with <a href="http://www.cse.psu.edu/%7Ewlee/" target="_blank">Wang-Chien Lee</a>),
-                                <a href="https://www.cs.ucy.ac.cy/~dmsn10/" target="_blank">2011</a>
-                                (and <font color="red"><b>PC Co-Chair</b></font> with <a href="http://www.cse.psu.edu/%7Ewlee/" target="_blank">Wang-Chien Lee</a>),
-                                <a href="http://dmsn09.ethz.ch/" target="_blank">2009</a>,
-                                <a href="http://dmsn08.cs.umass.edu/" target="_blank">2008</a>,
-                                <a href="http://data.cs.washington.edu/dmsn07/" target="_blank">2007</a>
-                                <i>[Intl. Workshop on Data Management for Sensor Networks @ VLDB]</i>
-                            </li>
-                            <li>
-                                <b>MUSICAL:</b>
-                                <a href="http://musical16.cs.ucy.ac.cy" target="_blank"><b>2016</b></a> (<font color="red"><b>PC Co-Chair</b></font> with Yuka Kato (TWC University, Japan) and Takuya Yoshihiro (Wakayama University, Japan)),
-                                <i>[Intl. Workshop On Mobile Ubiquitous Systems, Infrastructures, Communications, And AppLications @ EAI's MobiQuitous]</i>
-                            </li>
-                            <li>
-                                <b>MUD:</b>
-                                <a href="http://www.insight-ict.eu/mud/" target="_blank">2014</a>
-                                <i>[Intl. Workshop on Mining Urban Data @ EDBT/ICDT]</i>
-                            </li>
-                            <li>
-                                <b>HDMS:</b>
-                                <a href="http://hdms18.cs.ucy.ac.cy/" target="_blank"><b>2018</b></a> (<font color="red"><b>PC Co-Chair</b></font> with <a href="https://www.cut.ac.cy/faculties/fet/eecei/staff/herodotos.herodotou/" target="_blank">Herodotos Herodotou</a>),
-                                <a href="http://hdms16.aueb.gr/index.php/en/organizing-committee" target="_blank"><b>2016</b></a>,
-                                <a href="http://hdms15.cs.aueb.gr/index.php/en/organizing-committee" target="_blank">2015</a>,
-                                <a href="http://hdms2012.softnet.tuc.gr/index_en.html" target="_blank">2012</a>,
-                                <a href="http://hdms11.di.uoa.gr/index.php?lang=en" target="_blank">2011</a>,
-                                <a href="https://www.cs.ucy.ac.cy/%7Ehdms2010/en" target="_blank">2010</a>
-                                (and <font color="green">Local Arrangements and Poster Chair</font>),
-                                <a href="http://dmsn09.ethz.ch/" target="_blank">2009</a>,
-                                <a href="http://dmsn08.cs.umass.edu/" target="_blank">2008</a>,
-                                <a href="http://data.cs.washington.edu/dmsn07/" target="_blank">2007</a>
-                                <i>[Hellenic Data Management Symposium]</i>
-                            </li>
-                        </ul>
-                        
-                        <span class="label label-success">Journal and Magazine Referee</span>
-                        <ul>
-                            <li>
-                                <b>Journal Referee:</b>
-                                Springer's <a href="http://www.springer.com/computer/database+management+&amp;+information+retrieval/journal/778" target="_blank">VLDB Journal</a> (3),
-                                IEEE <a href="http://www.computer.org/tkde/" target="_blank">TKDE</a> (12),
-                                IEEE <a href="http://www.computer.org/tmc/" target="_blank">TMC</a> (2),
-                                IEEE <a href="http://www.computer.org/tkde/" target="_blank">TPDS</a> (2),
-                                IEEE <a href="http://bbcrlab-pc9.bbcrlabpcnet.uwaterloo.ca/tvt/index.html" target="_blank">TVT</a> (1),
-                                IEEE <a href="http://www.computer.org/tc/" target="_blank">TC</a> (1),
-                                IEEE <a href="http://www.ieee-cis.org/pubs/tec/" target="_blank">TEC</a> (2),
-                                ACM's <a href="http://tist.acm.org/" target="_blank">TIST</a> (2),
-                                ACM's <a href="http://taas.acm.org/" target="_blank">TAAS</a> (1),
-                                ACM's <a href="http://www.sigmod.org/publications/sigmod-record/">Sigmod Record</a> (1),
-                                Elsevier's <a href="http://www.elsevier.com/locate/is" target="_blank">Infosys</a> (2),
-                                Elsevier's <a href="http://www.elsevier.com/locate/ins" target="_blank">InfoSciences</a> (4),
-                                Elsevier's <a href="http://www.elsevier.com/locate/adhoc" target="_blank">Adhoc</a> (3),
-                                Elsevier's <a href="http://www.journals.elsevier.com/computer-communications/" target="_blank">ComCom</a> (5),
-                                Elsevier's <a href="http://www.elsevier.com/locate/jpdc" target="_blank">JPDC</a> (2),
-                                Elsevier's <a href="http://www.elsevier.com/locate/datak" target="_blank">DKE</a> (1),
-                                Springer's <a href="http://www.springerlink.com/content/100257/" target="_blank">DADP</a> (3),
-                                Springer's <a href="http://link.springer.com/journal/10115" target="_blank">KAIS</a> (1),
-                                Springer's <a href="http://www.springer.com/computer/database+management+%26+information+retrieval/journal/10618" target="_blank">DMKD</a> (1),
-                                <a href="http://www.computer.org/tkde/" target="_blank">PPL</a> (1)
-                            </li>
-                            
-                            <li>
-                                <b>Magazine Referee</b>:
-                                <a href="http://www.computer.org/internet" target="_blank">Internet Computing</a> (2),
-                                <a href="http://www.comsoc.org/netmag" target="_blank">IEEE Network</a> (1)
-                            </li>
-                        </ul>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+             <br><br>
+
+
+             <strong><font class="caps">august 2022</font></strong> • Gave an interview to <a href="https://indiaai.gov.in/article/there-is-huge-potential-for-clinical-ai-in-the-future-dimitris-spathis-nokia-bell-labs">IndiaAI.gov,</a> the AI initiative of the government of India. Also, the CS department at Cambridge <a href="https://www.cst.cam.ac.uk/news/remote-monitoring-successfully-tracks-covid-19-progression-over-time">covered</a> our recent JMIR paper.
+
+            
+
+             <br><br>
+
+             <strong><font class="caps">july 2022</font></strong> • Attended <a href="https://mobiuk.org/2022/">MobiUK 2022</a> at UCL with one contributed <a href="https://mobiuk.org/2022/abstract/S2-P3_Wu_WeakLabelLearning.pdf">talk/abstract.</a>
+
+             <br><br>
+
+             <strong><font class="caps">june 2022</font></strong> • Gave a keynote talk at the <a href="https://london.theaisummit.com/speakers/dimitris-spathis">AI Summit of the London Tech Week.</a> We also released the <a href="https://youtube.com/playlist?list=PLWXIxwt9DAKPUSYvAVHg9-VH1biZpUZCZ">recordings</a> of the Federated Sensing tutorial at Mobicom'21.
+
+             <br><br>
+
+             <strong><font class="caps">may 2022</font></strong> • Joined <a href="https://www.bell-labs.com/">Bell Labs</a> in Cambridge as a research scientist!
+
+             <br><br>    
+
+             <strong><font class="caps">apr 2022</font></strong> • Our Covid-19 Sounds work has received the <a href="https://www.cst.cam.ac.uk/news/presenting-hall-fame-awards/">2021 Hall of Fame Better Future Award</a> from the Department of Computer Science and Technology at the University of Cambridge! A recent paper <i>"COVID-19 Disease Progression Prediction via Audio Signals: A Longitudinal Study"</i> has been accepted in <a href="https://www.jmir.org/2022/6/e37004">JMIR.</a> Also, our paper <i>"Detecting sleep outside the clinic using wearable heart rate devices"</i> has been accepted in <a href="https://www.nature.com/articles/s41598-022-11792-7">Scientific Reports.</a>
+
+            
+
+           <br><br>    
+
+             <strong><font class="caps">mar 2022</font></strong> • Gave a talk on "<i>Self-supervised learning for health signals</i>" at the <a href="https://feinstein.northwell.edu/">Feinstein Institutes of Northwell Health</a> in New York (remotely), hosted by Theo Zanos. 
+
+           <br><br>     
+
+            <strong><font class="caps">feb 2022</font></strong> • Our paper <i>"Universals and variations in musical preferences: A study of preferential reactions to Western music in 53 countries"</i> was published in the <a href="https://psycnet.apa.org/doiLanding?doi=10.1037%2Fpspp0000397">Journal of Personality and Social Psychology.</a> The University of Cambridge covered it in a <a href="https://www.cam.ac.uk/stories/musical-preferences-unite-personalities-worldwide/">featured story.</a>
+
+          <br><br>   
+
+          <strong><font class="caps">dec 2021</font></strong> • Received an ACM SIGMOBILE travel award to attend <a href="https://www.sigmobile.org/mobicom/2021/">MobiCom</a> this coming March in New Orleans, USA.
+
+          <br><br>   
+
+          <strong><font class="caps">nov 2021</font></strong> • Our paper <i>"Sounds of COVID-19: exploring realistic performance of audio-based digital testing"</i> has been accepted to <a href="https://www.nature.com/articles/s41746-021-00553-x">Nature Digital Medicine!</a> A short paper <i>"Evaluating Contrastive Learning on Wearable Timeseries for Downstream Clinical Outcomes"</i> is accepted to <a href="https://ml4health.github.io/2021/">ML4H 2021,</a> while our perspective <i>"Breaking away from labels: the promise of self-supervised machine learning in intelligent health"</i> will appear in <a href="https://www.cell.com/patterns/fulltext/S2666-3899(21)00284-1">Cell Patterns.</a>
+
+
+        </p>
+          <a role="button" class="collapsed" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          </a>
         
-<!--         <!-- Courses Section -->
-        <section name="advising" id="advising">
-            <div class="container lead">
-                <div style="text-align: left; margin-top:10px" class="col-md-12">
-                    
-                    <b class="noshow" style="display:none;" id="tab-8">
-                        <button class="btn btn-default btn-lg btn-block"  style="display: block; width: 100%;" onclick="javascript:$('#tab-advising-content').toggle();">Advising  <span class="glyphicon glyphicon-chevron-down"></span></button>
-                    </b>
-                    <div class="allshow" style="display:none;" id="tab-advising-content">
-                        
-                        <hr class="star-primary">
-                        <h2>Advising <a href="cv.html#SECTION000120000000000000000" class="btn btn-primary">More &raquo;</a></h2>
-                        <ul>
-                            <li>
-                                <span class="label label-success">Postdoc</span> <a target="_blank" href="https://www.cs.ucy.ac.cy/~gchatzim/">George Chatzimilioudis</a>, Researcher at MTN, Cambrige.
-                            </li>
-                            <li>
-                                <span class="label label-success">Postdoc</span> <a target="_blank" href="http://staff.frederick.ac.cy//com.ca/AndreasConstantinides/">Andreas Konstantinidis</a>, Lecturer at Frederick University, Cambrige.
-                            </li>
-                            <li>
-                                <span class="label label-success">Postdoc</span> <a target="_blank" href="http://www2.ucy.ac.cy/~laoudias/">Christos Laoudias</a>, Researcher at KIOS Research Center, Cambrige.
-                            </li>
-                            <li>
-                                <span class="label label-success">Ph.D.</span> (completed) <a target="_blank" href="http://www.uclanCambrige.ac.cy/en/courses/school-sciences/academics/panayiotis-andreou">Panayiotis Andreou</a>, Assistant Professor at University of Central Lancashire, Cambrige. </span>
-                            </li>
-                            <li>
-                                <span class="label label-success">Ph.D.</span> (completed) <a target="_blank" href="https://www.cs.ucy.ac.cy/~cs07cc6/">Constantinos Costa</a>, Instructor/Researcher, University of Cambrige, Cambrige.
-                            </li>
-                           <!-- <li>
-                                <span class="label label-info">Ph.D.</span> (ongoing) <a target="_blank" href="https://www.cs.ucy.ac.cy/~glarko01/">Georgios Larkou</a>, University of Cambrige, Cambrige.
-                            </li>-->
-                        </ul>
-                    </div>
-                </div>
+          </div>
+
+      </div>
+
+        <div class="row">
+          <h2><a name="publications"></a>📖 Publications</h2>
+          <hr>
+          <h3>2022</h3>
+
+          <!-- Nat Dig Med 2022 -->
+        <div class="media">
+              <div class="media-left media-middle hidden-xs hidden-sm">
+                <a href="img/npj22fitness.png">
+                  <img class="media-object" src="img/npj22fitness.png"  style="max-width:250px;" alt="npj">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><strong>Longitudinal cardio-respiratory fitness prediction through wearables in free-living environments</strong></h4>
+                <p><i>Dimitris Spathis*</i>, Ignacio Perez-Pozuelo*, Tomas I. Gonzales, Yu Wu, Soren Brage, Nicholas Wareham, Cecilia Mascolo <span style="font-size:13px">(*equal contribution)</span> <br>
+                <em><a href="https://www.nature.com/articles/s41746-022-00719-1"
+                >Nature Digital Medicine</a></em>, 5(176) <br>
+                    <div class="btn-group-sm">
+                  <a href="https://www.nature.com/articles/s41746-022-00719-1"
+                  class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+                  <a href="https://www.nature.com/articles/s41746-022-00719-1.pdf"
+                  class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+                  <a href="https://github.com/sdimi/cardiofitness"
+                  class="btn btn-default"><i class="fa fa-github fa-lg"></i> Code</a> </p>
+                </div>       
             </div>
-        </section>
- -->        
-        <!-- Home Section -->
-        <section name="links" id="links">
-            <div class="container lead">
-                <div style="text-align: left; margin-top:10px" class="col-md-12">
-                    
-                    <b class="noshow" style="display:none;" id="tab-9">
-                        <button class="btn btn-default btn-lg btn-block"  style="display: block; width: 100%;" onclick="javascript:$('#tab-links-content').toggle();">Links  <span class="glyphicon glyphicon-chevron-down"></span></button>
-                    </b>
-                    
-                    <div class="allshow" style="display:none;" id="tab-links-content">
-                        
-                        <hr class="star-primary">
-                        <h2>Random Links</h2>
-                        <ul>
-                            <li><span class="label label-success"><a target="_blank" href="https://www.cs.ucy.ac.cy/colloquium/"><font color="white">Colloquium</font></a></span> I am the Computer Science Colloquium Coordinator.</li>
-                            <li><span class="label label-default"><a target="_blank" href="http://www.homepages.ucl.ac.uk/~uccazei/"><font color="white">Brother</font></a></span> My brother's website at UCL, UK.</li>
-                            <li><span class="label label-info"><a target="_blank" href="https://smartlib.cs.ucy.ac.cy/scripts/exportBooks.php?mykey=0a05bb77edad7395da818f361f8115a2"><font color="white">Books</font></a></span> My book collection constructed using our <a target="_blank" href="https://smartlib.cs.ucy.ac.cy/">SmartLib project.</a></li>
-                            <li><span class="label label-danger"><a target="_blank" href="https://code.org/learn"><font color="white">Hour-of-Code</font></a></span> I support the hour of code iniative as a volunteer instructor.</a></li>
-                            <li><span class="label label-primary"><a target="_blank" href="https://github.com/dmsl"><font color="white">Github</font></a></span> I support open-source code development.</a></li>
-                            <li><span class="label label-warning"><a target="_blank" href="http://www.kyreniaship.org/"><font color="white">Kyrenia-Chrysocava</font></a></span> A project aimed to preserve the cultural heritage of the <a target="_blank" href="https://en.wikipedia.org/wiki/Kyrenia_ship">Kyrenia ship</a>.</li>
-                            <li><span class="label label-success"><font color="white">Cycling</font></span> My favorite hobby besides programming :-)</a></li>
-                        </ul>
-                    </div>
-                </div>
+        </div>
+
+
+
+
+
+        <!-- Nat Dig Med 2022 -->
+        <div class="media">
+              <div class="media-left media-middle hidden-xs hidden-sm">
+                <a href="img/npj22.png">
+                  <img class="media-object" src="img/npj22.png"  style="max-width:250px;" alt="npj">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><strong>Sounds of COVID-19: exploring realistic performance of audio-based digital testing</strong></h4>
+                <p>Jing Han*, Tong Xia*, <i>Dimitris Spathis</i>, Erika Bondareva, Chloë Brown, Jagmohan Chauhan, Ting Dang, Andreas Grammenos, Apinan Hasthanasombat, Andres Floto, Pietro Cicuta, Cecilia Mascolo <br>
+                <em><a href="https://www.nature.com/articles/s41746-021-00553-x"
+              >Nature Digital Medicine</a></em>, 5(16) <br>
+                <div class="btn-group-sm">
+              <a href="https://www.nature.com/articles/s41746-021-00553-x"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://www.nature.com/articles/s41746-021-00553-x.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+              <a href="https://healthcommunity.nature.com/posts/sounds-of-covid-19-exploring-realistic-performance-of-audio-based-digital-testing?badge_id=712-npj-digital-medicine"
+              class="btn btn-default"><i class="fa fa-newspaper-o fa-lg"></i> Blog post</a>
+              <a href="https://github.com/cam-mobsys/covid19-sounds-npjDM"
+              class="btn btn-default"><i class="fa fa-github fa-lg"></i> Code</a> </p>
             </div>
-        </section>
+             
+        </div>
+    </div>
+
+          <!-- Cell Patterns 2022 -->
+          <div class="media">
+              <div class="media-left media-middle hidden-xs hidden-sm">
+                <a href="img/patterns22.png">
+                  <img class="media-object" border="0" src="img/patterns22.png" style="max-width:250px;">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><strong>Breaking away from labels: the promise of self-supervised machine learning in intelligent health</strong></h4>
+                <p><i>Dimitris Spathis</i>, Ignacio Perez-Pozuelo, Laia Marques-Fernandez, Cecilia Mascolo <br>
+                <em><a href="https://www.cell.com/patterns/fulltext/S2666-3899(21)00284-1"
+              >Cell Patterns</a></em>, 3(2) <br>
+                <div class="btn-group-sm">
+              <a href="https://www.cell.com/patterns/fulltext/S2666-3899(21)00284-1"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://www.cell.com/action/showPdf?pii=S2666-3899%2821%2900284-1"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a></p>
+            </div>
+              </div>
+        </div>
+
+
+          <!-- Sci Rep 2022 -->
+          <div class="media">
+              <div class="media-left media-middle hidden-xs hidden-sm">
+                <a href="img/scirep22.png">
+                  <img class="media-object" src="img/scirep22.png"  style="max-width:250px;" alt="npj">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><strong>Detecting sleep outside the clinic using wearable heart rate devices</strong></h4>
+                <p>Ignacio Perez-Pozuelo, Marius Posa, <i>Dimitris Spathis</i>, Kate Westgate, Nicholas Wareham, Cecilia Mascolo, Soren Brage, Joao Palotti <br>
+                <em><a href="https://www.nature.com/articles/s41598-022-11792-7"
+              >Scientific Reports</a></em>, 12 (7956) <br>
+                <div class="btn-group-sm">
+              <a href="https://www.nature.com/articles/s41598-022-11792-7-x"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://www.nature.com/articles/s41598-022-11792-7.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+              <a href="https://github.com/HypnosPy/HypnosPy/"
+              class="btn btn-default"><i class="fa fa-github fa-lg"></i> Code</a> </p>
+            </div>
+              </div>
+        </div>
+
+
+          <!-- JMIR 2022 -->
+          <div class="media">
+              <div class="media-left media-middle hidden-xs hidden-sm">
+                <a href="img/jmir22.png">
+                  <img class="media-object" src="img/jmir22.png"  style="max-width:250px;" alt="npj">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><strong>Exploring Longitudinal Cough, Breath, and Voice Data for COVID-19 Progression Prediction via Sequential Deep Learning: Model Development and Validation</strong></h4>
+                <p>Ting Dang, Jing Han, Tong Xia, <i>Dimitris Spathis</i>, Erika Bondareva, Chloë Brown, Jagmohan Chauhan, Andreas Grammenos, Apinan Hasthanasombat, Andres Floto, Pietro Cicuta, Cecilia Mascolo <br>
+                <em><a href="https://www.nature.com/articles/s41598-022-11792-7"
+              >Journal of Medical Internet Research (JMIR)</a></em>, 24(6) <br>
+                <div class="btn-group-sm">
+              <a href="https://www.jmir.org/2022/6/e37004"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://www.jmir.org/2022/6/e37004/PDF"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+              <a href="https://covid-19-sounds.org/en/blog/longitudinal_covid_jmir.html"
+              class="btn btn-default"><i class="fa fa-newspaper-o fa-lg"></i> Blog post</a> </p>
+            </div>
+              </div>
+        </div>
+
+         
+
+          <!-- JPSP 2022 -->
+
+          <div class="media">
+              <div class="media-left media-middle hidden-xs hidden-sm">
+                <a href="img/jpsp22.png">
+                  <img class="media-object" src="img/jpsp22.png"  style="max-width:250px;" alt="npj">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><strong>Universals and variations in musical preferences: A study of preferential reactions to Western music in 53 countries</strong></h4>
+                <p>David Greenberg, Sebastian Wride, Daniel Snowden, <i>Dimitris Spathis</i>, Jeff Potter, Jason Rentfrow <br>
+                <em><a href="https://psycnet.apa.org/doiLanding?doi=10.1037%2Fpspp0000397"
+              >Journal of Personality and Social Psychology</a></em>, 122(2) <br>
+              <font class="caps" color=#f39c12><i class="fa fa-trophy fa-xs"></i> Altmetric Top 5% of all research outputs</font>
+                <div class="btn-group-sm">
+              <a href="https://psycnet.apa.org/doiLanding?doi=10.1037%2Fpspp0000397"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://www.gwern.net/docs/psychology/personality/2022-greenberg.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+              <a href="https://osf.io/8dxtj/"
+              class="btn btn-default"><i class="fa fa-github fa-lg"></i> Code</a>
+              
+               </p>
+            </div>
+              </div>
+        </div>
+
+
+          <!-- ML4H 2022 (my paper) -->
+        <div class="media">
+              <div class="media-left media-middle hidden-xs hidden-sm">
+                <a href="img/ml4h22.png">
+                  <img class="media-object" src="img/ml4h22.png"  style="max-width:250px;" alt="npj">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><strong>Looking for Out-of-Distribution Environments in Multi-center Critical Care Data</strong></h4>
+                <p><i>Dimitris Spathis</i>, Stephanie Hyland <br>
+                <em><a href="https://arxiv.org/abs/2205.13398"
+              >Machine Learning for Health</a></em>, New Orleans, USA <br>
+                <div class="btn-group-sm">
+              <a href="https://arxiv.org/abs/2205.13398"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://arxiv.org/pdf/2205.13398.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+            </div>
+             </div>
+        </div>
+
+
+    <!-- ML4H 2022 (Yu's paper) -->
+        <div class="media">
+        <div class="media-left media-middle hidden-xs hidden-sm">
+          <a href="img/ml4h22(yu).png">
+            <img class="media-object" src="img/ml4h22(yu).png"  style="max-width:250px;" alt="npj">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><strong>Turning Silver into Gold: Domain Adaptation with Noisy Labels for Wearable Cardio-Respiratory Fitness Prediction</strong></h4>
+          <p>Yu Wu, <i>Dimitris Spathis</i>, Hong Jia, Ignacio Perez-Pozuelo, Tomas I Gonzales, Soren Brage, Nicholas Wareham, Cecilia Mascolo <br>
+          <em><a href="https://arxiv.org/abs/2211.10475"
+              >Machine Learning for Health</a></em>, New Orleans, USA <br>
+          <div class="btn-group-sm">
+              <a href="https://arxiv.org/abs/2211.10475"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://arxiv.org/pdf/2211.10475.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+            </div>
+       </div>
+    </div>
+
         
-        <!-- Home Section -->
-        <section  name="contact" id="contact">
-            <div class="container lead">
-                <div style="text-align: left; margin-top:10px" class="col-md-12">
-                    
-                    <b class="noshow" style="display:none;" id="tab-10">
-                        <button class="btn btn-default btn-lg btn-block"  style="display: block; width: 100%;" onclick="javascript:$('#tab-contact-content').toggle();">Contact  <span class="glyphicon glyphicon-chevron-down"></span></button>
-                    </b>
-                    <div class="allshow" style="display:none;" id="tab-contact-content">
-                        
-                        <hr class="star-primary">
-                        <h2>Contact</h2>
-                        <div class="container lead">
-                            <div align="left" class="col-md-3">
-                                <h4 class="myEN">
-                                    POSTAL ADDRESS (EN | <a target="_blank" onclick="javascript:$('.myEN').hide();$('.myEL').show();">EL</a>)
-                                </h4>
-                                
-                                <h4 class="myEL" style="display:none">
-                                    ΤΑΧΥΔΡΟΜ. ΔΙΕΥΘ. (<a target="_blank" onclick="javascript:$('.myEN').show();$('.myEL').hide();">EN</a> | EL)
-                                </h4>
-                                
-                                <p class="myEL" style="display:none">
-                                Δημήτρης Ζεϊναλιπούρ<br>
-                                Τμήμα Πληροφορικής<br>
-                                Πανεπιστήμιο Κύπρου<br>
-                                Τ.Θ. 20537<br>
-                                1678 Λευκωσία, ΚΥΠΡΟΣ<br>
-                                </p>
-                                
-                                <p class="myEN">
-                                Demetris Zeinalipour<br>
-                                Dept. of Computer Science<br>
-                                University of Cambrige<br>
-                                P.O. Box 20537<br>
-                                1678 Nicosia, Cambrige<br>
-                                </p>
-                                Email:
-                                <script language="JavaScript">
-                                    <!--
-                                    document.write("&nbsp;");
-                                    spiderjam('dzeina','cs.ucy.ac.cy');
-                                    -->
-                                    </script><br>
-                            </div>
-                            
-                            <div align="left" class="col-md-3">
-                                <h4>CONTACT VCARD</h4>
-                                <p>
-                                <a href="zeinalipour.vcf"><img src="images/zeinalipour-qr.gif" border="0" width="150"><br>
-                                    https://goo.gl/ndCbTg</a>
-                                
-                                <!--   <a href="zeinalipour.vcf" class="btn btn-primary">Get VCF Card &raquo;</a>-->
-                                </p>
-                            </div>
-                            
-                            <div align="left" class="col-md-3">
-                                <h4>OFFICE ADDRESS</h4>
-                                <p>B106, Computer Science,<br/>
-                                Building FST-01,<br/>
-                                1 University Avenue,<br/>
-                                2109 Aglantzia, Cambrige<br/>
-                                Tel: <a href="tel:0035722892755">+357-22892755</a><br/>
-                                Fax: <a href="tel:0035722892701">+357-22892701</a><br/>
-                                <br/>
-                                </p>
-                            </div>
-                            
-                            <div align="left" class="col-md-3">
-                                <h4>OFFICE DIRECTIONS</h4>
-                                <p><a href="https://goo.gl/RLbcXM" target="_blank"><img src="images/anyplace-directions.jpg" border="0"
-                                    width="150"> <br>https://goo.gl/RLbcXM</a>
-                                </p>
-                            </div>
-                        </div>
-                        <hr class="star-primary">
-                    </div>
-                    
-                    </section>
+
+          <!-- HASCA @ Ubicomp 2022 -->
+
+          <div class="media">
+              <div class="media-left media-middle hidden-xs hidden-sm">
+                <a href="img/hasca22.png">
+                  <img class="media-object" src="img/hasca22.png"  style="max-width:250px;" alt="npj">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><strong>Investigating Domain-agnostic Performance in Activity Recognition using Accelerometer Data</strong></h4>
+                <p>Apinan Hasthanasombat, Abhirup Ghosh, <i>Dimitris Spathis</i>, Cecilia Mascolo <br>
+                <em>UbiComp workshop on Human Activity Sensing Corpus & Applications <a href="https://doi.org/10.1145/3544793.3560398"
+              >(HASCA @ UbiComp)</a></em>, Cambridge, UK <br>
+                <div class="btn-group-sm">
+              <a href="https://doi.org/10.1145/3544793.3560398"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://mobile-systems.cl.cam.ac.uk/papers/hasca22.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+              
+               </p>
+            </div>
+              </div>
+        </div>
+
+
+          <h3>2021</h3>
+
+          <!-- NeurIPS 2021 -->
+          <div class="media">
+              <div class="media-left media-middle hidden-xs hidden-sm">
+                <a href="img/neurips21.png">
+                  <img class="media-object" src="img/neurips21.png"  style="max-width:250px;" alt="npj">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><strong>COVID-19 Sounds: A Large-Scale Audio Dataset for Digital Respiratory Screening</strong></h4>
+                <p>Tong Xia*, <i>Dimitris Spathis*</i>, Chloe Brown, Jagmohan Chauhan, Andreas Grammenos, Jing Han, Apinan Hasthanasombat, Erika Bondareva, Ting Dang, Andres Floto, Pietro Cicuta, Cecilia Mascolo <br>
+                <em><a href="https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/e2c0be24560d78c5e599c2a9c9d0bbd2-Abstract-round2.html"
+              >Neural Information Processing Systems (NeurIPS)</a></em>, Datasets and Benchmarks Track <br>
+                <div class="btn-group-sm">
+              <a href="https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/e2c0be24560d78c5e599c2a9c9d0bbd2-Abstract-round2.html"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/file/e2c0be24560d78c5e599c2a9c9d0bbd2-Paper-round2.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+              <a href="https://www.covid-19-sounds.org/blog/neurips_dataset"
+              class="btn btn-default"><i class="fa fa-newspaper-o fa-lg"></i> Blog post</a>
+              <a href="https://github.com/cam-mobsys/covid19-sounds-neurips"
+              class="btn btn-default"><i class="fa fa-github fa-lg"></i> Code</a> 
+              <a href="https://slideslive.com/38969500/covid19-sounds-a-largescale-audio-dataset-for-digital-respiratory-screening?ref=recommended"
+              class="btn btn-default"><i class="fa fa-video-camera fa-lg"></i> Talk (4mins)</a>
+          </p>
+            </div>
+        </div>
+  </div>
+
+
+          
+
+          <!-- CHIL 2021 -->
+            <div class="media">
+              <div class="media-left media-middle hidden-xs hidden-sm">
+                <a href="img/chil21.png">
+                  <img class="media-object" src="img/chil21.png"  style="max-width:250px;" alt="npj">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><strong>Self-supervised transfer learning of physiological representations from free-living wearable data</strong></h4>
+                <p>Dimitris Spathis</i>, Ignacio Perez-Pozuelo, Soren Brage, Nicholas Wareham, Cecilia Mascolo <br>
+                <em><a href="https://dl.acm.org/doi/10.1145/3450439.3451863"
+              >Conference on Health, Inference, and Learning (CHIL)</a></em>, Virtual event, USA <br>
+                <div class="btn-group-sm">
+              <a href="https://dl.acm.org/doi/10.1145/3450439.3451863"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://dl.acm.org/doi/pdf/10.1145/3450439.3451863"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+              <a href="https://github.com/sdimi/Step2heart"
+              class="btn btn-default"><i class="fa fa-github fa-lg"></i> Code</a> 
+              <a href="https://www.chilconference.org/proceeding_P07.html"
+              class="btn btn-default"><i class="fa fa-video-camera fa-lg"></i> Talk (6mins) </a>
+          </p>
+            </div>
+        </div>
+    </div>
+
+
+          <!-- ICASSP 2021 -->
+
+                      <div class="media">
+              <div class="media-left media-middle hidden-xs hidden-sm">
+                <a href="img/icassp21.png">
+                  <img class="media-object" src="img/icassp21.png"  style="max-width:250px;" alt="npj">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><strong>Exploring Automatic COVID-19 Diagnosis via voice and symptoms from Crowdsourced Data</strong></h4>
+                <p>Jing Han, Chloë Brown*, Jagmohan Chauhan*, Andreas Grammenos*, Apinan Hasthanasombat*, <i>Dimitris Spathis</i>*, Tong Xia*, Pietro Cicuta, Cecilia Mascolo <br>
+                <em><a href="https://doi.org/10.1109/ICASSP39728.2021.9414576"
+              >International Conference on Acoustics, Speech, & Signal Processing
+            (ICASSP)</a></em>, Toronto, Canada <br>
+                <div class="btn-group-sm">
+              <a href="https://doi.org/10.1109/ICASSP39728.2021.9414576"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://arxiv.org/pdf/2102.05225.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+              <a href="https://covid-19-sounds.org/blog/voice_covid_icassp"
+              class="btn btn-default"><i class="fa fa-newspaper-o fa-lg"></i> Blog post</a>
+          </p>
+            </div>
+        </div>
+    </div>
+
+
+   
+
+          <!-- IMWUT 2021 -->
+
+                      <div class="media">
+              <div class="media-left media-middle hidden-xs hidden-sm">
+                <a href="img/imwut21.png">
+                  <img class="media-object" src="img/imwut21.png"  style="max-width:250px;" alt="npj">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><strong><em>SelfHAR</em>: Improving Human Activity Recognition through Self-training with Unlabeled Data</strong></h4>
+                <p>Chi Ian Tang, Ignacio Perez-Pozuelo*, <i>Dimitris Spathis</i>*, Soren Brage, Nicholas Wareham, Cecilia Mascolo <br>
+                <em><a href="https://doi.org/10.1145/3448112"
+              >Proc. on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT/Ubicomp)</a></em>, 5(1) <br>
+                <div class="btn-group-sm">
+              <a href="https://doi.org/10.1145/3448112"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://dl.acm.org/doi/pdf/10.1145/3448112"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+              <a href="https://github.com/iantangc/SelfHAR"
+              class="btn btn-default"><i class="fa fa-github fa-lg"></i> Code</a> 
+              <a href="https://youtu.be/WpZCiUXUNAo"
+              class="btn btn-default"><i class="fa fa-play fa-lg"></i> Promo video (5mins)</a>
+              <a href="https://youtu.be/BzBLSH13kzU"
+              class="btn btn-default"><i class="fa fa-video-camera fa-lg"></i> Talk (13mins) </a>
+          </p>
+            </div>
+        </div>
+    </div>
+
+
+          <!-- Interspeech 2021 -->
+
+          <div class="media">
+              <div class="media-left media-middle hidden-xs hidden-sm">
+                <a href="img/interspeech21.png">
+                  <img class="media-object" src="img/interspeech21.png"  style="max-width:250px;" alt="npj">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><strong><em>The INTERSPEECH 2021 Computational Paralinguistics Challenge</em>: COVID-19 Cough, COVID-19 Speech, Escalation & Primates</strong></h4>
+                <p>Björn W. Schuller, ... <i>Dimitris Spathis</i>, Tong Xia, Pietro Cicuta, Leon J. M. Rothkrantz, Joeri Zwerts, Jelle Treep, Casper Kaandorp <br>
+                <em><a href="https://www.isca-speech.org/archive/interspeech_2021/schuller21_interspeech.html"
+              >Conference of the International Speech Communication Association (Interspeech)</a></em>, Brno, Czechia <br>
+                <div class="btn-group-sm">
+              <a href="https://www.isca-speech.org/archive/interspeech_2021/schuller21_interspeech.html"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://www.isca-speech.org/archive/pdfs/interspeech_2021/schuller21_interspeech.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+              <a href="http://www.compare.openaudio.eu/now/"
+              class="btn btn-default"><i class="fa fa-database fa-lg"></i> Dataset </a>
+          </p>
+            </div>
+        </div>
+    </div>
+
+          
+          <!-- JAMIA 2021 -->
+
+          <div class="media">
+              <div class="media-left media-middle hidden-xs hidden-sm">
+                <a href="img/jamia21.png">
+                  <img class="media-object" src="img/jamia21.png"  style="max-width:250px;" alt="npj">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><strong>Digital Phenotyping and Sensitive Health Data: Implications for Data Governance</strong></h4>
+                <p>Ignacio Perez-Pozuelo, <i>Dimitris Spathis</i>, Jordan Gifford-Moore, Jessica Morley, Josh Cowls <br>
+                <em><a href="https://academic.oup.com/jamia/advance-article/doi/10.1093/jamia/ocab012/6153954"
+              >Journal of the American Medical Informatics Association</a></em>, 28(9) <br>
+                <div class="btn-group-sm">
+              <a href="https://academic.oup.com/jamia/advance-article/doi/10.1093/jamia/ocab012/6153954"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://www.repository.cam.ac.uk/bitstream/handle/1810/316526/ocab012.pdf?sequence=4&isAllowed=y"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+          </p>
+            </div>
+        </div>
+    </div>
+
+
+      
+
+          <!-- MobileHCI 2021 -->
+
+                    <div class="media">
+        <div class="media-left media-middle hidden-xs hidden-sm">
+          <a href="img/mobilehci21.png">
+            <img class="media-object" src="img/mobilehci21.png"  style="max-width:250px;" alt="npj">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><strong>Anticipatory Detection of Compulsive Body-focused Repetitive Behaviors with Wearables</strong></h4>
+          <p>Benjamin Searle, <i>Dimitris Spathis</i>, Marios Constantinides, Daniele Quercia, Cecilia Mascolo <br>
+          <em><a href="https://dl.acm.org/doi/10.1145/3447526.3472061"
+              >ACM International Conference on Mobile Human-Computer Interaction (MobileHCI)</a></em>, Toulouse, France <br>
+          <div class="btn-group-sm">
+              <a href="https://dl.acm.org/doi/10.1145/3447526.3472061"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://dl.acm.org/doi/pdf/10.1145/3447526.3472061"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+              <a href="https://github.com/Bhorda/BFRBAnticipationDataset"
+              class="btn btn-default"><i class="fa fa-github fa-lg"></i> Code </a>
+              <a href="https://medium.com/socialdynamics/skin-picking-and-hair-pulling-disorders-smartwatches-can-stop-965fb852dc6f"
+              class="btn btn-default"><i class="fa fa-newspaper-o fa-lg"></i> Blog post</a>
+              <a href="https://github.com/Bhorda/BFRBAnticipationDataset"
+              class="btn btn-default"><i class="fa fa-database fa-lg"></i> Dataset </a>
+          </p>
+            </div>
+    </div>
+    </div>
+
+
+
+          <!-- ML4H 2021 -->
+
+                    <div class="media">
+        <div class="media-left media-middle hidden-xs hidden-sm">
+          <a href="img/ml4h21.png">
+            <img class="media-object" src="img/ml4h21.png"  style="max-width:250px;" alt="npj">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><strong>Evaluating Contrastive Learning on Wearable Timeseries for Downstream Clinical Outcomes</strong></h4>
+          <p>Kevalee Shah, <i>Dimitris Spathis</i>, Chi Ian Tang, Cecilia Mascolo <br>
+          <em><a href="https://arxiv.org/abs/2111.07089"
+              >Machine Learning for Health (ML4H)</a></em>, Virtual event <br>
+          <div class="btn-group-sm">
+              <a href="https://arxiv.org/abs/2111.07089"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://arxiv.org/pdf/2111.07089.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+          </p>
+            </div>
+    </div>
+    </div>
+
+          <!-- MobiCom 2021 -->
+
+           <div class="media">
+        <div class="media-left media-middle hidden-xs hidden-sm">
+          <a href="img/mobicom21.png">
+            <img class="media-object" src="img/mobicom21.png"  style="max-width:250px;" alt="npj">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><strong>Federated mobile sensing for activity recognition</strong></h4>
+          <p>Stefanos Laskaridis, <i>Dimitris Spathis</i>, Mario Almeida <br>
+          <em><a href="https://dl.acm.org/doi/abs/10.1145/3447993.3488031"
+              >ACM International Conference on Mobile Computing and Networking (MobiCom)</a></em>, New Orleans, USA (tutorial) <br>
+          <div class="btn-group-sm">
+              <a href="https://dl.acm.org/doi/abs/10.1145/3447993.3488031"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://dl.acm.org/doi/pdf/10.1145/3447993.3488031?casa_token=sRVbM3EVRwsAAAAA:4VRt_cEajLs-dC81KAL8nhNqYnlplXadIjdkQ9FOFxG0c4pLjsaGRgECmxBXbTwJHPZS-VeWNO2q"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+              <a href="https://gitlab.com/stevelaskaridis/federatedsensing-mobicom21"
+              class="btn btn-default"><i class="fa fa-github fa-lg"></i> Code </a>
+              <a href="https://federatedsensing.gitlab.io"
+              class="btn btn-default"><i class="fa fa-newspaper-o fa-lg"></i> Project</a>
+              <a href="https://youtu.be/HYSep0yZECc"
+              class="btn btn-default"><i class="fa fa-video-camera fa-lg"></i> Talk (31mins) </a>
+          </p>
+            </div>
+    </div>
+    </div>
+
+          <!-- Digital Health 2021 -->
+
+          <div class="media">
+        <div class="media-left media-middle hidden-xs hidden-sm">
+          <a href="img/chapter21.png">
+            <img class="media-object" src="img/chapter21.png"  style="max-width:250px;" alt="npj">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><strong>Wearables, smartphones and artificial intelligence for digital phenotyping and health</strong></h4>
+          <p>Ignacio Perez-Pozuelo, <i>Dimitris Spathis</i>, Emma Clifton, Cecilia Mascolo <br>
+          <em><a href="https://doi.org/fpfv"
+              >Digital Health</a></em>, Chapter 3  <br>
+          <div class="btn-group-sm">
+              <a href="https://doi.org/fpfv"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://www.repository.cam.ac.uk/bitstream/handle/1810/313818/Elsevier%20Digital%20Health%20accepted%20version.pdf?sequence=1&isAllowed=y"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+            
+          </p>
+            </div>
+    </div>
+    </div>
+
+
+          <h3>2020</h3> 
+
+          <!-- KDD 2020 -->
+
+          <div class="media">
+        <div class="media-left media-middle hidden-xs hidden-sm">
+          <a href="img/kdd20.png">
+            <img class="media-object" src="img/kdd20.png"  style="max-width:250px;" alt="npj">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><strong>Exploring Automatic Diagnosis of COVID-19 from Crowdsourced Respiratory Sound Data</strong></h4>
+          <p>Chloë Brown*, Jagmohan Chauhan*, Andreas Grammenos*, Jing Han*, Apinan Hasthanasombat*, <i>Dimitris Spathis</i>*, Tong Xia*, Pietro Cicuta, Cecilia Mascolo <br>
+
+          <em><a href="https://dl.acm.org/doi/abs/10.1145/3447993.3488031"
+              >International Conference on Knowledge Discovery and Data Mining
+(KDD)</a></em>, San Diego, USA <br>
+          <font class="caps" color=#be1e2d><i class="fa fa-star fa-xs"></i> Oral presentation</font> <font class="caps" color=#f39c12><i class="fa fa-trophy fa-xs"></i> Cambridge University Hall of Fame Better Future Award</font>
+          <div class="btn-group-sm">
+              <a href="https://doi.org/10.1145/3394486.3412865"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="papers/KDD_Exploring_automatic_Brown_et_al.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+              <a href="https://github.com/cam-mobsys/covid19-sounds-kdd20"
+              class="btn btn-default"><i class="fa fa-github fa-lg"></i> Code </a>
+              <a href="https://covid-19-sounds.org/blog/detect_covid_kdd"
+              class="btn btn-default"><i class="fa fa-newspaper-o fa-lg"></i> Blog post</a>
+              <a href="https://youtu.be/l8stvxjBjKs"
+              class="btn btn-default"><i class="fa fa-video-camera fa-lg"></i> Talk (21mins) </a>
+          </p>
+            </div>
+    </div>
+    </div>
+
+
+          
+
+          <!-- Neurips-W (Spathis) 2020 -->
+
+              <div class="media">
+        <div class="media-left media-middle hidden-xs hidden-sm">
+          <a href="img/neuripsw20a.png">
+            <img class="media-object" src="img/neuripsw20a.png"  style="max-width:250px;" alt="npj">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><strong>Learning Generalizable Physiological Representations from Large-scale Wearable Data</strong></h4>
+          <p>Dimitris Spathis</i>, Ignacio Perez-Pozuelo, Soren Brage, Nicholas Wareham, Cecilia Mascolo<br>
+          NeurIPS Machine Learning for Mobile Health workshop <em><a href="https://sites.google.com/view/ml4mobilehealth-neurips-2020/home"
+              >(ML4MH @ NeurIPS)</a></em>, Vancouver, Canada <br>
+          <div class="btn-group-sm">
+              <a href="https://arxiv.org/pdf/2011.04601.pdf"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://arxiv.org/pdf/2011.04601.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+              <a href="https://github.com/sdimi/Step2heart"
+              class="btn btn-default"><i class="fa fa-github fa-lg"></i> Code </a>
+          </p>
+            </div>
+    </div>
+    </div>
+
+          <!-- Neurips-W (Tang) 2020 -->
+
+
+              <div class="media">
+        <div class="media-left media-middle hidden-xs hidden-sm">
+          <a href="img/neuripsw20b.png">
+            <img class="media-object" src="img/neuripsw20b.png"  style="max-width:250px;" alt="npj">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><strong>Exploring Contrastive Learning in Human Activity Recognition for Healthcare</strong></h4>
+          <p>Chi Ian Tang, Ignacio Perez-Pozuelo, <i>Dimitris Spathis</i>, Cecilia Mascolo<br>
+          NeurIPS Machine Learning for Mobile Health workshop <em><a href="https://sites.google.com/view/ml4mobilehealth-neurips-2020/home"
+              >(ML4MH @ NeurIPS)</a></em>, Vancouver, Canada <br>
+          <div class="btn-group-sm">
+              <a href="https://arxiv.org/pdf/2011.11542.pdf"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://arxiv.org/pdf/2011.11542.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+              <a href="https://github.com/iantangc/ContrastiveLearningHAR"
+              class="btn btn-default"><i class="fa fa-github fa-lg"></i> Code </a>
+          </p>
+            </div>
+    </div>
+    </div>
+
+
+          <h3>2019</h3> 
+
+
+          <!-- KDD 2019 -->
+
+               <div class="media">
+        <div class="media-left media-middle hidden-xs hidden-sm">
+          <a href="img/kdd19.png">
+            <img class="media-object" src="img/kdd19.png"  style="max-width:250px;" alt="npj">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><strong>Sequence Multi-task Learning to Forecast Mental Wellbeing from Sparse Self-reported Data</strong></h4>
+          <p><i>Dimitris Spathis</i>, Sandra Servia, Katayoun Farrahi, Cecilia Mascolo, Jason Rentfrow <br>
+
+          <em><a href="https://doi.org/10.1145/3292500.3330730"
+              >International Conference on Knowledge Discovery and Data Mining
+(KDD)</a></em>, Anchorage, USA <br>
+          <font class="caps" color=#be1e2d><i class="fa fa-star fa-xs"></i> Oral presentation (Top 6%)</font>
+          <div class="btn-group-sm">
+              <a href="https://doi.org/10.1145/3292500.3330730"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="papers/KDD_Sequence_multi_Spathis_et_al.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+              <a href="https://www.youtube.com/watch?v=fgtkr_4ienw"
+              class="btn btn-default"><i class="fa fa-play fa-lg"></i> Promo video (3mins) </a>
+              <a href="https://dl.acm.org/doi/10.1145/3292500.3330730#sec-supp"
+              class="btn btn-default"><i class="fa fa-video-camera fa-lg"></i> Talk (21mins) </a>
+          </p>
+            </div>
+    </div>
+    </div>
+
+
+
+          
+          <!-- PervasiveHealth 2019 -->
+
+                        <div class="media">
+        <div class="media-left media-middle hidden-xs hidden-sm">
+          <a href="img/pervhealth19.png">
+            <img class="media-object" src="img/pervhealth19.png"  style="max-width:250px;" alt="npj">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><strong>Passive mobile sensing and psychological traits for large scale mood prediction</strong></h4>
+          <p><i>Dimitris Spathis</i>, Sandra Servia, Katayoun Farrahi, Cecilia Mascolo, Jason Rentfrow <br>
+
+          <em><a href="https://doi.org/10.1145/3329189.3329213"
+              >International Conference on Pervasive Computing Technologies for Healthcare (PervasiveHealth)</a></em>, Trento, Italy <br>
+          <div class="btn-group-sm">
+              <a href="https://doi.org/10.1145/3329189.3329213"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="papers/PH_Passive_mobile_Spathis_et_al.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+          </p>
+            </div>
+    </div>
+    </div>
+
+          <h3>Pre-PhD (2013-2018)</h3> 
+          <!-- KBS 2019 -->
+
+          <p>
+            <strong>Interactive dimensionality reduction
+using similarity projections</strong><br>
+            <i>Dimitris Spathis</i>, Nikolaos Passalis, Anastasios Tefas<br>
+            <em><a href="http://doi.org/cxbm"
+              >Knowledge-Based Systems</a></em>, 165 <br>
+            <div class="btn-group-sm">
+
+              <a href="http://doi.org/cxbm"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://arxiv.org/pdf/1811.05531.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+            </div>
+
+          </p>
+
+          <!-- ECCV 2018 -->
+          <p>
+            <strong>Fast, Visual and Interactive Semi-supervised Dimensionality Reduction</strong><br>
+            <i>Dimitris Spathis</i>, Nikolaos Passalis, Anastasios Tefas<br>
+            ECCV Efficient Feature Representation Learning workshop<em><a href="http://doi.org/cz6d"
+              > (CEFRL @ ECCV 2018)</a></em>, Munich, Germany <br>
+            
+            <div class="btn-group-sm">
+              <a href="http://doi.org/cz6d"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="papers/ECCV_Fast_visual_Spathis_et_al.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+            </div>
+
+          </p>
+
+          <!-- HIJ 2017 -->
+
+          
+          <p>
+            <strong>Diagnosing Asthma and Chronic Obstructive Pulmonary Disease with Machine Learning</strong><br>
+            <i>Dimitris Spathis</i>, Panayiotis Vlamos<br>
+            <em><a href="http://doi.org/cbzh"
+              >Health Informatics Journal</a></em>, 25(3)<br>
+            
+            <div class="btn-group-sm">
+               <a href="http://doi.org/cbzh"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="papers/HIJ_Diagnosing_asthma_Spathis_et_al.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+            </div>
+
+          </p>
+
+          <!-- ACL 2017 -->
+          <p>
+            <strong>Class-based Prediction Errors to Detect Hate Speech with
+Out-of-vocabulary Words</strong><br>
+            Joan Serra, Ilias Leontiadis, <i>Dimitris Spathis</i>, Gianluca Stringhini, Jeremy Blackburn, Athena Vakali<br>
+
+            ACL Abusive Language Online workshop<em><a href="http://doi.org/b94p"
+              > (ALW @ ACL 2017)</a></em>, Vancouver, Canada <br>
+
+            <div class="btn-group-sm"> 
+               <a href="http://doi.org/b94p"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="papers/ACL_Class_based_Serra_et_al.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+            </div>
+            
+
+          </p>
+          
+
+          <!-- EAAI 2016 -->
+          <p>
+            <strong>A comparison between semi-supervised and supervised text mining techniques on detecting irony in greek political tweets</strong><br>
+            Basilis Charalampakis, <i>Dimitris Spathis</i>, Elias Kouslis, Katia Kermanidis<br>
+            <em><a href="http://doi.org/bzxq"
+              >Engineering Applications of Artificial Intelligence</a></em>, 51<br>
+            
+      
+            <div class="btn-group-sm">
+
+              <a href="http://doi.org/bzxq"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="papers/EAAI_Detecting_Irony_Charalambakis_et_al.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+            </div>
+          </p>
+
+          
+          <!-- EANN 2015 -->
+          <p>
+            <strong>Detecting Irony on Greek Political Tweets: A Text Mining Approach</strong><br>
+            Basilis Charalampakis, <i>Dimitris Spathis</i>, Elias Kouslis, Katia Kermanidis<br>
+            <em><a href="http://doi.org/bzxr"
+              >International Conference on Engineering Applications of Neural Networks</a></em>, Rhodes, Greece<br>
+            
+            <div class="btn-group-sm">
+              <a href="http://doi.org/bzxr"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="papers/EANN_Detecting_Irony_Charalambakis_et_al.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+            </div>
+
+          </p>
+
+          
+          <!-- ER 2017 -->
+          <p>
+            <strong>Glocal News: An Attempt to Visualize the Discovery of Localized Top Local News, Globally</strong><br>
+            <i>Dimitris Spathis</i>, Theofilos Mouratidis, Spyros Sioutas, Athanasios Tsakalidis<br>
+            <em><a href="http://doi.org/bzxs"
+              >International Conference on Conceptual Modeling</a></em>, Hong Kong, China<br>
+
+            <div class="btn-group-sm">
+
+               <a href="http://doi.org/bzxs"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="papers/LNCS_Glocal_News_Spathis_et_al.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+            </div>
+
+
+
+
+          </p>
+
+
+
+          <h3>Theses</h3>
+          <hr>
+
+          <!-- PhD -->
+          <p>
+            <strong>Machine learning to model health with multimodal mobile sensor data</strong><br>
+            PhD thesis <br>
+             
+            <em>University of Cambridge</em>, 2021
+            <div class="btn-group-sm">
+
+               <a href="https://www.repository.cam.ac.uk/handle/1810/333746"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="https://www.repository.cam.ac.uk/bitstream/handle/1810/333746/Spathis%20PhD%20thesis.pdf?sequence=3&isAllowed=y"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+            </div>
+          </p>
+
+          <!-- MSc -->
+          <p>
+            <strong>Learning to interact with high-dimensional data</strong><br>
+            MSc thesis <br>
+             
+            <em>Aristotle University</em>, 2017
+            <div class="btn-group-sm">
+
+              <a href="http://ikee.lib.auth.gr/record/289476?ln=en"
+              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
+              <a href="http://ikee.lib.auth.gr/record/289476/files/GRI-2017-19250.pdf"
+              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
+            </div>
+          </p>
+
+          
+        </div>
+
+
+        <div class="row">
+          <h2><a name="service"></a>🧐 Academic service</h2>
+          <hr>
+          
         
-        <hr class="star-primary">
-<!--         <footer>
-            <small>
-                <center>
-                    © 2015 | D. Zeinalipour. Credits: AR template
-                    <a onclick="javascript:$('#credit').toggle();"><img border="0" src="images/ccby.png"/></a>
-                    <div style="display:none;" id="credit">[AR template available under Creative Commons CC BY 4.0 licence:
-                        <a href="https://github.com/dmsl/academic-responsive-template" target="_blank">
-                            https://github.com/dmsl/academic-responsive-template
-                        </a> ]
-                    </div>
-                </center>
-            </small>
-        </footer>        
- -->    </body>
-    
+          <p>
+              <strong>Organizer</strong>:
+
+            <ul>
+
+              <li>
+               Co-organizer and track chair of <a href="https://www.chilconference.org/">CHIL 2023</a>, Boston, USA.
+              </li>
+
+                <li>
+
+               Senior panel/roundtable chair at <a href="https://ml4health.github.io/2022//">ML4H 2022</a>, New Orleans, USA.
+                </li>
+
+              <li>
+               Chair of <a href="https://wellcomp-workshop.github.io/2022/">WellComp 2022</a> workshop at UbiComp 2022, Cambridge, UK.
+              </li>
+
+                <li>
+
+               Co-organizer of the <a href="https://federatedsensing.gitlab.io/">Federated sensing tutorial</a> at <span title="Annual International Conference On Mobile Computing And Networking" data-toggle="tooltip" data-placement="bottom" >MobiCom 2021</span>, New Orleans, USA.
+                </li>
+
+                
+
+                
+            </ul>
+                
+          </p>
+
+          <p>
+              <strong>Program Committee Member</strong>: 
+              <span title="AAAI Conference on Artificial Intelligence" data-toggle="tooltip" data-placement="bottom" ><a href="https://aaai.org/Conferences/AAAI-21/wp-content/uploads/2021/05/AAAI-21-Program-Committee.pdf">AAAI</a> 2021-2023</span>,
+
+              <span title="International Joint Conference on Artificial Intelligence" data-toggle="tooltip" data-placement="bottom" ><a href="https://www.ijcai.org/proceedings/2020/preface.pdf">IJCAI</a> 2020</span>,
+
+              <span title="ACM International Conference on Knowledge Discovery & Data Mining" data-toggle="tooltip" data-placement="bottom" ><a href="https://kdd.org/kdd2021/organizers/PC_SPC">KDD</a> 2020-2023 (PC & Session Chair)</span>,
+
+               <span title="SIAM International Conference on Data Mining" data-toggle="tooltip" data-placement="bottom" >SIAM SDM 2022</span>, 
+
+               <a href="https://www.sensiblend.io/organizers/">Sensiblend</a> @ <span title="ACM Proceedings on Interactive, Mobile, Wearable and Ubiquitous Technologies" data-toggle="tooltip" data-placement="bottom">Ubicomp 2021</span>, 
+
+               <a href="https://mobiquitous.eai-conferences.org/2022/technical-program-committee/">Mobiquitous</a> 2022.
+
+                
+            </p>
+
+
+            <p>
+              <strong>Reviewer</strong>: <span title="Conference on Neural Information Processing Systems" data-toggle="tooltip" data-placement="bottom" >NeurIPS</span>,
+              <span title="International Conference on Learning Representations" data-toggle="tooltip" data-placement="bottom" >ICLR</span>, 
+
+              <span title="International Conference on Machine Learning" data-toggle="tooltip" data-placement="bottom" >ICML</span>, 
+
+              <span title="AAAI Conference on Artificial Intelligence" data-toggle="tooltip" data-placement="bottom" >AAAI</span>, 
+
+              <span title="International Joint Conference on Artificial Intelligence" data-toggle="tooltip" data-placement="bottom" >IJCAI</span>, 
+
+              <span title="ACM International Conference on Knowledge Discovery & Data Mining" data-toggle="tooltip" data-placement="bottom" >KDD</span>,
+
+              <span title="ACM Conference on Human Factors in Computing Systems" data-toggle="tooltip" data-placement="bottom" >CHI</span>, 
+
+              <span title="ACM Proceedings on Interactive, Mobile, Wearable and Ubiquitous Technologies" data-toggle="tooltip" data-placement="bottom" >Ubicomp/IMWUT</span>, 
+
+            <span title="Conference on Health, Inference, and Learning" data-toggle="tooltip" data-placement="bottom" >CHIL</span>, Nature Digital Medicine, Nature Scientific Reports,
+
+              <span title="IEEE International Conference on Acoustics, Speech and Signal Processing" data-toggle="tooltip" data-placement="bottom" >ICASSP</span>, 
+
+              Expert Systems with Applications, Neurocomputing,
+              WWW/The Web Conference, Engineering Applications of Artificial Intelligence, 
+
+              Sensors,
+
+              <span title="AAAI International Conference on Web and Social Media" data-toggle="tooltip" data-placement="bottom" >ICWSM</span>,
+
+              <span title="International Conference on Pattern Recognition " data-toggle="tooltip" data-placement="bottom" >ICPR</span>, Pervasive and Mobile Computing, Computer Networks, The Visual Computer,
+
+               and more.
+            </p>
+          
+        </div>
+
+          <div class="row">
+          <h2><a name="talks"></a>📢 Talks</h2>
+          <hr>
+
+          <em>Looking for Out-of-Distribution Environments in Multi-center Critical Care Data </em>
+       <ul style="list-style-type: lower-alpha; list-style: none;">
+          <li style="margin-left:0.1em">📍 <a href="https://ml4health.github.io/2022/"> ML4H'22</a>, New Orleans, USA (co-located with NeurIPS'22)<span style="font-size:13px; vertical-align:center"> — November 28, 2022</span></li>
+      </ul>
+
+          <em>Representation learning for cardio-fitness prediction in free-living environments </em>
+       <ul style="list-style-type: lower-alpha; list-style: none;">
+          <li style="margin-left:0.1em">📍 <a href="https://www.kcl.ac.uk/mental-health-and-psychological-sciences/about/departments/biostatistics-and-health-informatics?"> King's College London</a>, Precision Health Informatics Data Lab, London, UK<span style="font-size:13px; vertical-align:center"> — November 24, 2022</span></li>
+      </ul>
+
+          <em>AI-powered Wearables Transforming Mobile Health </em>
+       <ul style="list-style-type: lower-alpha; list-style: none;">
+          <li style="margin-left:0.1em">📍 <a href="https://london.theaisummit.com/speakers/dimitris-spathis"> AI Summit</a>, London Tech week, London, UK<span style="font-size:13px; vertical-align:center"> — June 16, 2022</span></li>
+      </ul>
+
+          <em>Federated learning for human activity recognition</em>
+       <ul style="list-style-type: lower-alpha; list-style: none;">
+          <li style="margin-left:0.1em">📍 <a href="https://www.sigmobile.org/mobicom/2021/"> Mobicom'21</a> (held 2022), New Orleans, USA<span style="font-size:13px; vertical-align:center"> — April 1, 2022</span></li>
+      </ul>
+
+          <em>Self-supervised learning for health signals</em>
+       <ul style="list-style-type: lower-alpha; list-style: none;">
+          <li style="margin-left:0.1em">📍 <a href="https://feinstein.northwell.edu/"> Feinstein Institutes of Northwell Health</a>, New York, USA (remote)<span style="font-size:13px; vertical-align:center"> — March 22, 2022</span></li>
+      </ul>
+
+          <em>COVID-19 Sounds: A Large-Scale Audio Dataset for Digital Respiratory Screening</em>
+       <ul style="list-style-type: lower-alpha; list-style: none;">
+          <li style="margin-left:0.1em">📍 <a href="https://neurips.cc/Conferences/2021">NeurIPS'21</a>, virtual event, Australia<span style="font-size:13px; vertical-align:center"> — December 7, 2021</span></li>
+          <li style="margin-left:0.1em">📍 <a href="https://www.neuripsmeetupcambridge.info/">NeurIPS MeetUp Cambridge</a>, University of Cambridge, UK<span style="font-size:13px; vertical-align:center"> — December 8, 2021</span></li>
+      </ul>
+
+          <em>Towards unsupervised wearable representations
+for longitudinal cardio-fitness prediction</em>
+       <ul style="list-style-type: lower-alpha; list-style: none;">
+          <li style="margin-left:0.1em">📍 <a href="https://mobiuk.org/">MobiUK'21</a>, virtual event, UK<span style="font-size:13px; vertical-align:center"> — July 6, 2021</span></li>
+      </ul>
+          
+            <em>Learning Generalizable Physiological Representations from Large-scale Wearable Data</em>
+             <ul style="list-style-type: lower-alpha; list-style: none;">
+          <li style="margin-left:0.1em">📍 <a href="https://www.chilconference.org/">CHIL'21</a>, virtual event, USA <span style="font-size:13px; vertical-align:center">— April 8, 2021</span></li>  
+                  <li style="margin-left:0.1em">📍 <a href="https://sites.google.com/view/ml4mobilehealth-neurips-2020/home">NeurIPS'20 ML4MH workshop</a>, virtual event, Canada <span style="font-size:13px; vertical-align:center">— December 12, 2020</span></li>      
+            </ul>
+          
+             <em>AI to model Human Behaviour and Health</em>
+             <ul style="list-style-type: lower-alpha; list-style: none;">
+        <li style="margin-left:0.1em">📍 <a href="https://mcr.jesus.cam.ac.uk/conference/">Jesus College Postgraduate Conference</a>, virtual event, UK <span style="font-size:13px; vertical-align:center">— March 5, 2021</span></li>   
+                  <li style="margin-left:0.1em">📍 <a href="https://labs.uk.barclays/">Barclays</a> Eagle Lab, Cambridge, UK <span style="font-size:13px; vertical-align:center">— March 12, 2020</span></li>
+          
+            </ul>
+
+            <em>Sequence Multi-task Learning to Forecast Mental Wellbeing from Sparse Self-reported Data</em>
+             <ul style="list-style-type: lower-alpha; list-style: none;">
+                  <li style="margin-left:0.1em">📍 <a href="https://www.kdd.org/kdd2019/">KDD'19</a>, Anchorage, USA <span style="font-size:13px; vertical-align:center"> — August 4, 2019</span></li>
+            </ul>
+
+            <em>Passive mobile sensing and psychological traits for large scale mood prediction</em>
+             <ul style="list-style-type: lower-alpha; list-style: none;">
+                  <li style="margin-left:0.1em">📍 <a href="https://pervasivehealth.eai-conferences.org/2019/">PervasiveHealth'19</a>, Trento, Italy <span style="font-size:13px; vertical-align:center">— May 20, 2019</span></li>
+            </ul>
+
+            <em>Deep sequence learning for large-scale inference of human behaviour from mobile sensor data</em>
+             <ul style="list-style-type: lower-alpha; list-style: none;">
+                  <li style="margin-left:0.1em">📍  <a href="https://www.mrc-epid.cam.ac.uk/">MRC Epidemiology Unit</a>, University of Cambridge, UK<span style="font-size:13px; vertical-align:center"> — March 5, 2019</span></li>
+                  <li style="margin-left:0.1em">📍 <a href="https://www.ocadogroup.com/technology/technology-pioneers">Ocado</a>, Barcelona, Spain & Hatfield, UK (remote) <span style="font-size:13px; vertical-align:center"> — July 10, 2019</span></li>
+            </ul>
+
+            <em>Fast, Visual and Interactive Semi-supervised Dimensionality Reduction</em>
+             <ul style="list-style-type: lower-alpha; list-style: none;">
+                  <li style="margin-left:0.1em">📍 <a href="https://ai.facebook.com/">Facebook</a> PhD Open House, London, UK <span style="font-size:13px; vertical-align:center"> — October 25, 2018</span></li>
+            </ul>
+
+            <em>Deep Sequence Learning on Mobile Data for Mood Prediction</em>
+             <ul style="list-style-type: lower-alpha; list-style: none;">
+                  <li style="margin-left:0.1em">📍 <a href="https://mobiuk.org/2018/">MobiUK'18</a>, Cambridge, UK<span style="font-size:13px; vertical-align:center"> — September 13, 2018</span></li>
+            </ul>
+
+            <em>Class-based Prediction Errors to Detect Hate Speech with Out-of-vocabulary Words</em>
+             <ul style="list-style-type: lower-alpha; list-style: none;">
+                  <li style="margin-left:0.1em">📍 <a href="https://sites.google.com/site/abusivelanguageworkshop2017/">ACL'17 Abusive Language workshop</a>, Vancouver, Canada<span style="font-size:13px; vertical-align:center"> — August 4, 2017</span></li>
+            </ul>
+
+            <em>Detecting Irony on Greek Political Tweets: A Text Mining Approach</em>
+             <ul style="list-style-type: lower-alpha; list-style: none;">
+                  <li style="margin-left:0.1em">📍 <a href="http://delab.csd.auth.gr/eann2015//">EANN'15</a>, Rhodes, Greece<span style="font-size:13px; vertical-align:center"> — September 25, 2015</span></li>
+            </ul>
+        </div>
+
+        <div class="row">
+          <h2><a name="press"></a>🗞️ Press</h2>
+          <hr>
+          <p>
+            Audio AI for COVID-19: 
+              <a href="https://www.cam.ac.uk/research/news/new-app-collects-the-sounds-of-covid-19">Cambridge University (1)</a>,
+              <a href="https://www.cst.cam.ac.uk/news/your-phone-could-tell-us-if-you-have-coronavirus">(2)</a>,
+              <a href="https://www.cst.cam.ac.uk/news/presenting-hall-fame-awards">(3)</a>,
+              <a href="https://www.cst.cam.ac.uk/news/remote-monitoring-successfully-tracks-covid-19-progression-over-time">(4)</a>,
+              <a href="https://www.bbc.co.uk/news/technology-52215290">BBC</a>,
+              <a href="https://www.theguardian.com/world/2020/sep/21/what-is-persistent-cough-and-how-to-i-recognise-it-coronavirus-covid">The Guardian</a>,
+              <a href="https://www.ft.com/content/af763300-9fc6-4863-b5bf-c3e670301c09">Financial Times</a>,
+              <a href="https://archive.ph/IRAX1">The Times</a>,
+              <a href="https://www.forbes.com/sites/marcwebertobias/2020/05/05/ai-and-medical-diagnostics-can-a-smartphone-app-detect-covid-19-from-speech-or-a-cough/#144df95f5436">Forbes</a>,
+              <a href="https://slate.com/technology/2020/04/cough-covid19-coronavirus-app.html">Slate</a>,
+              <a href="https://www.huffingtonpost.co.uk/entry/resapp-phone-cough-covid-test_uk_625e7b1fe4b0be72bffa32e9">Huffington Post</a>,
+              <a href="https://www.dailymail.co.uk/sciencetech/article-8192043/Cough-Researchers-launch-Covid-19-Sounds-App.html">DailyMail</a>,
+              <a href="https://www.itv.com/news/anglia/2020-04-06/scientists-want-cough-recordings-to-help-diagnose-covid-19/">ITV</a>,
+              <a href="https://spectrum.ieee.org/ai-recognizes-covid-19-in-the-sound-of-a-cough">IEEE Spectrum</a>,
+              <a href="https://thenextweb.com/news/researchers-want-your-voice-to-train-coronavirus-detecting-ai">TheNextWeb</a>,
+              <a href="https://us11.campaign-archive.com/?u=f8609630ae206654824f897b6&id=d274162ebb">STAT</a>,
+              <a href="https://www.epfl.ch/labs/esl/the-race-between-researchers-for-the-diagnosis-of-covid-19-in-the-sound-of-a-cough/">EPFL</a>,
+              <a href="https://www.the-scientist.com/news-opinion/ai-assisted-cough-tracking-could-help-detect-the-next-pandemic--68233">TheScientist</a>,
+              <a href="https://www.theregister.com/2020/04/06/covid19_app_collects_sound_of_your_cough/">The Register</a>,
+              <a href="https://www.kdnuggets.com/2020/12/covid-cough-ai-detecting-sounds.html">KDnuggets</a>,
+              <a href="https://www.wbur.org/hereandnow/2020/12/03/detecting-covid-19-through-sound">NPR/WBUR</a>,
+              <a href="https://www.rsb.org.uk/biologist-covid-19/pietro-cicuta">Royal Society of Biology</a>,
+              <a href="https://www.thelancet.com/journals/landig/article/PIIS2589-7500(21)00141-2/fulltext">Lancet Digital Health</a>,
+              <a href="https://www.psychologytoday.com/gb/blog/language-in-the-wild/202012/is-voice-test-covid-coming-smartphone-near-you">Psychology Today</a>,
+              <a href="https://elpais.com/tecnologia/2020-04-25/se-buscan-donantes-de-voz-para-capturar-los-sonidos-de-la-covid-19.html">El Pais</a>,
+              <a href="http://www.rainews.it/dl/rainews/media/130420-323-varvello-uk-virus-463ba7c4-b4fd-4ae1-a6e4-9ca5a20767d2.html">RAI</a>,
+              <a href="https://www.corriere.it/salute/ehealth/cards/aiutateci-realizzare-web-app-monitorare-casa-segnali-coronavirus/studio-cambridge.shtml">Corriere della Sera</a>,
+              <a href="https://www.focus.it/scienza/salute/un-app-capisce-dalla-voce-se-abbiamo-la-covid">Focus</a>,
+              <a href="https://www.derstandard.at/jetzt/livebericht/2000116635062/1000186508/fast-2-000-tote-in-den-usa-binnen-eines-tages">DerStandard</a>.
+             </p>
+
+             <p> AI for wearables:
+              <a href="https://www.cam.ac.uk/research/news/fitness-levels-can-be-accurately-predicted-using-wearable-devices-no-exercise-required">Cambridge University (1)</a>,
+              <a href="https://www.cam.ac.uk/business/nokiabelllabs">(2)</a>,
+              <a href="https://venturebeat.com/2020/11/11/researchers-claim-ai-algorithm-use-heart-rate-and-motion-data-to-predict-age-sex-and-more/">VentureBeat</a>,
+              <a href="https://archive.ph/JkOp6">Business Insider</a>,
+              <a href="https://cacm.acm.org/careers/267362-wearable-devices-accurately-predict-fitness-levels">Communications of the ACM</a>,
+              <a href="https://www.ncqa.org/digital-measures/resources/blogs/da0b0894-e16f-4e75-95d1-6283888f316c/">National Committee for Quality Assurance</a>.
+             </p>
+
+             <p> Big data for psychology:
+              <a href="https://www.cam.ac.uk/stories/musical-preferences-unite-personalities-worldwide">Cambridge University</a>,
+              <a href="https://archive.ph/HtQvL#selection-735.0-735.85">The Times</a>,
+              <a href="https://edition.cnn.com/2022/04/07/health/music-brain-wellness-scn/index.html">CNN</a>,
+              <a href="https://www.telegraph.co.uk/news/2022/02/09/fans-ed-sheeran-extroverts-says-cambridge-study-music-personality/">The Telegraph</a>,
+              <a href="https://news.sky.com/story/what-does-your-music-taste-say-about-your-personality-study-uncovers-link-between-listening-tastes-and-character-traits-12538105">Sky News</a>,
+              <a href="https://www.itv.com/news/anglia/2022-02-10/what-your-music-tastes-say-about-you-why-fans-of-ed-sheeran-are-extroverts">ITV</a>,
+              <a href="https://www.dailymail.co.uk/sciencetech/article-10494393/What-music-choice-says-personality.html">DailyMail</a>,
+              <a href="https://www.inc.com/jessica-stillman/hiring-music-taste-study.html">Inc.</a>,
+              <a href="https://www.ctvnews.ca/lifestyle/personality-and-musical-preference-are-connected-largely-the-same-way-no-matter-where-you-live-study-1.5779935">CTV</a>,
+              <a href="https://www.facebook.com/ZDFterraX/videos/632525978041682/?__tn__=%2CO">ZDF</a>,
+              <a href="https://archive.ph/ZtxHS">ABC.ES</a>,
+              <a href="https://www.abc.net.au/radio/programs/aca-on-demand/what-does-your-music-choice-say-about-your/13753990">ABC.AU</a>,
+              <a href="https://www.elle.fr/Love-Sexe/News/Nos-gouts-musicaux-varient-en-fonction-de-notre-personnalite-3994308">ELLE</a>,
+              <a href="https://www.cosmopolitan.fr/ce-que-vos-gouts-musicaux-revelent-de-votre-personnalite,2055654.asp">Cosmopolitan</a>,
+              <a href="https://www.rtbf.be/article/notre-playlist-musicale-le-reflet-de-notre-personnalite-10934854">RTBF</a>,
+              <a href="https://youtu.be/evVRxrOo5iw">TEDx</a>.
+             </p>
+
+             <p>Interviews: <a href="https://indiaai.gov.in/article/there-is-huge-potential-for-clinical-ai-in-the-future-dimitris-spathis-nokia-bell-labs">IndiaAI.gov</a>
+             </p>
+
+
+             
+          
+
+        </div>
+
+
+
+        <div class="row">
+          <h2><a name="teaching"></a>🎒 Mentoring</h2>
+          <hr>
+          <p>
+          I find it incredibly stimulating working with university students. Some recent research projects I supervised:
+          </p>   
+
+          <ul>
+            <li>Chi Ian Tang — Self-supervised learning in timeseries <span style="color:#a7a7a7">(papers at IMWUT & NeurIPS-W)</span> </li>
+             <li>Benjamin Searle — Predicting compulsive behaviours with wearables <span style="color:#a7a7a7">(paper at MobileHCI)</span> </li>
+             <li>Kevalee Shah — Contrastive learning in activity/clinical timeseries <span style="color:#a7a7a7">(paper at ML4H)</span> </li>
+             <li>Yu (Yvonne) Wu — Weakly-supervised learning for activity timeseries <span style="color:#a7a7a7">(paper at ML4H)</span> </li>
+             <li>Shohreh Deldari — Multimodal self-supervised learning <span style="color:#a7a7a7">(ongoing)</span> </li>
+             <li>Chuen Low — Pure attention models for medical timeseries <span style="color:#a7a7a7"></span> </li>
+              
+          </ul>
+
+
+
+          <p>
+            I have also been a teaching assistant for the following undergraduate courses:
+            </p>   
+
+          <ul>
+             <li><a href="https://www.cl.cam.ac.uk/teaching/1819/MLRD/">Machine Learning & Real-World Data</a> (U. of Cambridge)</li>
+             <li><a href="https://www.cl.cam.ac.uk/teaching/1819/MobSensSys/">Mobile & Sensor Systems</a> (U. of Cambridge)</li>
+             <li><a href="https://www.cl.cam.ac.uk/teaching/1819/SciComp/">Scientific Computing</a> (U. of Cambridge)</li>
+             <li><a href="https://qa.auth.gr/en/class/1/600121197/M1">Numerical Analysis</a> (Aristotle University)</li>
+          </ul>
+        </div>
+
+        <div class="row">
+          <h2><a name="projects"></a>🎠 Playground</h2>
+          <hr>
+
+          <blockquote class="blockquote text-right" style="border-left:none">
+          <p class="mb-0">“The next big thing in technology often starts off looking like a toy”</p>
+          <footer class="blockquote-footer">Chris Dixon (<a href="https://cdixon.org/2010/01/03/the-next-big-thing-will-start-out-looking-like-a-toy">2010</a>)</footer>
+        </blockquote>
+
+
+          
+            <h4>Quantifying name-dropping</h4>
+            <a href="http://communitypoprefs.com">
+              <img src="img/community.jpg" style="max-width:100%;" />
+            </a>
+            <p>
+            <a href="http://communitypoprefs.com/">Communitypoprefs.com</a> is a data visualization website, where we present every pop-culture reference over the course of 5 seasons of the TV series <em>Community</em>.
+            </p>
+            <br>
+
+          
+            <h4>Map out your music taste on Spotify</h4>
+            <a href="https://medium.com/p/fe50c94b8af3">
+              <img src="img/spotify.png" style="max-width:100%;" />
+            </a>
+            <p>
+            Visualizing my favourite songs on Spotify with dimensionality reduction and anomaly detection. <a href="https://medium.com/p/fe50c94b8af3/">Data essay</a> published in <em>Cuepoint Magazine</em>, Medium's premier music publication.
+            </p>
+            <br>
+
+
+            <h4>Children books and childish language?</h4>
+            <a href="http://medium.com/p/100290c94242">
+              <img src="img/books.png" style="max-width:100%;" />
+            </a>
+            <p>
+            Text mining Game of Thrones, Harry Potter, Hunger Games and Lord of the Rings books. <a href="http://medium.com/p/100290c94242/" >Data essay </a>featured in Medium's Editor Picks.
+            </p>
+            <br>
+
+            <h4>Anonymize kids' faces before posting online</h4>
+            <a href="https://devpost.com/software/patronus-k61iv4">
+              <img src="img/patronous.png" style="max-width:100%;" />
+            </a>
+            <p>
+            <a href="https://devpost.com/software/patronus-k61iv4/">Mobile app</a> with face recognition, age estimation, & emotion recognition to blur
+kids or replace their face with emotion-based emoji. Developed during <em>HackZurich 2018</em>.
+            </p>
+            <br>
+
+            <h4>Discover top local news globally</h4>
+            <a href="https://github.com/sdimi/glocalnews.js">
+              <img src="img/glocal.jpg" style="max-width:100%;" />
+            </a>
+            <p>
+            <a href="https://github.com/sdimi/glocalnews.js/">Glocalne.ws</a> was a mashup of Google News and Google Maps. Unfortunately it is now defunct due to API discontinuance.
+            </p>
+            <br>
+
+
+            <h4>Composing music and text with Recurrent Neural Networks</h4>
+            <a href="https://web.archive.org/web/20160628133340/http://users.auth.gr/sdimitris/rnn">
+              <img src="img/rnn.png" style="max-width:100%;" />
+            </a>
+            <p>Training neural networks on massive amounts of musical notation and literature and letting them create their own art. <a href="https://web.archive.org/web/20160628133340/http://users.auth.gr/sdimitris/rnn">Essay</a> in Greek but you can still see/listen to the results.
+            </p>
+            
+          
+
+
+
+
+          
+          
+        </div>
+
+        <div class="row">
+          <h2><a name="personal"></a>🕳️🐇 Personal</h2>
+          <hr>
+            <p>
+            Non-academic things about me: I love music, both playing and listening. I am mostly into art rock and indie folk, with the occasional exception of some well-crafted pop. Although I am an accordionist by training, over the last few years I've been playing mostly piano and ukulele. In a previous life, I performed with the critically acclaimed band <i>The Children of the Oldness</i> (aka <a href="https://en.wikipedia.org/wiki/Kore._Ydro.">Kore Ydro</a>) and recorded the album <i>"Consortium in Amato"</i> (<a href="https://paidiatispalaiotitas.bandcamp.com/album/consortium-in-amato">listen here</a>). </p>
+
+            <p>I also enjoy street photography and in particular playing with light—photography comes from Greek φως (light) and γραφή (writing), or <em>drawing with light</em>. A sample of my shots is on <a href="https://flickr.com/sdimitris">Flickr</a> and one of my landscapes was featured in the <a href="http://huff.to/17N58jI">Huffington Post</a>.</p>
+
+            <p>Lastly, and perhaps most importantly, I'm always on the lookout for ways to move items from the "non-academic list" to the "academic list"—let me know if you'd like to help!
+            </p>     
+          
+        </div>
+      </div>
+    </div>
+    <footer>
+    &nbsp;
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- display tooltips for social links -->
+  <script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip() 
+})
+</script>
+  
+</body>
 </html>
