@@ -1133,6 +1133,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active { border-color: #337ab7
 .alert-info { color: #31708f; background-color: #d9edf7; border-color: #bce8f1 }
 .alert-info hr { border-top-color: #a6e1ec }
 .alert-info .alert-link { color: #245269 }
+.alert-dark {background-color: #D6D8D9;}
 .alert-warning { color: #8a6d3b; background-color: #fcf8e3; border-color: #faebcc }
 .alert-warning hr { border-top-color: #f7e1b5 }
 .alert-warning .alert-link { color: #66512c }
