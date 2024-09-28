@@ -1,627 +1,374 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+    <head>
+        <title>Hong Jia | Home</title>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"">
+        <meta name="author" content="Hong Jia">
+        <meta name="description" content="University of Melbourne, Australia">
+        <meta name="og:title" content="Hong Jia">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <link rel="shortcut icon" href="img/mel.png" type="image/x-icon">
+        
+        <style>
+            .content-wrapper {
+                padding-top: 10px;
+            }
+            .profile-photo {
+                max-width: 100%;
+                height: auto;
+                margin-top: 20px;
+            }
+            .news-container {
+                display: flex;
+                flex-direction: column;
+                gap: 1px;
+            }
+            .news-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 1px;
+                background-color: transparent;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            .news-date {
+                width: 45px;
+                background-color: transparent;
+                color: inherit;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 1px 0;
+                font-size: 12px;
+            }
+            .news-content {
+                flex-grow: 1;
+                padding: 2px 0;
+                border-radius: 0;
+            }
+            .news-content p {
+                margin: 0;
+                line-height: 1.2;
+                font-size: 13px;
+            }
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Academic website of Hong Jia, Research Fellow at the University of Melbourne.">
-  <meta name="author" content="Hong Jia">
-  <link rel="shortcut icon" href="img/mel.png" type="image/x-icon">
-  <title>Hong Jia — Research Fellow </title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-  <script src="https://kit.fontawesome.com/6294d10de4.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./main.css">
-  <style>
-    /* Remove indentation from the unordered list */
-    ul.no-indent {
-        margin: 0;
-        padding: 0;
-        list-style-type: none; /* This removes the bullets */
-    }
-  </style>
-  <style>
-    .HCI {
-      background-color: #004589;
-      color: white;
-      text-decoration: none;
-      padding: 0px 8px;
-      position: relative;
-      display: inline-block;
-      border-radius: 10px;
-    }
-    .EdgeAI {
-    background-color: #A54C78;
-    color: white;
-    text-decoration: none;
-    padding: 0px 8px;
-    position: relative;
-    display: inline-block;
-    border-radius: 10px;
-  }
-  .social-icons {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 10px;
-  }
-  .container-fluid {
-  padding-right: 0px;
-  padding-left: 0px;
-  margin-right: auto;
-  margin-left: auto;
-}
-  </style>
-</head>
-
-<body>
-  <div class="container-fluid">
-
-    <div class="container-fluid" style="padding:20px">
-
-      <!-- we hide the navbar in xs and sm breakpoints  -->
-      <div class="hidden-xs hidden-sm col-sm-3 col-md-2" id="sidebar" role="navigation">
-        <hr>
-        <ul class="nav nav-pills nav-stacked">
-          <li><a href="#about">About</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a href="#talks">Talks</a></li>
-          <li><a href="#teaching">Mentoring</a></li>
-        </ul>
-      </div>
-
-      <div class="col-xs-12 col-sm-9 col-md-9">
-
-        <div class="container-fluid">
-          <div class="col-sm-3">
-            <!-- we place the img -15px left to align with the divider  -->
-            <img src="img/photo2.jpg" class="pull-left" style="margin:20px
-          20px 20px -15px; height:auto; width:130px; border-radius:50%" />
-
-          </div>
-
-          <div class="col-sm-6">
-            <h3><a name="about"></a>Hong Jia</h3>
-            <p class="lead">
-              Research Fellow <br>
-              University of Melbourne<br>
-              <!-- <a href="mailto:hong.jia@unimelb.edu.au"> -->
-              <!-- <i class="fas fa-envelope" style="color:#00468C"></i></a> hong.jia AT unimelb.edu.au<br> -->
-              <!-- <i class="fas fa-envelope" style="color:#CC0000"></i></a> hj359<i class="fas fa-at" style="color:#CC0000"></i>cam.ac.uk -->
-              <a href="mailto:hong.jia@unimelb.edu.au" title="Academic email" class="icon">
-                <i class="fa fa-envelope fa-lg" style="color:#337AB7; font-size:22px;" data-toggle="tooltip" data-placement="bottom" title="Email"></i> 
-              </a>hong.jia<i class="fas fa-at" style="color:#337AB7; font-size:16px;"></i>unimelb.edu.au<br>
-              <!-- &nbsp; -->
-
-
-              <a href="https://scholar.google.com/citations?hl=en&user=Q9ExZbAAAAAJ&view_op=list_works&sortby=pubdate"
-                title="Google Scholar (publications list)" class="icon">
-                <i class="fa fa-graduation-cap fa-lg"  style="color:#337AB7; font-size:22px;" data-toggle="tooltip" data-placement="bottom"
-                  title="Google Scholar"></i>
-              </a>
-              &nbsp;
-              <a href="https://github.com/h-jia" title="Github (code repository)" class="icon">
-                <i class="fa fa-github fa-lg"  style="color:#337AB7; font-size:22px;" data-toggle="tooltip" data-placement="bottom" title="Github"></i>
-              </a>
-              &nbsp;
-              <a href="https://www.linkedin.com/in/hong-jia-b3857b154/"
-              title="Linkedin" class="icon">
-              <i class="fa fa-linkedin fa-lg"  style="color:#337AB7; font-size:22px;" data-toggle="tooltip"  data-placement="bottom"
-              title="Linkedin"></i>
-              </a>
-              &nbsp;
-              <a href="https://twitter.com/HongJia_1" title="Twitter" class="icon">
-                <i class="fa fa-twitter fa-lg"  style="color:#337AB7; font-size:22px;" data-toggle="tooltip" data-placement="bottom" title="Twitter"></i>
-              </a>
-              &nbsp;
-            </p>
-          </div>
-
-          <div class="social-icons" style="display: flex; justify-content: end; align-items: center; margin-left: 70px;">
-            <a href="https://www.unimelb.edu.au" style="margin-right: 10px;">
-              <img src="img/mel.png" style="height:auto; width:85px; border-style: none" />
-            </a>
-            
-            <a href="https://www.cst.cam.ac.uk/" style="margin-right: 10px;">
-               <img src="img/unilogo.svg" style="height:auto; width:80px; border-style: none" />
-            </a>
-            <a href="https://www.unsw.edu.au">
-              <img src="img/unsw.png" style="height:auto; width:70px; border-style: none" />
-            </a> 
-          </div>
-
-
-
+            /* Update these styles for the left-aligned navbar and content alignment */
+            body {
+                padding-top: 50px; /* Adjust based on your navbar height */
+            }
+            .navbar {
+                margin-bottom: 0;
+            }
+            .navbar-nav {
+                float: left;
+            }
+            .navbar-nav > li > a {
+                padding: 15px 15px;
+            }
+            .content-wrapper {
+                padding-top: 20px;
+                padding-left: 70px; /* Align content with "About" nav item */
+            }
+            @media (max-width: 767px) {
+                .content-wrapper {
+                    padding-left: 15px; /* Reset padding for mobile */
+                }
+            }
+        </style>
+    </head>
+    
+    <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-left" style="margin-left: 120px;">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="talks.html">Talks</a></li>
+                    <li><a href="mentoring.html">Mentoring</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container content-wrapper">
+        <div class="row">
+            <div class="col-md-6 col-sm-9">
+                <h2><a class="anchor" name="about"></a>Hong Jia</h2>
+                <h5>Research Fellow at <a href="https://www.unimelb.edu.au/">University of Melbourne, Australia</a></h5>
+                <h5>Ext. Research Associate at <a href="https://www.cl.cam.ac.uk/">University of Cambridge, UK</a></h5>
+                <h5>hong.jia@unimelb.edu.au <a href="mailto:hong.jia@unimelb.edu.au"><span class="glyphicon glyphicon-envelope"></span></a></h5>
+                <h5>
+                    <a href="https://scholar.google.com/citations?hl=en&user=Q9ExZbAAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> - 
+                    <a href="https://github.com/h-jia">GitHub</a> - 
+                    <a href="https://www.linkedin.com/in/hong-jia-b3857b154/">LinkedIn</a> - 
+                    <a href="https://twitter.com/HongJia_1">Twitter</a>
+                </h5>
+            </div>
+            <div class="col-md-3 col-sm-12 text-right">
+                <img src="img/photo2.jpg" class="profile-photo" alt="Hong Jia" style="width: 120px; height: auto; margin-top: 30px;">
+            </div>
         </div>
 
-        <div class="container-fluid">
-          <hr>
+        <div class="row content">
+            <div class="col-md-10">
+                <h4><a name="News"></a>Biography</h4>
+                <p style="text-align:justify;font-size:14px">
+                    I am a Research Fellow at the University of Melbourne (2024-). I was a Research Associate at the University of Cambridge (2021-2024). I obtained my Ph.D. in Computer Science from the University of New South Wales (UNSW) in 2021.</p>
+                <p style="text-align:justify;font-size:14px">
+                    My research primarily focuses on efficient and on-device machine learning and LLMs, human-centred computing and pervasive computing. I served as a PC and reviewer for top-tier journals and conferences, including NeurIPS, IMWUT, CHI, UIST, PMCJ, TMC, IPSN, SenSys, and TheWebConf. I have been recognized for my contributions to the field with several awards, including the 2024 Best Paper Runner-Up Award at ACM IPSN, the 2023 ACM MobiSys Rising Star Award from ACM SIGMOBILE, and the 2022 Best Poster Runner-Up Award at ACM MobiCom.
+                </p>
+                <h4><a name="News"></a>Research Highlights</h4>
+                <div class="news-container">
+                    <div class="news-item">
+                        <div class="news-date">2024/09</div>
+                        <div class="news-content">
+                            <p>One paper titled "TinyTTA: Efficient Test-time Adaptation via Early-exit Ensembles on Edge Devices" is accepted by <a href="https://neurips.cc/Conferences/2024">NeurIPS 2024</a>!</p>
+                        </div>
+                    </div>
 
-          <div class="alert alert-dark" role="alert" style="background-color: #D6D8D9;">
-            I am a Research Fellow (2024-) at the <a href="https://www.unimelb.edu.au">University of Melbourne</a> working with Prof. <a href="https://people.eng.unimelb.edu.au/vkostakos/">Vassilis Kostakos</a>. Prior to that I was a Research Associate (2021-2024) at the <a href="https://www.cst.cam.ac.uk/">University of Cambridge</a> working with
-            Prof. <a href="https://www.cl.cam.ac.uk/~cm542/">Cecilia Mascolo</a>. I obtained my PhD in Computer Science in 2021 from the <a href="https://www.unsw.edu.au/">UNSW</a> working with
-            Prof. <a href="https://github.com/wenh77/Website/wiki">Wen Hu</a>. I am a recipient of Australian Government Research Training Program (RTP) Scholar (2017-2021) and <a href="https://www.sigmobile.org/mobisys/2023/rising.html">ACM MobiSys Rising Star (2023)</a>. 
-            <br /> <br />
+                    <div class="news-item">
+                        <div class="news-date">2024/09</div>
+                        <div class="news-content">
+                            <p>A grant worth $15,000 from the Google Research Fund is awarded as the sole CI.</p>
+                        </div>
+                    </div>
 
-            My research explores novel mobile sensing capabilities to advance new forms of human-computer interaction and deploys edge AI systems to enhance real-time, trustworthy, and efficient interactions with human. 
+                    <div class="news-item">
+                        <div class="news-date">2024/09</div>
+                        <div class="news-content">
+                            <p>Serve as a PC member for Artifacts Evaluation at <a href="https://sensys.acm.org/2024/">ACM SenSys 2024</a>.</p>
+                        </div>
+                    </div>
 
-          <h2><a name="News"></a>News!</h2>
+                    <div class="news-item">
+                        <div class="news-date">2024/08</div>
+                        <div class="news-content">
+                            <p>One paper titled "<a href="https://arxiv.org/pdf/2407.08240">Leveraging LLMs to Predict Affective States via Smartphone Sensor Features</a>" is accepted by Mental Health workshops in conjunction with UbiComp 2024.</p>
+                        </div>
+                    </div>
 
-          <em>2024/09</em>,
-          <strong>
-            <font class="caps">One paper titled "TinyTTA: Efficient Test-time Adaptation via Early-exit Ensembles on Edge Devices" is accepted by <a href="https://neurips.cc/Conferences/2024">NeurIPS 2024</a>. </font>
-          </strong>
-          <div style="height: 1em;"></div>
+                    <div class="news-item">
+                        <div class="news-date">2024/08</div>
+                        <div class="news-content">
+                            <p>One paper titled "<a href="https://www.repository.cam.ac.uk/items/bc81f841-1370-4cd3-962a-d6eb25459d9f">StatioCL: Contrastive Learning for Time Series via Non-Stationary and Temporal Contrast</a>" is accepted by <a href="https://cikm2024.org">ACM CIKM 2024</a>.</p>
+                        </div>
+                    </div>
 
-          <em>2024/09</em>,
-          <strong>
-            <font class="caps">Serve as a PC member for Artifacts Evaluation at <a href="https://sensys.acm.org/2024/"> ACM SenSys 2024</a>. </font>
-          </strong>
-          <div style="height: 1em;"></div>
+                    <div class="news-item">
+                        <div class="news-date">2024/07</div>
+                        <div class="news-content">
+                            <p><a href="https://dl.acm.org/doi/10.1145/3675094.3678494">Exploring Large-Scale Language Models to Evaluate EEG-Based Multimodal Data for Mental Health</a>" is accepted by WellComp 2024 in conjunction with UbiComp 2024. </p>
+                        </div>
+                    </div>
 
-          <em>2024/08</em>,
-          <strong>
-            <font class="caps">One paper titled "<a href="https://arxiv.org/pdf/2407.08240">Leveraging LLMs to Predict Affective States via Smartphone Sensor Features</a>" is accepted by Mental Health workshops in conjunction with UbiComp 2024. </font>
-          </strong>
-          <div style="height: 1em;"></div>
+                    <div class="news-item">
+                        <div class="news-date">2024/07</div>
+                        <div class="news-content">
+                            <p>Invited talk "Mobile Sensing Systems via Edge Intelligence" at the <a href="https://www.unsw.edu.au/engineering/our-schools/computer-science-and-engineering">
+                            UNSW</a>, invited by Prof. <a href="https://fsalim.github.io/">Flora Salim</a> and hosted by Dr. <a href="https://www.unsw.edu.au/staff/hao-xue"> Hao Xue</a>. </p>
+                        </div>
+                    </div>
 
-          <em>2024/08</em>,
-          <strong>
-            <font class="caps">One paper titled "<a href="https://www.repository.cam.ac.uk/items/bc81f841-1370-4cd3-962a-d6eb25459d9f">StatioCL: Contrastive Learning for Time Series via Non-Stationary and Temporal Contrast</a>" is accepted by <a href="https://cikm2024.org">ACM CIKM 2024</a>.</font>
-          </strong>
-          <div style="height: 1em;"></div>
+                    <div class="news-item">
+                        <div class="news-date">2024/06</div>
+                        <div class="news-content">
+                            <p>Two demo papers using personalized on-device LLMs to analyze human behavior and provide recommendation are accepted by <a href="https://www.ubicomp.org/ubicomp-iswc-2024/">UbiComp 2024</a>. </p>
+                        </div>
+                    </div>
 
-          <em>2024/07</em>,
-          <strong>
-            <font class="caps"><a href="https://dl.acm.org/doi/10.1145/3675094.3678494">Exploring Large-Scale Language Models to Evaluate EEG-Based Multimodal Data for Mental Health</a>" is accepted by WellComp 2024 in conjunction with UbiComp 2024. </font>
-          </strong>
-          <div style="height: 1em;"></div>
+                    <div class="news-item">
+                        <div class="news-date">2024/05</div>
+                        <div class="news-content">
+                            <p>Our paper <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10577385">LiDARSpectra: Indoor Spectral Mapping with Low-cost LiDARs"</a> has been awarded as the
+                            <font class="caps" color=#F00> <strong>🏆 Best Paper Runner-up Award (2/93)</strong></font> by <a
+                                href="https://ipsn.acm.org/2024/awards.html"><strong>IPSN 2024</span></strong></a> (Core A*).</p>
+                        </div>
+                    </div>
 
-          <em>2024/07</em>,
-          <strong>
-            <font class="caps">Invited talk "Mobile Human-Computer Interaction via Edge Intelligence" at the <a href="https://www.unsw.edu.au/engineering/our-schools/computer-science-and-engineering">
-              UNSW</a>, invited by Prof. <a href="https://fsalim.github.io/">Flora Salim</a> and hosted by Dr. <a href="https://www.unsw.edu.au/staff/hao-xue"> Hao Xue</a>. </font>
-          </strong>
-          <div style="height: 1em;"></div>
+                    <div class="news-item">
+                        <div class="news-date">2024/05</div>
+                        <div class="news-content">
+                            <p>Invited to serve as TPC in <a href="https://wellcomp2024.github.io/index.html">WellComp 2024</a>, in conjunction with <a href="https://www.ubicomp.org/ubicomp-iswc-2024/">UbiComp 2024</a> (Core A*).</p>
+                        </div>
+                    </div>
 
-          <em>2024/06</em>,
-          <strong>
-            <font class="caps">Two demo papers using personalized on-device LLMs to analyze human behavior and provide recommendation are accepted by <a href="https://www.ubicomp.org/ubicomp-iswc-2024/">UbiComp 2024</a>. </font>
-          </strong>
-          <div style="height: 1em;"></div>
+                    <div class="news-item">
+                        <div class="news-date">2024/05</div>
+                        <div class="news-content">
+                            <p>General Chair and Organizer of the 1st <a href="https://eifcom.netlify.app">Mobile Computing with Efficient and Interactive Foundation Models (EIFCom)</a> workshop in conjunction with <a href="https://www.sigmobile.org/mobicom/2024/workshop_program.html">MobiCom 2024</a> (Core A*).</p>
+                        </div>
+                    </div>
 
-          <em>2024/05</em>,
-          <strong>
-            <font class="caps">Our paper <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10577385">LiDARSpectra: Indoor Spectral Mapping with Low-cost LiDARs"</a> has been awarded as the
-              <font class="caps" color=#F00> <strong>🏆 Best Paper Runner-up Award (2/93)</strong></font> by <a
-                href="https://ipsn.acm.org/2024/awards.html"><strong>IPSN 2024</span></strong></a> (Core A*).</font>
-          </strong>
-          <div style="height: 1em;"></div>
+                    <div class="news-item">
+                        <div class="news-date">2024/04</div>
+                        <div class="news-content">
+                            <p>Invited to serve as Guest Editor of 'Recent Advances in Signal Processing for Flexible and Wearable Electronics' at MDPI Electronics</p>
+                        </div>
+                    </div>
 
-          <em>2024/05</em>,
-          <strong>
-            <font class="caps">Invited to serve as TPC in <a href="https://wellcomp2024.github.io/index.html">WellComp 2024</a>, in conjunction with <a href="https://www.ubicomp.org/ubicomp-iswc-2024/">UbiComp 2024</a> (Core A*).</font>
-          </strong>
-          <div style="height: 1em;"></div>
+                    <div class="news-item">
+                        <div class="news-date">2024/03</div>
+                        <div class="news-content">
+                            <p>I have joined the <a href="https://www.unimelb.edu.au">University of Melbourne</a> as a Research Fellow, working with Prof. <a href="https://people.eng.unimelb.edu.au/vkostakos/">Vassilis Kostakos</a>. Happy to be back in Australia with my family!</p>
+                        </div>
+                    </div>
 
-          <em>2024/05</em>,
-          <strong>
-            <font class="caps">General Chair and Organizer of the 1st <a href="https://eifcom.netlify.app">Mobile Computing with Efficient and Interactive Foundation Models (EIFCom)</a> workshop in conjunction with <a href="https://www.sigmobile.org/mobicom/2024/workshop_program.html">MobiCom 2024</a> (Core A*).</font>
-          </strong>
-          <div style="height: 1em;"></div>
+                    <div class="news-item">
+                        <div class="news-date">2024/01</div>
+                        <div class="news-content">
+                            <p>One paper "LiDARSpectra: Indoor Spectral Mapping with Low-cost LiDARs" has been conditionally accepted by <a
+                                href="https://ipsn.acm.org/2024"><strong>IPSN 2024</strong> </a></p>
+                        </div>
+                    </div>
 
-          <em>2024/04</em>,
-          <strong>
-            <font class="caps">Invited to serve as Guest Editor of 'Recent Advances in Signal Processing for Flexible and Wearable Electronics' at MDPI Electronics</font>.
-          </strong>
-          <div style="height: 1em;"></div>
+                    <div class="news-item">
+                        <div class="news-date">2023/12</div>
+                        <div class="news-content">
+                            <p>One paper <a href="https://arxiv.org/pdf/2402.09264.pdf"> "UR2M: Uncertainty and Resource-Aware Event Detection on Microcontrollers"</a> has been accepted by <a
+                                href="https://www.percom.org/2024"><strong>PerCom 2024</span></strong> </a></p>
+                        </div>
+                    </div>
 
-          <em>2024/03</em>,
-          <strong>
-            <font class="caps">I have joined the <a href="https://www.unimelb.edu.au">University of Melbourne</a> as a Research Fellow, working with Prof. <a href="https://people.eng.unimelb.edu.au/vkostakos/">Vassilis Kostakos</a>. Happy to be back in Australia with my family!</font>
-          </strong>
-          <div style="height: 1em;"></div>
+                    <div class="news-item">
+                        <div class="news-date">2023/09</div>
+                        <div class="news-content">
+                            <p>One paper <a href="https://dl.acm.org/doi/pdf/10.1145/3625687.3625804">"LifeLearner: Hardware-Aware Meta Continual Learning System for Embedded Computing Platforms"</a> has been accepted by <a
+                                href="http://sensys.acm.org/2023/"><strong>SenSys 2023</strong> </a></p>
+                        </div>
+                    </div>
 
-          <em>2024/01</em>,
-          <strong>
-            <font class="caps">One paper "LiDARSpectra: Indoor Spectral Mapping with Low-cost LiDARs" has been conditionally accepted by <a
-                href="https://ipsn.acm.org/2024"><strong>IPSN 2024</strong> </a></font>( <font class="caps" color=#A64D79>Acceptance Rate: 21.5%</font>) (Core A*).
-          </strong>
-          <div style="height: 1em;"></div>
-          <em>2023/12</em>,
-          <strong>
-            <font class="caps">One paper <a href="https://arxiv.org/pdf/2402.09264.pdf"> "UR2M: Uncertainty and Resource-Aware Event Detection on Microcontrollers"</a> has been accepted by <a
-                href="https://www.percom.org/2024"><strong>PerCom 2024</span></strong> </a></font>( <font class="caps" color=#A64D79>Full Paper Acceptance Rate: 9.4% (12/128)</font>) (Core A*).
-          </strong>
-          <div style="height: 1em;"></div>
-          <em>2023/09</em>,
-          <strong>
-            <font class="caps">One paper <a href="https://dl.acm.org/doi/pdf/10.1145/3625687.3625804">"LifeLearner: Hardware-Aware Meta Continual Learning System for Embedded Computing Platforms"</a> has been accepted by <a
-                href="http://sensys.acm.org/2023/"><strong>SenSys 2023</strong> </a></font>( <font class="caps" color=#A64D79>Acceptance rate: 18.9%</font>) (Core A*).
-          </strong>
-          <div style="height: 1em;"></div>
-          <em>2023/08</em>,
-          <strong>
-            <font class="caps">Reviewer/TPC for <font class="caps" color=#A64D79>NeurIPS, TMC, TheWebConf, EWSN,
-                UbiComp, IPSN etc.</font>
-          </strong>
-          <div style="height: 1em;"></div>
-          <em> 2023/07</em>,
-          <strong>
-            <font class="caps">One paper <a href="https://dl.acm.org/doi/pdf/10.1145/3610913">"Iris: Passive Visible Light Positioning using Light Spectral Information"</a> has
-              been accepted by <a href="https://www.ubicomp.org/ubicomp-iswc-2023/"><strong>IMWUT/UbiComp 2023</span></strong></a> (Core A*).</font>
-          </strong>
-          <div style="height: 1em;"></div>
-          <em> 2023/07</em>,
-          <strong>
-            <font class="caps">One paper <a href="https://mobile-systems.cl.cam.ac.uk/papers/mlhc23.pdf">UDAMA:
-                Unsupervised Domain Adaptation Through Multi Discriminator Adversarial Training With Noisy Labels
-                Improves Cardio Fitness Prediction</a> has been accepted by <a
-                href="https://www.mlforhc.org/2023-agenda"><strong>ML4H, NeurIPS 2023</a>
-          </strong>.</font></strong>
-          <div style="height: 1em;"></div>
-          <em> 2023/06</em>,
-          <strong>
-            <font class="caps">Talk at <a href="https://www.sigmobile.org/mobisys/2023/index.html">
-                MobiSys'23</a> with the topic "<font class="caps" color=#A64D79>Ubiquitous, Secure, and Efficient Mobile
-                Sensing Systems</font>" (Core A*).</font>
-          </strong>
-          <div style="height: 1em;"></div>
-          <em> 2023/05</em>,
-          <strong>
-            <font class="caps">I am honored to be selected as the <a href="https://www.sigmobile.org/mobisys/2023/rising.html">
-                <font class="caps" color=#F00><strong>🏆 ACM MobiSys Rising Star (2023)</strong>
-              </a>.</font>
-          </strong>
-          <div style="height: 1em;"></div>
-          <em>2023/02</em>,
-          <strong>
-            <font class="caps">One paper <a href="https://dl.acm.org/doi/pdf/10.1145/3584986">Subject-Adaptive
-                Loss-Fitting Smart Garment Platform for Human Activity Recognition</a> has been accepted by <a
-                href="https://dl.acm.org/journal/tosn/"><strong>TOSN 2023</a>
-          </strong> (Core A*).</font></strong>
-          <div style="height: 1em;"></div>
-          <em>2023/01</em>,
-          <strong>
-            <font class="caps">One paper on indoor localization <a
-                href="https://dl.acm.org/doi/10.1145/3580878">Spectral-Loc: Indoor Localization using Light Spectral
-                Information</a> has been accepted by <a
-                href="https://www.ubicomp.org/ubicomp-iswc-2023/"><strong>IMWUT/UbiComp 2023</span></strong></a> (Core A*).</font>
-          </strong>
-          <div style="height: 1em;"></div>
-          <em>2022/12</em>,
-          <strong>
-            <font class="caps">One paper <a href="https://ieeexplore.ieee.org/document/9996544/">Pistis: Replay Attack
-                and Liveness Detection for Gait-based User Authentication System on Wearable Devices Using Vibration</a>
-              has been accepted by <a href="https://ieee-iotj.org/"><strong>IEEE Internet of Things
-                  Journal</strong></a>.</font>
-          </strong>
-          <div style="height: 1em;"></div>
-          <em>2022/11</em>,
-          <strong>
-            <font class="caps">One paper <a href="https://arxiv.org/abs/2211.10475">Turning Silver into Gold: Domain
-                Adaptation with Noisy Labels for Wearable Cardio-Respiratory Fitness Prediction
-              </a> on domain adaptation has been accepted in <a href="https://ml4health.github.io/2022/"><strong>ML4H 2022</strong></a> (co-located with NeurIPS 2022)</a>.</font>
-          </strong>
-          <div style="height: 1em;"></div>
-          <em>2022/10</em>,
-          <strong>
-            <font class="caps">Our poster paper <a href="https://dl.acm.org/doi/10.1145/3495243.3558253">Passive Light
-                Spectral Indoor Localization</a> has been awarded as the
-              <font class="caps" color=#F00> <strong>🏆 Best Poster Runner-up Award (2/36)</strong></font> by <a
-                href="https://www.sigmobile.org/mobicom/2022/"><strong>MobiCom 2022</span></strong></a> (Core A*).
-            </font>
-          </strong>
-          <div style="height: 1em;"></div>
-          <em>2022/09</em>,
-          <strong>
-            <font class="caps">One paper <a href="https://dl.acm.org/doi/10.1145/3495243.3560533">PROS: An Efficient
-                Pattern-Driven Compressive Sensing Framework For Low Power Biopotential-Based Wearables With On-Chip
-                Intelligence</a> has been accepted by <a href="https://www.sigmobile.org/mobicom/2022/"><strong>MobiCom
-                  2022</strong></a>! ( <font class="caps" color=#A64D79>Acceptance rate: 17.8%</font>) (Core A*).</font>
-          </strong>
-          <div style="height: 1em;"></div>
-        </div>
+                    <div class="news-item">
+                        <div class="news-date">2023/08</div>
+                        <div class="news-content">
+                            <p>Reviewer/TPC for <font class="caps" color=#A64D79>NeurIPS, TMC, TheWebConf, EWSN,
+                                UbiComp, IPSN etc.</font></p>
+                        </div>
+                    </div>
 
-        <div class="container-fluid">
+                    <div class="news-item">
+                        <div class="news-date">2023/07</div>
+                        <div class="news-content">
+                            <p>One paper <a href="https://dl.acm.org/doi/10.1145/3580878">Spectral-Loc: Indoor Localization using Light Spectral
+                                Information</a> has been accepted by <a
+                                href="https://www.ubicomp.org/ubicomp-iswc-2023/"><strong>IMWUT/UbiComp 2023</span></strong></a> (Core A*).</p>
+                        </div>
+                    </div>
 
-          <h2><a name="publications"></a>Selected Publications (last 3 years)</h2>
-          <hr>
+                    <div class="news-item">
+                        <div class="news-date">2023/07</div>
+                        <div class="news-content">
+                            <p>One paper <a href="https://mobile-systems.cl.cam.ac.uk/papers/mlhc23.pdf">UDAMA:
+                                Unsupervised Domain Adaptation Through Multi Discriminator Adversarial Training With Noisy Labels
+                                Improves Cardio Fitness Prediction</a> has been accepted by <a
+                                href="https://www.mlforhc.org/2023-agenda"><strong>ML4H, NeurIPS 2023</a>
+                            </strong>.</p>
+                        </div>
+                    </div>
 
-          <div class="media">
-            <div class="media-left media-middle hidden-xs hidden-sm">
-              <a href="img/tinytta.png">
-                <img class="media-object" src="img/tinytta.png" style="max-width:250px;">
-              </a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading"><strong>TinyTTA: Efficient Test-time Adaptation via Early-exit Ensembles on Edge Devices</strong></h4>
-              <u>Hong Jia</u>, Young D. Kwon, Alessio Orsino, Ting Dang, Domenico Talia, Cecilia Mascolo <br>
-              <em><a href="https://neurips.cc/Conferences/2024">
-                Conference on Neural Information Processing Systems
-                  <br> <strong>NeurIPS 2024</span> <font class="caps" color=#A64D79>(Full Paper Acceptance Rate: 25.8%, Core Ranking A*)</font></strong></a></em><br>
-              <!-- <div class="btn-group-sm"> -->
-                <!-- <a>To appear</a> -->
-                <!-- <a href="https://arxiv.org/abs/2402.09264"
-                class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
-                <a href="https://arxiv.org/pdf/2402.09264.pdf"
-                class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a> -->
-                <!-- </p> -->
-              <!-- </div> -->
-            </div>
-          </div>        
+                    <div class="news-item">
+                        <div class="news-date">2023/06</div>
+                        <div class="news-content">
+                            <p>Talk at <a href="https://www.sigmobile.org/mobisys/2023/index.html">
+                                MobiSys'23</a> with the topic "<font class="caps" color=#A64D79>Ubiquitous, Secure, and Efficient Mobile
+                                Sensing Systems</font>" (Core A*).</p>
+                        </div>
+                    </div>
 
+                    <div class="news-item">
+                        <div class="news-date">2023/05</div>
+                        <div class="news-content">
+                            <p>I am honored to be selected as the <a href="https://www.sigmobile.org/mobisys/2023/rising.html">
+                                <font class="caps" color=#F00><strong>🏆 ACM MobiSys Rising Star (2023)</strong></font>
+                            </a>.</p>
+                        </div>
+                    </div>
 
-        <div class="media">
-          <div class="media-left media-middle hidden-xs hidden-sm">
-            <a href="img/ur2m.png">
-              <img class="media-object" src="img/ur2m.png" style="max-width:250px;">
-            </a>
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading"><strong>UR2M: Uncertainty and Resource-Aware Event Detection on Microcontrollers</strong></h4>
-            <u>Hong Jia</u>, Young D. Kwon, Dong Ma, Nhat Pham, Lorena Qendro, Tam Vu, Cecilia Mascolo <br>
-            <em><a href="https://www.percom.org/2024">The 22th IEEE International Conference on Pervasive Computing and Communication
-                <br> <strong>PerCom2024</span> <font class="caps" color=#A64D79>(Full Paper Acceptance Rate: 9.4% (12/128), Core Ranking A*)</font></strong></a></em><br>
-            <div class="btn-group-sm">
-              <!-- <a>To appear</a> -->
-              <a href="https://arxiv.org/abs/2402.09264"
-              class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
-              <a href="https://arxiv.org/pdf/2402.09264.pdf"
-              class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
-              </p>
-            </div>
-          </div>
-        </div>
+                    <div class="news-item">
+                        <div class="news-date">2023/02</div>
+                        <div class="news-content">
+                            <p>One paper <a href="https://dl.acm.org/doi/pdf/10.1145/3584986">Subject-Adaptive
+                                Loss-Fitting Smart Garment Platform for Human Activity Recognition</a> has been accepted by <a
+                                href="https://dl.acm.org/journal/tosn/"><strong>TOSN 2023</a>
+                            </strong> (Core A*).</p>
+                        </div>
+                    </div>
 
+                    <div class="news-item">
+                        <div class="news-date">2023/01</div>
+                        <div class="news-content">
+                            <p>One paper on indoor localization <a
+                                href="https://dl.acm.org/doi/10.1145/3580878">Spectral-Loc: Indoor Localization using Light Spectral
+                                Information</a> has been accepted by <a
+                                href="https://www.ubicomp.org/ubicomp-iswc-2023/"><strong>IMWUT/UbiComp 2023</span></strong></a> (Core A*).</p>
+                        </div>
+                    </div>
 
-        <div class="media">
-          <div class="media-left media-middle hidden-xs hidden-sm">
-            <a href="img/ipsn.png">
-              <img class="media-object" src="img/ipsn.png" style="max-width:250px;">
-            </a>
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading"><strong> LiDARSpectra: Indoor Spectral Mapping with Low-cost LiDARs</strong></h4>
-            Jiawei Hu, Yanxiang Wang, <u>Hong Jia</u>, Cheng Jiang, Mahbub Hassan, Brano Kusy, Wen Hu,  <br>
-            <em><a href="https://www.percom.org/2024">The 23rd ACM/IEEE International Conference on Information Processing in Sensor Networks
-                <br> <strong>IPSN 2024 <font class="caps" color=#A64D79>(Acceptance Rate: 21.5%, Core Ranking A*)</font></strong></a></em><br>
-            <font class="caps" color=#dc143c>🏆 Best Paper Runner-up Award (2/93)</font>
-            <div class="btn-group-sm">
-              <a>To appear</a>
-              </p>
-            </div>
-          </div>
-        </div>
+                    <div class="news-item">
+                        <div class="news-date">2022/12</div>
+                        <div class="news-content">
+                            <p>One paper <a href="https://ieeexplore.ieee.org/document/9996544/">Pistis: Replay Attack
+                                and Liveness Detection for Gait-based User Authentication System on Wearable Devices Using Vibration</a>
+                            has been accepted by <a href="https://ieee-iotj.org/"><strong>IEEE Internet of Things
+                                Journal</strong></a>.</p>
+                        </div>
+                    </div>
 
-          <!-- HASCA @ Ubicomp 2022 -->
+                    <div class="news-item">
+                        <div class="news-date">2022/11</div>
+                        <div class="news-content">
+                            <p>One paper <a href="https://arxiv.org/abs/2211.10475">Turning Silver into Gold: Domain
+                                Adaptation with Noisy Labels for Wearable Cardio-Respiratory Fitness Prediction
+                            </a> on domain adaptation has been accepted in <a href="https://ml4health.github.io/2022/"><strong>ML4H 2022</strong></a> (co-located with NeurIPS 2022)</a>.</p>
+                        </div>
+                    </div>
 
+                    <div class="news-item">
+                        <div class="news-date">2022/10</div>
+                        <div class="news-content">
+                            <p>Our poster paper <a href="https://dl.acm.org/doi/10.1145/3495243.3558253">Passive Light
+                                Spectral Indoor Localization</a> has been awarded as the
+                            <font class="caps" color=#F00> <strong>🏆 Best Poster Runner-up Award (2/36)</strong></font> by <a
+                                href="https://www.sigmobile.org/mobicom/2022/"><strong>MobiCom 2022</span></strong></a> (Core A*).
+                            </p>
+                        </div>
+                    </div>
 
-          <!-- Nat Dig Med 2022 -->
-          <div class="media">
-            <div class="media-left media-middle hidden-xs hidden-sm">
-              <a href="img/npj22fitness.png">
-                <img class="media-object" src="img/lifelearner.jpeg" style="max-width:250px;">
-              </a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading"><strong>LifeLearner: Hardware-Aware Meta Continual Learning System for
-                  Embedded Computing Platforms</strong></h4>
-              Young D. Kwon, Jagmohan Chauhan, <u>Hong Jia</u>, Stylianos I. Venieris, Cecilia Mascolo <br>
-              <em><a href="http://sensys.acm.org/2023/">The 21th ACM Conference on Embedded Networked Sensor Systems
-                  <br> <strong>SenSys 2023 <font class="caps" color=#A64D79>(Acceptance Rate: 18.9%, Core Ranking A*)</font></strong></a></em><br>
-              <div class="btn-group-sm">
-                <div class="btn-group-sm">
-                  <a href="https://arxiv.org/abs/2311.11420" class="btn btn-default"><i
-                      class="fa fa-link fa-lg"></i> DOI </a>
-                  <a href="https://mobile-systems.cl.cam.ac.uk/papers/sensys23.pdf" class="btn btn-default"><i
-                      class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
-                  <!-- <a href="https://github.com/yvonneywu/UDAMA-CRF-Prediction" class="btn btn-default"><i
-                      class="fa fa-github fa-lg"></i> Code</a>  -->
-                  </p>
+                    <div class="news-item">
+                        <div class="news-date">2022/09</div>
+                        <div class="news-content">
+                            <p>One paper <a href="https://dl.acm.org/doi/10.1145/3495243.3560533">PROS: An Efficient
+                                Pattern-Driven Compressive Sensing Framework For Low Power Biopotential-Based Wearables With On-Chip
+                                Intelligence</a> has been accepted by <a href="https://www.sigmobile.org/mobicom/2022/"><strong>MobiCom
+                                2022</strong></a>! ( <font class="caps" color=#A64D79>Acceptance rate: 17.8%</font>) (Core A*).</p>
+                        </div>
+                    </div>
                 </div>
-                </p>
-              </div>
             </div>
-          </div>
+        </div>
 
-          <!-- Nat Dig Med 2022 -->
-          <div class="media">
-            <div class="media-left media-middle hidden-xs hidden-sm">
-              <a href="img/npj22fitness.png">
-                <img class="media-object" src="img/gary-ubicomp.png" style="max-width:250px;">
-              </a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading"><strong>Iris: Passive Visible Light Positioning using Light Spectral
-                  Information</strong></h4>
-              Jiawei Hu, Yanxiang Wang, <u>Hong Jia</u>, Ashraf Uddin, Kusy, Brano, Moustafa Youssef, Mahbub Hassan, Wen
-              Hu <br>
-              <em><a href="https://www.ubicomp.org/ubicomp-iswc-2023/">Proceedings of the ACM on Interactive, Mobile,
-                  Wearable and Ubiquitous Technologies <br> <strong>IMWUT/UbiComp 2023</span> <font class="caps" color=#A64D79>(Core Ranking A*)</font></strong></a></em><br>
-              <div class="btn-group-sm">
-                <!-- <a>To appear</a> -->
-                  <a href="https://dl.acm.org/doi/abs/10.1145/3610913"
-                  class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI </a>
-                  <a href="https://dl.acm.org/doi/pdf/10.1145/3610913"
-                  class="btn btn-default"><i class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="footer discrete">
+            <p>&copy; Hong Jia 2024</p>
+        </div>
 
+    </div> <!-- /container -->
 
-
-
-          <!-- Cell Patterns 2022 -->
-          <div class="media">
-            <div class="media-left media-middle hidden-xs hidden-sm">
-              <a href="img/tosn.png">
-                <img class="media-object" border="0" src="img/tosn.png" style="max-width:250px;">
-              </a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading"><strong>Subject-Adaptive Loss-Fitting Smart Garment Platform for Human Activity
-                  Recognition</strong></h4>
-              Qi Lin, Shuhua Peng, Yuezhong Wu, Jun Liu, <u>Hong Jia</u>, Wen Hu, Mahbub Hassan, Aruna Seneviratne, Chun
-              H Wang <br>
-              <em><a href="https://dl.acm.org/journal/tosn/">ACM Transactions on Sensor Networks<br> <strong>TOSN
-                    2023 <font class="caps" color=#A64D79>(Core Ranking A*)</font></strong></a></em> <br>
-              <div class="btn-group-sm">
-                <a href="https://dl.acm.org/doi/pdf/10.1145/3584986" class="btn btn-default"><i
-                    class="fa fa-link fa-lg"></i> DOI </a>
-                <a href="https://dl.acm.org/doi/pdf/10.1145/3584986" class="btn btn-default"><i
-                    class="fa fa-file-pdf-o fa-lg"></i> PDF</a></p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Nat Dig Med 2022 -->
-          <div class="media">
-            <div class="media-left media-middle hidden-xs hidden-sm">
-              <a href="img/npj22fitness.png">
-                <img class="media-object" src="img/indoor.jpg" style="max-width:250px;">
-              </a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading"><strong>Spectral-Loc: Indoor Localization using Light Spectral
-                  Information</strong></h4>
-              Yanxiang Wang, Jiawei Hu, <u>Hong Jia</u>, Ashraf Uddin, Kusy, Brano, Moustafa Youssef, Mahbub Hassan, Wen
-              Hu <br>
-              <em><a href="https://www.ubicomp.org/ubicomp-iswc-2023/">Proceedings of the ACM on Interactive, Mobile,
-                  Wearable and Ubiquitous Technologies <br> <strong>IMWUT/UbiComp 2023</span> <font class="caps" color=#A64D79>(Core Ranking A*)</font></strong></a></em><br>
-              <div class="btn-group-sm">
-                <a href="https://dl.acm.org/doi/10.1145/3580878" class="btn btn-default"><i
-                    class="fa fa-link fa-lg"></i> DOI </a>
-                <a href="https://dl.acm.org/doi/pdf/10.1145/3580878" class="btn btn-default"><i
-                    class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Cell Patterns 2022 -->
-          <div class="media">
-            <div class="media-left media-middle hidden-xs hidden-sm">
-              <a href="img/patterns22.png">
-                <img class="media-object" border="0" src="img/pros.png" style="max-width:250px;">
-              </a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading"><strong>PROS: An Efficient Pattern-Driven Compressive Sensing Framework For Low
-                  Power Biopotential-Based Wearables With On-Chip Intelligence</strong></h4>
-              Nhat Pham, <u>Hong Jia</u>, Minh Tran1, Tuan Dinh, Nam Bui, Young Kwon, Dong Ma, Phuc Nguyen, Cecilia
-              Mascolo, and Tam Vu <br>
-              <em><a href="https://www.sigmobile.org/mobicom/2022/">The 28th Annual International Conference on Mobile
-                  Computing And Networking <br> <strong>MobiCom 2022</span> <font class="caps" color=#A64D79>(Acceptance rate: 17.8%, Core Ranking A*)</font></strong></a></em> <br>
-              <div class="btn-group-sm">
-                <a href="https://dl.acm.org/doi/abs/10.1145/3495243.3560533" class="btn btn-default"><i
-                    class="fa fa-link fa-lg"></i> DOI </a>
-                <a href="https://dl.acm.org/doi/pdf/10.1145/3495243.3560533" class="btn btn-default"><i
-                    class="fa fa-file-pdf-o fa-lg"></i> PDF</a></p>
-              </div>
-            </div>
-          </div>
-
-
-
-          <!-- Nat Dig Med 2022 -->
-          <div class="media">
-            <div class="media-left media-middle hidden-xs hidden-sm">
-              <a href="img/pistis.jpg">
-                <img class="media-object" src="img/pistis.jpg" style="max-width:250px;">
-              </a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading"><strong>Pistis: Replay Attack and Liveness Detection for Gait-based User
-                  Authentication System on Wearable Devices Using Vibration</strong></h4>
-              <p>Wei Song, <u>Hong Jia</u>, Min Wang, Yuezhong Wu, Wanli Xue, Chun Tung Chou, Jiankun Hu, Wen Hu<br>
-                <em><a href="https://ieee-iotj.org/">IEEE Internet of Things Journal</a></em> <br>
-                <em><a href="https://ieee-iotj.org/"><strong>IoTJ 2022 <font class="caps" color=#A64D79>(IF=11.61)</font> </strong></a></em> <br>
-              <div class="btn-group-sm">
-                <a href="https://ieeexplore.ieee.org/document/9996544" class="btn btn-default"><i
-                    class="fa fa-link fa-lg"></i> DOI </a>
-                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9996544" class="btn btn-default"><i
-                    class="fa fa-file-pdf-o fa-lg"></i> PDF</a></p>
-              </div>
-
-            </div>
-          </div>
-
-
-
-          <!-- Sci Rep 2022 -->
-          <!-- <div class="media">
-            <div class="media-left media-middle hidden-xs hidden-sm">
-              <a href="img/scirep22.png">
-                <img class="media-object" src="img/ml4h.jpg" style="max-width:250px;">
-              </a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading"><strong>Turning Silver into Gold: Domain Adaptation with Noisy Labels for
-                  Wearable Cardio-Respiratory Fitness Prediction</strong></h4>
-              <p>Yu Wu, Dimitris Spathis, <u>Hong Jia</u>, Ignacio Perez-Pozuelo, Tomas I. Gonzales, Soren Brage,
-                Nicholas Wareham, Cecilia Mascolo <br>
-                <em><a href="https://ml4health.github.io/2022/">Machine Learning for Health <br> <strong>ML4H
-                      2022</strong></a></em> <br>
-              <div class="btn-group-sm">
-                <a href="https://arxiv.org/abs/2211.10475" class="btn btn-default"><i class="fa fa-link fa-lg"></i> DOI
-                </a>
-                <a href="https://arxiv.org/pdf/2211.10475.pdf" class="btn btn-default"><i
-                    class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
-              </div>
-            </div>
-          </div> -->
-
-
-          <div class="media">
-            <div class="media-left media-middle hidden-xs hidden-sm">
-              <a href="img/jmir22.png">
-                <img class="media-object" src="img/swingnet.jpg" style="max-width:250px;">
-              </a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading"><strong>SwingNet: Ubiquitous Fine-Grained Swing Tracking Framework via
-                  Stochastic Neural Architecture Search and Adversarial Learning</strong></h4>
-              <p><u>Hong Jia</u>, Jiawei Hu, Wen Hu<br>
-                <em><a href="https://ubicomp.org/ubicomp2021/">Proceedings of the ACM on Interactive, Mobile, Wearable
-                    and Ubiquitous Technologies <br> <strong>IMWUT/UbiComp 2021</span> <font class="caps" color=#A64D79>(Core Ranking A*)</font></strong></a></em> <br>
-              <div class="btn-group-sm">
-                <a href="https://dl.acm.org/doi/abs/10.1145/3478082" class="btn btn-default"><i
-                    class="fa fa-link fa-lg"></i> DOI </a>
-                <a href="https://dl.acm.org/doi/pdf/10.1145/3478082" class="btn btn-default"><i
-                    class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
-                <a href="https://www.youtube.com/watch?v=xOUBnpCdCng" class="btn btn-default"><i
-                    class="fa fa-video-camera fa-lg"></i> Talk (6mins)</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- JMIR 2022 -->
-
-
-          <!-- JPSP 2022 -->
-
-          <div class="media">
-            <div class="media-left media-middle hidden-xs hidden-sm">
-              <a href="img/jpsp22.png">
-                <img class="media-object" src="img/RFID.jpg" style="max-width:250px;">
-              </a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading"><strong>RFaceID: Towards RFID-based Facial Recognition</strong></h4>
-              <p>Chengwen Luo, Zhongru Yang, Xingyu Feng, Jin Zhang, <u>Hong Jia</u>, Jianqiang Li, Jiawei Wu, Wen
-                Hu<br>
-                <em><a href="https://psycnet.apa.org/doiLanding?doi=10.1037%2Fpspp0000397">Proceedings of the ACM on
-                    Interactive, Mobile, Wearable and Ubiquitous Technologies <strong>IMWUT/UbiComp 2021</span>
-                      <font class="caps" color=#A64D79>(Core Ranking A*)</font></strong></a></em> <br>
-              <div class="btn-group-sm">
-                <a href="https://dl.acm.org/doi/abs/10.1145/3494985" class="btn btn-default"><i
-                    class="fa fa-link fa-lg"></i> DOI </a>
-                <a href="https://dl.acm.org/doi/pdf/10.1145/3494985" class="btn btn-default"><i
-                    class="fa fa-file-pdf-o fa-lg"></i> PDF</a>
-                <!--   <a href="https://osf.io/8dxtj/"
-              class="btn btn-default"><i class="fa fa-github fa-lg"></i> Code</a>
- -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
