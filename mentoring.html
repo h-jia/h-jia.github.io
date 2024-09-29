@@ -58,6 +58,56 @@
                 color: #333;
                 font-size: 0.9em;
             }
+            
+            .phd-section {
+                margin-bottom: 30px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .phd-info {
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 20px;
+                width: 48%; /* Adjust this value to control the gap between columns */
+            }
+            .phd-photo {
+                width: 150px; /* Reduced from 180px to 150px */
+                height: auto;
+                margin-right: 20px;
+            }
+            .phd-details {
+                flex: 1;
+            }
+            .phd-name {
+                font-weight: bold;
+                font-size: 1.1em;
+                color: #2c3e50;
+                margin-bottom: 5px;
+            }
+            .phd-topic {
+                font-style: italic;
+                color: #34495e;
+                margin-top: 10px;
+            }
+
+            /* Media query for small screens */
+            @media (max-width: 768px) {
+                .phd-section {
+                    flex-direction: column;
+                }
+                .phd-info {
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+                .phd-photo {
+                    width: 120px; /* Further reduced for small screens */
+                    margin-right: 0;
+                    margin-bottom: 15px;
+                }
+            }
         </style>
     </head>
     
@@ -90,10 +140,26 @@
             <div class="col-md-12">
                 <div class="mentoring-section">
                     <div class="mentoring-category">PhD Supervising</div>
-                    <ul class="mentoring-list">
-                        <li class="mentoring-item">Le Fang (University of Melbourne, co-supervising with Prof. Vassilis Kostakos and Prof. Jorge Goncalves) — Mobile Phone Over Usage Detection via On-Device LLMs</li>
-                        <li class="mentoring-item">Shiquan Zhang (University of Melbourne, co-supervising with Prof. Vassilis Kostakos and Dr. Simon D'Alfonso) — On-Device Foundation Models for Personalized Sensing</li>
-                    </ul>
+                    <div class="phd-section">
+                        <div class="phd-info">
+                            <img src="img/lefang.png" alt="Le Fang" class="phd-photo">
+                            <div class="phd-details">
+                                <div class="phd-name">Le Fang</div>
+                                <div>University of Melbourne</div>
+                                <div>Co-supervising with Prof. Vassilis Kostakos and Prof. Jorge Goncalves</div>
+                                <div class="phd-topic">Mobile Phone Over Usage Detection via On-Device LLMs</div>
+                            </div>
+                        </div>
+                        <div class="phd-info">
+                            <img src="img/shiquan.png" alt="Shiquan Zhang" class="phd-photo">
+                            <div class="phd-details">
+                                <div class="phd-name">Shiquan Zhang</div>
+                                <div>University of Melbourne</div>
+                                <div>Co-supervising with Prof. Vassilis Kostakos and Dr. Simon D'Alfonso</div>
+                                <div class="phd-topic">On-Device Foundation Models for Personalized Sensing</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="mentoring-section">
@@ -103,10 +169,10 @@
                         <li class="mentoring-item">Tianyi (Tina) Zhang (University of Melbourne) — Digital Phenotyping for Mental Health and Well-Being Using LLMs</li>
                         <li class="mentoring-item">Yu (Yvonne) Wu (University of Cambridge) — Weakly-Supervised Methods in Time Series Forecasting</li>
                         <li class="mentoring-item">Mark Cardamis (UNSW) — Smart Farming via mmWave Sensing</li>
-                        <li class="mentoring-item">Yongquan Hu (UNSW) — Human-Computer Interaction through Mobile Sensing</li>
+                        <!-- <li class="mentoring-item">Yongquan Hu (UNSW) — Human-Computer Interaction through Mobile Sensing</li> -->
                         <li class="mentoring-item">Yanxiang Wang (UNSW) — Spectral Information Sensing</li>
                         <li class="mentoring-item">Jiawei Hu (UNSW) — Indoor Light Localization</li>
-                        <li class="mentoring-item">Song Wei (UNSW) — Mobile Authentication via Human Biometrics</li>
+                        <!-- <li class="mentoring-item">Song Wei (UNSW) — Mobile Authentication via Human Biometrics</li> -->
                     </ul>
                 </div>
 
