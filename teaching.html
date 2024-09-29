@@ -17,26 +17,67 @@
         
         <style>
             .content-wrapper {
-                padding-top: 5px;
+                padding-top: 10px;
+                max-width: 1200px;
+                margin: 0 auto;
+                width: 100%;
             }
-            .mentoring-item {
+            .teaching-section {
+                background-color: #f8f9fa;
+                border-radius: 10px;
+                padding: 10px 20px;
                 margin-bottom: 20px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             }
-            .mentoring-title {
+            .teaching-section h4 {
+                color: #3498db; /* Changed to match the Invited Talks style */
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-weight: bold;
+                font-size: 19px; /* Reduced by 1pt from 20px */
+                border-bottom: 2px solid #3498db; /* Added to match the Invited Talks style */
+                padding-bottom: 5px; /* Added to give some space below the border */
+                display: block; /* Changed from inline-block to block */
+                width: 100%; /* Makes the line extend to the end */
+            }
+            .teaching-category {
+                font-weight: bold;
+                color: #3498db;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                border-bottom: 1px solid #3498db;
+                padding-bottom: 5px;
+            }
+            .teaching-list {
+                list-style-type: none;
+                padding-left: 0;
+            }
+            .teaching-item {
+                margin-bottom: 15px;
+            }
+            .teaching-title {
                 font-weight: bold;
                 color: #2c3e50;
                 margin-bottom: 5px;
             }
-            .mentoring-info {
-                color: #7f8c8d;
+            .teaching-info {
+                color: #333;
                 font-size: 0.9em;
             }
-            .year-header {
-                margin-top: 30px;
-                margin-bottom: 15px;
-                color: #34495e;
-                border-bottom: 2px solid #ecf0f1;
-                padding-bottom: 5px;
+            .location-icon {
+                color: #3498db;
+                margin-right: 5px;
+            }
+            .navbar-nav {
+                margin-left: 0 !important;
+            }
+            .navbar-collapse {
+                padding-left: 0;
+            }
+            @media (min-width: 768px) {
+                .navbar-nav {
+                    float: left;
+                }
             }
         </style>
     </head>
@@ -52,7 +93,7 @@
                 </button>
             </div>
             <div class="navbar-collapse collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-left" style="margin-left: 113px;">
+                <ul class="nav navbar-nav">
                     <li><a href="index.html#about">About</a></li>
                     <li><a href="publications.html">Publications</a></li>
                     <li><a href="service.html">Service</a></li>
@@ -65,69 +106,79 @@
     </nav>
     
     <div class="container content-wrapper">
+        <h2>Teaching Experience</h2>
         <div class="row">
-            <div class="col-md-9">
-                <div class="row content">
-                    <div class="col-md-12">
-                        <h3>Teaching Experience</h3>
-                        <h4 class="year-header" style="margin-top: 10px;">2024</h4>
-                        
-                        <div class="mentoring-item">
-                            <p class="mentoring-title">Guest Lecturer, Mobile Computing Systems Programming (COMP90018), Term 2</p>
-                            <p class="mentoring-info">
-                                📍 School of Computing and Information Systems, University of Melbourne
+            <div class="col-md-12">
+                <div class="teaching-section">
+                    <h4>2024</h4>
+                    <ul class="teaching-list">
+                        <li class="teaching-item">
+                            <p class="teaching-title">Guest Lecturer, Mobile Computing Systems Programming (COMP90018), Term 2</p>
+                            <p class="teaching-info">
+                                <i class="fas fa-map-marker-alt location-icon"></i>
+                                School of Computing and Information Systems, University of Melbourne
                                 <br>
                                 Role: Teaching mobile sensing systems courses (~250 students, graduate courses).
                             </p>
-                        </div>
-
-                        <div class="mentoring-item">
-                            <p class="mentoring-title">Guest Lecturer, Mobile, Wearable Systems and Machine Learning, Term 1</p>
-                            <p class="mentoring-info">
-                                📍 Department of Computer Technology, University of Cambridge
+                        </li>
+                        <li class="teaching-item">
+                            <p class="teaching-title">Guest Lecturer, Mobile, Wearable Systems and Machine Learning, Term 1</p>
+                            <p class="teaching-info">
+                                <i class="fas fa-map-marker-alt location-icon"></i>
+                                Department of Computer Technology, University of Cambridge
                                 <br>
                                 Role: Comments on on-device machine learning courses (~22 students, graduate courses).
                             </p>
-                        </div>
-
-                        <div class="mentoring-item">
-                            <p class="mentoring-title">Instructor, HCI projects INFO90008 and HCI Design projects INFO90009, Term 1</p>
-                            <p class="mentoring-info">
-                                📍 School of Computing and Information Systems, University of Melbourne
+                        </li>
+                        <li class="teaching-item">
+                            <p class="teaching-title">Instructor, HCI projects INFO90008 and HCI Design projects INFO90009, Term 1</p>
+                            <p class="teaching-info">
+                                <i class="fas fa-map-marker-alt location-icon"></i>
+                                School of Computing and Information Systems, University of Melbourne
+                                <br>
+                                Role: Marking HCI and HCI design thesis (6 reports)
                             </p>
-                        </div>
-
-                        <div class="mentoring-item">
-                            <p class="mentoring-title">Supervisor, MCS-100, MIT(AI), and MIT(HCI), Term 2</p>
-                            <p class="mentoring-info">
-                                📍 School of Computing and Information Systems, University of Melbourne
+                        </li>
+                        <li class="teaching-item">
+                            <p class="teaching-title">Supervisor, MCS-100, MIT(AI), and MIT(HCI), Term 2</p>
+                            <p class="teaching-info">
+                                <i class="fas fa-map-marker-alt location-icon"></i>
+                                School of Computing and Information Systems, University of Melbourne
                                 <br>
                                 Role: Supervising seven MSC students, including 5 MSC-100, 1 MIT (AI) and 1 MIT(HCI), (load: 150).
                             </p>
-                        </div>
+                        </li>
+                    </ul>
+                </div>
 
-                        <h4 class="year-header">2023</h4>
-
-                        <div class="mentoring-item">
-                            <p class="mentoring-title">Supervisor for Part II, and Mphil Projects, Term 2</p>
-                            <p class="mentoring-info">
-                                📍 Department of Computer Technology, University of Cambridge
+                <div class="teaching-section">
+                    <h4>2023</h4>
+                    <ul class="teaching-list">
+                        <li class="teaching-item">
+                            <p class="teaching-title">Supervisor for Part II, and Mphil Projects, Term 2</p>
+                            <p class="teaching-info">
+                                <i class="fas fa-map-marker-alt location-icon"></i>
+                                Department of Computer Technology, University of Cambridge
                                 <br>
                                 Role: Supervisor of research-oriented projects including efficient on-device machine learning and test-time adaptation.
                             </p>
-                        </div>
+                        </li>
+                    </ul>
+                </div>
 
-                        <h4 class="year-header">2021</h4>
-
-                        <div class="mentoring-item">
-                            <p class="mentoring-title">Teaching Assistant, Capacity Planning of Computer Systems and Networks (COMP9334), Term 1</p>
-                            <p class="mentoring-info">
-                                📍 Department of Computer Science and Engineering, University of New South Wales
+                <div class="teaching-section">
+                    <h4>2021</h4>
+                    <ul class="teaching-list">
+                        <li class="teaching-item">
+                            <p class="teaching-title">Teaching Assistant, Capacity Planning of Computer Systems and Networks (COMP9334), Term 1</p>
+                            <p class="teaching-info">
+                                <i class="fas fa-map-marker-alt location-icon"></i>
+                                Department of Computer Science and Engineering, University of New South Wales
                                 <br>
                                 Role: Tutoring lab tutorials, final assignment and marking (~150 students, undergraduate courses).
                             </p>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

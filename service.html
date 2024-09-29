@@ -5,7 +5,7 @@
         <title>Hong Jia | Service</title>
         
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"">
         <meta name="author" content="Hong Jia">
         <meta name="description" content="University of Melbourne, Australia">
         <meta name="og:title" content="Hong Jia">
@@ -17,10 +17,48 @@
         
         <style>
             .content-wrapper {
-                padding-top: 5px;
+                padding-top: 10px;
+                max-width: 1200px;
+                margin: 0 auto;
+                width: 100%;
+            }
+            .navbar-nav {
+                margin-left: 0 !important; /* Remove the fixed left margin */
+            }
+            .navbar-collapse {
+                padding-left: 0; /* Remove left padding */
+            }
+            @media (min-width: 768px) {
+                .navbar-nav {
+                    float: left; /* Ensure items float left on larger screens */
+                }
+            }
+            .service-section {
+                background-color: #f8f9fa;
+                border-radius: 10px;
+                padding: 10px 20px;
+                margin-bottom: 20px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            .service-section h4 {
+                color: #34495e;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            .service-category {
+                font-weight: bold;
+                color: #3498db;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                border-bottom: 1px solid #3498db;
+                padding-bottom: 5px;
+            }
+            .service-list {
+                list-style-type: none;
+                padding-left: 0;
             }
             .service-item {
-                margin-bottom: 20px;
+                margin-bottom: 15px;
             }
             .service-title {
                 font-weight: bold;
@@ -28,23 +66,8 @@
                 margin-bottom: 5px;
             }
             .service-info {
-                color: #7f8c8d;
+                color: #333;
                 font-size: 0.9em;
-            }
-            .year-header {
-                margin-top: 30px;
-                margin-bottom: 15px;
-                color: #34495e;
-                border-bottom: 2px solid #ecf0f1;
-                padding-bottom: 5px;
-            }
-            .reviewer-item {
-                margin-bottom: 3px;
-                line-height: 1.2;
-            }
-            .reviewer-section p {
-                margin-bottom: 3px;
-                line-height: 1.2;
             }
         </style>
     </head>
@@ -60,7 +83,7 @@
                 </button>
             </div>
             <div class="navbar-collapse collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-left" style="margin-left: 113px;">
+                <ul class="nav navbar-nav">
                     <li><a href="index.html#about">About</a></li>
                     <li><a href="publications.html">Publications</a></li>
                     <li><a href="service.html">Service</a></li>
@@ -73,49 +96,66 @@
     </nav>
     
     <div class="container content-wrapper">
+        <h2>Academic Service</h2>
         <div class="row">
-            <div class="col-md-9">
-                <div class="row content">
-                    <div class="col-md-12">
-                        <h4>Editor, Chair, Committee</h4>
-                        <h4 class="year-header" style="margin-top: 10px; margin-bottom: 10px;">2024</h4>
-                        <ul>
-                            <li>Organiser and General Chair: <a href="https://eifcom.netlify.app" title="ACM Workshop on Mobile Computing with Efficient and Interactive Foundation Models">ACM MobiCom 2024 – EIFCom workshop</a></li>
-                            <li>Organiser and General Chair: <span title="2024 IEEE Smart World Congress (SWC): Workshop on Human-Centric Ubiquitous Sensing and Computing for Health">IEEE SWC 2024 – HUSH workshop</span></li>
-                            <li>Artifacts Program Committee: <span title="ACM Conference on Embedded Networked Sensor Systems">ACM SenSys 2024</span></li>
-                            <li>Technical Program Committee: <span title="ACM International Joint Conference on Pervasive and Ubiquitous Computing">ACM UbiComp 2024</span> – <span title="Computing for Well-being Workshop">WellComp workshop</span></li>
-                            <li>Guest Editor: MDPI Electronics</li>
-                        </ul>
+            <div class="col-md-12">
+                <div class="service-section">
+                    <h4>Editor, Chair, and Programme Committee</h4>
+                    <div class="service-category">Organiser and General Chair</div>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <p class="service-title"><a href="https://eifcom.netlify.app">ACM MobiCom 2024 – EIFCom workshop</a></p>
+                        </li>
+                        <li class="service-item">
+                            <p class="service-title">IEEE SWC 2024 – HUSH workshop</p>
+                        </li>
+                    </ul>
 
-                        <h4 class="year-header">2023</h4>
-                        <ul>
-                            <li>Technical Program Committee: <span title="The Web Conference">ACM TheWebConf 2023</span></li>
-                        </ul>
-                        
-                        <h4>Reviewer</h4>
-                        <div class="reviewer-section">
-                            <h4 class="year-header" style="margin-top: 10px; margin-bottom: 10px;">2024</h4>
-                            <p class="reviewer-item">[UbiComp & HCI] <span title="Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies">ACM IMWUT</span>, <span title="ACM Conference on Human Factors in Computing Systems">ACM CHI</span>, <span title="ACM Symposium on User Interface Software and Technology">ACM UIST</span>, <span title="IEEE Internet of Things Journal">IEEE Internet of Things Journal</span>, <span title="Pervasive and Mobile Computing">Pervasive and Mobile Computing</span></p>
-                            <p class="reviewer-item">[Mobile] <span title="IEEE Transactions on Mobile Computing">IEEE Transactions on Mobile Computing</span>, <span title="ACM/IEEE International Conference on Information Processing in Sensor Networks">ACM IPSN</span>, <span title="International Conference on Embedded Wireless Systems and Networks">ACM EWSN</span>, <span title="ACM Conference on Embedded Networked Sensor Systems">ACM SenSys</span></p>
-                            <p class="reviewer-item">[Machine Learning] <span title="Conference on Neural Information Processing Systems">NeurIPS</span>, <span title="The Web Conference">ACM TheWebConf</span></p>
-                            <h4 class="year-header">2023</h4>
-                            <p class="reviewer-item">[UbiComp & HCI] <span title="Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies">ACM IMWUT</span>, <span title="IEEE Internet of Things Journal">IEEE Internet of Things Journal</span></p>
-                            <p class="reviewer-item">[Mobile] <span title="IEEE Transactions on Mobile Computing">IEEE Transactions on Mobile Computing</span>, <span title="ACM/IEEE International Conference on Information Processing in Sensor Networks">ACM IPSN</span>, <span title="International Conference on Embedded Wireless Systems and Networks">ACM EWSN</span>, <span title="ACM Conference on Embedded Networked Sensor Systems">ACM SenSys</span></p>
-                            <p class="reviewer-item">[Machine Learning] <span title="Conference on Neural Information Processing Systems">NeurIPS</span>, <span title="The Web Conference">ACM TheWebConf</span></p>
-                            <h4 class="year-header">2022</h4>
-                            <p class="reviewer-item">[UbiComp & HCI] <span title="Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies">ACM IMWUT</span>, <span title="IEEE Internet of Things Journal">IEEE Internet of Things Journal</span></p>
-                            <p class="reviewer-item">[Mobile] <span title="IEEE Transactions on Mobile Computing">IEEE Transactions on Mobile Computing</span>, <span title="ACM/IEEE International Conference on Information Processing in Sensor Networks">ACM IPSN</span>, <span title="International Conference on Embedded Wireless Systems and Networks">ACM EWSN</span>, <span title="ACM Conference on Embedded Networked Sensor Systems">ACM SenSys</span></p>
-                            <h4 class="year-header">2021</h4>
-                            <p class="reviewer-item">[UbiComp & HCI] <span title="Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies">ACM IMWUT</span>, <span title="IEEE Internet of Things Journal">IEEE Internet of Things Journal</span></p>
-                            <p class="reviewer-item">[Mobile] <span title="IEEE Transactions on Mobile Computing">IEEE Transactions on Mobile Computing</span>, <span title="ACM/IEEE International Conference on Information Processing in Sensor Networks">ACM IPSN</span>, <span title="International Conference on Embedded Wireless Systems and Networks">ACM EWSN</span>, <span title="ACM Conference on Embedded Networked Sensor Systems">ACM SenSys</span></p>
-                            <h4 class="year-header">2020</h4>
-                            <p class="reviewer-item">[UbiComp & HCI] <span title="Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies">ACM IMWUT</span></p>
-                            <p class="reviewer-item">[Mobile] <span title="ACM/IEEE International Conference on Information Processing in Sensor Networks">ACM IPSN</span>, <span title="International Conference on Embedded Wireless Systems and Networks">ACM EWSN</span>, <span title="ACM Conference on Embedded Networked Sensor Systems">ACM SenSys</span></p>
-                        </div>
+                    <div class="service-category">Program Committee</div>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <p class="service-title">Artifacts Program Committee: ACM SenSys 2024</p>
+                        </li>
+                        <li class="service-item">
+                            <p class="service-title">Technical Program Committee: ACM UbiComp 2024 – WellComp workshop</p>
+                        </li>
+                        <li class="service-item">
+                            <p class="service-title">Technical Program Committee: ACM TheWebConf 2023</p>
+                        </li>
+                    </ul>
 
-                        
+                    <div class="service-category">Editor</div>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <p class="service-title">Guest Editor: MDPI Electronics</p>
+                        </li>
+                    </ul>
+                </div>
 
-                    </div>
+                <div class="service-section">
+                    <h4>Reviewer</h4>
+                    <div class="service-category">UbiComp & HCI</div>
+                    <ul class="service-list">
+                        <li class="service-item"><p class="service-title">ACM IMWUT (since 2020)</p></li>
+                        <li class="service-item"><p class="service-title">ACM CHI (since 2024)</p></li>
+                        <li class="service-item"><p class="service-title">ACM UIST (since 2024)</p></li>
+                        <li class="service-item"><p class="service-title">IEEE Internet of Things Journal (since 2021)</p></li>
+                        <li class="service-item"><p class="service-title">Pervasive and Mobile Computing (since 2024)</p></li>
+                    </ul>
+
+                    <div class="service-category">Mobile & Sensing</div>
+                    <ul class="service-list">
+                        <li class="service-item"><p class="service-title">IEEE Transactions on Mobile Computing (since 2021)</p></li>
+                        <li class="service-item"><p class="service-title">ACM IPSN (since 2020)</p></li>
+                        <li class="service-item"><p class="service-title">ACM EWSN (since 2020)</p></li>
+                        <li class="service-item"><p class="service-title">ACM SenSys (since 2020)</p></li>
+                    </ul>
+
+                    <div class="service-category">Machine Learning</div>
+                    <ul class="service-list">
+                        <li class="service-item"><p class="service-title">NeurIPS (since 2023)</p></li>
+                        <li class="service-item"><p class="service-title">ACM TheWebConf (since 2023)</p></li>
+                    </ul>
                 </div>
             </div>
         </div>

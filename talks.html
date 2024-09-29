@@ -17,10 +17,37 @@
         
         <style>
             .content-wrapper {
-                padding-top: 5px;
+                padding-top: 10px;
+                max-width: 1200px;
+                margin: 0 auto;
+                width: 100%;
+            }
+            .talks-section {
+                background-color: #f8f9fa;
+                border-radius: 10px;
+                padding: 10px 20px;
+                margin-bottom: 20px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            .talks-section h4 {
+                color: #34495e;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            .talk-category {
+                font-weight: bold;
+                color: #3498db; /* This is the blue color used in the service page */
+                margin-top: 20px;
+                margin-bottom: 10px;
+                border-bottom: 1px solid #3498db;
+                padding-bottom: 5px;
+            }
+            .talk-list {
+                list-style-type: none;
+                padding-left: 0;
             }
             .talk-item {
-                margin-bottom: 20px;
+                margin-bottom: 15px;
             }
             .talk-title {
                 font-weight: bold;
@@ -28,8 +55,12 @@
                 margin-bottom: 5px;
             }
             .talk-info {
-                color: #7f8c8d;
+                color: #333; /* Changed from #7f8c8d to a darker color */
                 font-size: 0.9em;
+            }
+            .location-icon {
+                color: #3498db;
+                margin-right: 5px;
             }
         </style>
     </head>
@@ -58,85 +89,91 @@
     </nav>
     
     <div class="container content-wrapper">
+        <h2>Talks</h2>
         <div class="row">
-            <div class="col-md-9">
-                <h3>Talks</h3>
-                <div class="row content">
-                    <div class="col-md-12">
-                        
-                        <div class="talk-item">
-                            <p class="talk-title">[Invited Presentation] MobileHCI via Novel Mobile Sensing and Edge Intelligence</p>
+            <div class="col-md-12">
+                <div class="talks-section">
+                    <div class="talk-category">Invited Talks</div>
+                    <ul class="talk-list">
+                        <li class="talk-item">
+                            <p class="talk-title">MobileHCI via Novel Mobile Sensing and Edge Intelligence</p>
                             <p class="talk-info">
-                                📍 <a href="https://www.unsw.edu.au/engineering/our-schools/computer-science-and-engineering">x-Lab & IITP, University of Melbourne</a>, Melbourne, Australia
+                                <i class="fas fa-map-marker-alt location-icon"></i>
+                                <a href="https://www.unsw.edu.au/engineering/our-schools/computer-science-and-engineering">x-Lab & IITP, University of Melbourne</a>, Melbourne, Australia
                                 <br>
                                 September 3, 2024, invited by Prof. Taehyun Rhee and Dr. Wafa Johal
                             </p>
-                        </div>
-
-                        <div class="talk-item">
-                            <p class="talk-title">[Invited Talk] Mobile HCI via Edge Intelligence</p>
+                        </li>
+                        <li class="talk-item">
+                            <p class="talk-title">Mobile HCI via Edge Intelligence</p>
                             <p class="talk-info">
-                                📍 <a href="https://www.unsw.edu.au/engineering/our-schools/computer-science-and-engineering">CSE, University of New South Wales</a>, Sydney, Australia
+                                <i class="fas fa-map-marker-alt location-icon"></i>
+                                <a href="https://www.unsw.edu.au/engineering/our-schools/computer-science-and-engineering">CSE, University of New South Wales</a>, Sydney, Australia
                                 <br>
                                 July 9, 2024, invited by Prof. Flora Salim and hosted by Dr. Hao Xue
                             </p>
-                        </div>
-
-                        <div class="talk-item">
-                            <p class="talk-title">[Lightning Talk] Mobile Human-Computer Interaction and Edge AI</p>
+                        </li>
+                        <li class="talk-item">
+                            <p class="talk-title">Ubiquitous, Secure and Efficient Mobile Sensing Systems</p>
                             <p class="talk-info">
-                                📍 <a href="https://cis.unimelb.edu.au/">CIS, FEIT, University of Melbourne</a>, Melbourne, Australia
-                                <br>
-                                June 26, 2024, hosted by Dr. Thuan Pham
-                            </p>
-                        </div>
-
-                        <div class="talk-item">
-                            <p class="talk-title">[Invited Talk] Ubiquitous, Secure and Efficient Mobile Sensing Systems</p>
-                            <p class="talk-info">
-                                📍 <a href="https://www.sigmobile.org/mobisys/2023/index.html">MobiSys'23</a>, Helsinki, Finland
+                                <i class="fas fa-map-marker-alt location-icon"></i>
+                                <a href="https://www.sigmobile.org/mobisys/2023/index.html">MobiSys'23</a>, Helsinki, Finland
                                 <br>
                                 June 19, 2023, hosted by Prof. Chenren Xu and Prof. Qing Wang
                             </p>
-                        </div>
-
-                        <div class="talk-item">
-                            <p class="talk-title">[Invited Talk] Resource and Uncertainty Aware Event Detection for Microcontrollers</p>
+                        </li>
+                        <li class="talk-item">
+                            <p class="talk-title">Resource and Uncertainty Aware Event Detection for Microcontrollers</p>
                             <p class="talk-info">
-                                📍 <a href="https://mobile-systems.cl.cam.ac.uk/">Mobile System Lab</a>, University of Cambridge, Cambridge, UK
+                                <i class="fas fa-map-marker-alt location-icon"></i>
+                                <a href="https://mobile-systems.cl.cam.ac.uk/">Mobile System Lab</a>, University of Cambridge, Cambridge, UK
                                 <br>
                                 April 16, 2022, hosted by Prof. Cecilia Mascolo
                             </p>
-                        </div>
+                        </li>
+                    </ul>
+                </div>
 
-                        <div class="talk-item">
+                <div class="talks-section">
+                    <div class="talk-category">Conference Presentations</div>
+                    <ul class="talk-list">
+                        <li class="talk-item">
+                            <p class="talk-title">Mobile Human-Computer Interaction and Edge AI</p>
+                            <p class="talk-info">
+                                <i class="fas fa-map-marker-alt location-icon"></i>
+                                <a href="https://cis.unimelb.edu.au/">CIS, FEIT, University of Melbourne</a>, Melbourne, Australia
+                                <br>
+                                June 26, 2024, hosted by Dr. Thuan Pham
+                            </p>
+                        </li>
+                        <li class="talk-item">
                             <p class="talk-title">Ubiquitous Fine-Grained Swing Tracking Framework via Stochastic Neural Architecture Search and Adversarial Learning</p>
                             <p class="talk-info">
-                                📍 <a href="https://ubicomp.org/ubicomp2021/">IMWUT'21</a>, Virtual
+                                <i class="fas fa-map-marker-alt location-icon"></i>
+                                <a href="https://ubicomp.org/ubicomp2021/">IMWUT'21</a>, Virtual
                                 <br>
                                 September 22, 2021, paper presentation
                             </p>
-                        </div>
-
-                        <div class="talk-item">
+                        </li>
+                        <li class="talk-item">
                             <p class="talk-title">Mobile Golf Swing Tracking via Sensor Fusion using Conditional Generative Adversarial Network</p>
                             <p class="talk-info">
-                                📍 <a href="https://ewsn2021.ewi.tudelft.nl/">EWSN'21</a>, Delft, Netherlands
+                                <i class="fas fa-map-marker-alt location-icon"></i>
+                                <a href="https://ewsn2021.ewi.tudelft.nl/">EWSN'21</a>, Delft, Netherlands
                                 <br>
                                 February 18, 2021, paper presentation
                             </p>
-                        </div>
-
-                        <div class="talk-item">
+                        </li>
+                        <li class="talk-item">
                             <p class="talk-title">Mobile Golf Swing Tracking Using Deep Learning with Data Fusion</p>
                             <p class="talk-info">
-                                📍 <a href="http://sensys.acm.org/2019/">Sensys'19</a>, New York, USA
+                                <i class="fas fa-map-marker-alt location-icon"></i>
+                                <a href="http://sensys.acm.org/2019/">Sensys'19</a>, New York, USA
                                 <br>
                                 January 13, 2019, paper presentation
                             </p>
-                        </div>
-
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

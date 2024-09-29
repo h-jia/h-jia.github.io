@@ -17,12 +17,57 @@
         
         <style>
             .content-wrapper {
-                padding-top: 10px;
+                padding-top: 20px;
+                max-width: 1200px;
+                margin: 0 auto;
+                width: 100%;
+            }
+            .profile-section {
+                margin-bottom: 20px;
+            }
+            .profile-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                max-width: 100%;
+                margin: 0;
+            }
+            .profile-info {
+                flex: 1;
+                padding-right: 20px;
+                max-width: 670px;
+            }
+            .profile-photo-container {
+                width: 130px;
+                flex-shrink: 0;
+                margin-top: 10px;
             }
             .profile-photo {
-                max-width: 100%;
+                width: 100%;
                 height: auto;
-                margin-top: 20px;
+                max-width: 130px;
+            }
+            @media (max-width: 768px) {
+                .profile-content {
+                    flex-direction: column-reverse;
+                    align-items: center;
+                }
+                .profile-photo-container {
+                    margin-bottom: 20px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    padding: 0;
+                }
+                .profile-info {
+                    text-align: center;
+                    padding-right: 0;
+                    width: 100%;
+                }
+                .profile-photo {
+                    margin: 0;
+                    display: block;
+                }
             }
             .news-container {
                 display: flex;
@@ -57,28 +102,111 @@
                 line-height: 1.2;
                 font-size: 13px;
             }
-
-            /* Update these styles for the left-aligned navbar and content alignment */
-            body {
-                padding-top: 50px; /* Adjust based on your navbar height */
+            #research-highlights {
+                width: 100%;
+                margin-bottom: 30px;
+                padding: 0;
             }
-            .navbar {
-                margin-bottom: 0;
+            .news-container {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                padding: 0;
             }
-            .navbar-nav {
-                float: left;
+            .news-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                width: 100%;
+                padding: 0;
             }
-            .navbar-nav > li > a {
-                padding: 15px 15px;
+            .news-date {
+                min-width: 60px;
+                font-size: 12px;
+                font-weight: bold;
+                flex-shrink: 0;
             }
-            .content-wrapper {
-                padding-top: 20px;
-                padding-left: 70px; /* Align content with "About" nav item */
+            .news-content {
+                flex-grow: 1;
+                padding-right: 0;
             }
-            @media (max-width: 767px) {
+            .news-content p {
+                margin: 0;
+                padding-right: 0;
+            }
+            @media (max-width: 768px) {
                 .content-wrapper {
-                    padding-left: 15px; /* Reset padding for mobile */
+                    padding-left: 15px;
+                    padding-right: 15px;
                 }
+            }
+            @media (max-width: 480px) {
+                .content-wrapper {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+                h2, h5 {
+                    word-wrap: break-word;
+                }
+            }
+
+            body {
+                font-size: 15px; /* Increased from default 14px */
+            }
+
+            h2 {
+                font-size: 30px; /* Increased from 28px */
+            }
+
+            h4 {
+                font-size: 22px; /* Increased from 20px */
+            }
+
+            h5 {
+                font-size: 15px; /* Reduced from 16px (default h5 size) */
+            }
+
+            .news-content p {
+                font-size: 14px; /* Increased from 13px */
+            }
+
+            .news-date {
+                font-size: 13px; /* Increased from 12px */
+            }
+
+            @media (max-width: 768px) {
+                body {
+                    font-size: 14px; /* Slightly smaller for mobile, but still larger than before */
+                }
+            }
+
+            .navbar-nav {
+                margin-left: 0 !important; /* Remove the fixed left margin */
+            }
+
+            .navbar-collapse {
+                padding-left: 0; /* Remove left padding */
+            }
+
+            @media (min-width: 768px) {
+                .navbar-nav {
+                    float: left; /* Ensure items float left on larger screens */
+                }
+            }
+
+            .profile-info h5 {
+                margin-bottom: 2px; /* Reduce space between h5 elements */
+                line-height: 1.1; /* Reduce line height further */
+            }
+
+            .profile-info h5:last-child {
+                margin-bottom: 5px; /* Slightly reduce space after the last h5 element */
+            }
+
+            /* Restore original size for the name */
+            .profile-info h2 {
+                font-size: 30px; /* Keep the original size for the name */
             }
         </style>
     </head>
@@ -94,7 +222,7 @@
                 </button>
             </div>
             <div class="navbar-collapse collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-left" style="margin-left: 120px;">
+                <ul class="nav navbar-nav">
                     <li><a href="#about">About</a></li>
                     <li><a href="publications.html">Publications</a></li>
                     <li><a href="service.html">Service</a></li>
@@ -107,256 +235,261 @@
     </nav>
     
     <div class="container content-wrapper">
-        <div class="row">
-            <div class="col-md-6 col-sm-9">
-                <h2><a class="anchor" name="about"></a>Hong Jia</h2>
-                <h5>Research Fellow at <a href="https://www.unimelb.edu.au/">University of Melbourne, Australia</a></h5>
-                <h5>Ext. Research Associate at <a href="https://www.cl.cam.ac.uk/">University of Cambridge, UK</a></h5>
-                <h5>hong.jia@unimelb.edu.au <a href="mailto:hong.jia@unimelb.edu.au"><span class="glyphicon glyphicon-envelope"></span></a></h5>
-                <h5>
-                    <a href="https://scholar.google.com/citations?hl=en&user=Q9ExZbAAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> - 
-                    <a href="https://github.com/h-jia">GitHub</a> - 
-                    <a href="https://www.linkedin.com/in/hong-jia-b3857b154/">LinkedIn</a> - 
-                    <a href="https://twitter.com/HongJia_1">Twitter</a>
-                </h5>
-            </div>
-            <div class="col-md-3 col-sm-12 text-right">
-                <img src="img/photo2.jpg" class="profile-photo" alt="Hong Jia" style="width: 120px; height: auto; margin-top: 30px;">
+        <div class="profile-section">
+            <div class="profile-content">
+                <div class="profile-info">
+                    <h2><a class="anchor" name="about"></a>Hong Jia</h2>
+                    <h5>Research Fellow at <a href="https://www.unimelb.edu.au/">University of Melbourne, Australia</a></h5>
+                    <h5>Ext. Research Associate at <a href="https://www.cl.cam.ac.uk/">University of Cambridge, UK</a></h5>
+                    <h5>hong.jia@unimelb.edu.au <a href="mailto:hong.jia@unimelb.edu.au"><span class="glyphicon glyphicon-envelope"></span></a></h5>
+                    <h5>
+                        <a href="https://scholar.google.com/citations?hl=en&user=Q9ExZbAAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> - 
+                        <a href="https://github.com/h-jia">GitHub</a> - 
+                        <a href="https://www.linkedin.com/in/hong-jia-b3857b154/">LinkedIn</a> - 
+                        <a href="https://twitter.com/HongJia_1">Twitter</a>
+                    </h5>
+                </div>
+                <div class="profile-photo-container">
+                    <img src="img/photo2.jpg" class="profile-photo" alt="Hong Jia">
+                </div>
             </div>
         </div>
 
-        <div class="row content">
-            <div class="col-md-10">
+        <div class="row">
+            <div class="col-md-12" id="bio">
                 <h4><a name="News"></a>Biography</h4>
                 <p style="text-align:justify;font-size:14px">
                     I am a Research Fellow at the University of Melbourne (2024-). Prior to that,I was a Research Associate at the University of Cambridge (2021-2024). I obtained my Ph.D. in Computer Science from the University of New South Wales (UNSW) in 2021.</p>
                 <p style="text-align:justify;font-size:14px">
                     My research primarily focuses on efficient machine learning & LLMs and pervasive computing for human-centered computing. I have served as a PC and reviewer for top-tier journals and conferences, including NeurIPS, ACM IMWUT/UbiComp, ACM CHI, ACM UIST, PMCJ, ACM TMC, ACM IPSN, ACM SenSys, and ACM TheWebConf. I have been recognized for my contributions to the field with several awards, including the 2024 Best Paper Runner-Up Award at ACM IPSN (Core A*), the 2023 ACM MobiSys (Core A*) Rising Star Award from ACM SIGMOBILE, and the 2022 Best Poster Runner-Up Award at ACM MobiCom (Core A*).
                 </p>
-                <h4><a name="News"></a>Research Highlights</h4>
-                <div class="news-container">
-                    <div class="news-item">
-                        <div class="news-date">2024/09</div>
-                        <div class="news-content">
-                            <p>One paper titled "TinyTTA: Efficient Test-time Adaptation via Early-exit Ensembles on Edge Devices" is accepted by <strong><a href="https://nips.cc/Conferences/2024">NeurIPS 2024</a></strong> (Core A*)!</p>
-                        </div>
-                    </div>
+            </div>
+        </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2024/09</div>
-                        <div class="news-content">
-                            <p>A grant worth $11,064 from the Google Research Fund is awarded as the sole CI.</p>
-                        </div>
+        <div id="research-highlights">
+            <h4><a name="News"></a>Research Highlights</h4>
+            <div class="news-container">
+                <div class="news-item">
+                    <div class="news-date">2024/09</div>
+                    <div class="news-content">
+                        <p>One paper titled "TinyTTA: Efficient Test-time Adaptation via Early-exit Ensembles on Edge Devices" is accepted by <strong><a href="https://nips.cc/Conferences/2024">NeurIPS 2024</a></strong> (Core A*)!</p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2024/09</div>
-                        <div class="news-content">
-                            <p>Serve as a PC member for Artifacts Evaluation at <strong><a href="https://sensys.acm.org/2024/">ACM SenSys 2024</a></strong>.</p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2024/09</div>
+                    <div class="news-content">
+                        <p>A grant worth $11,064 from the Google Research Fund is awarded as the sole CI.</p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2024/08</div>
-                        <div class="news-content">
-                            <p>One paper titled "<a href="https://arxiv.org/pdf/2407.08240">Leveraging LLMs to Predict Affective States via Smartphone Sensor Features</a>" is accepted by Mental Health workshops in conjunction with <strong><a href="https://www.ubicomp.org/ubicomp-iswc-2024/">UbiComp 2024</a></strong>.</p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2024/09</div>
+                    <div class="news-content">
+                        <p>Serve as a PC member for Artifacts Evaluation at <strong><a href="https://sensys.acm.org/2024/">ACM SenSys 2024</a></strong>.</p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2024/08</div>
-                        <div class="news-content">
-                            <p>One paper titled "<a href="https://www.repository.cam.ac.uk/items/bc81f841-1370-4cd3-962a-d6eb25459d9f">StatioCL: Contrastive Learning for Time Series via Non-Stationary and Temporal Contrast</a>" is accepted by <strong><a href="https://cikm2024.org/">ACM CIKM 2024</a></strong> (Core A).</p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2024/08</div>
+                    <div class="news-content">
+                        <p>One paper titled "<a href="https://arxiv.org/pdf/2407.08240">Leveraging LLMs to Predict Affective States via Smartphone Sensor Features</a>" is accepted by Mental Health workshops in conjunction with <strong><a href="https://www.ubicomp.org/ubicomp-iswc-2024/">UbiComp 2024</a></strong>.</p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2024/07</div>
-                        <div class="news-content">
-                            <p><a href="https://dl.acm.org/doi/10.1145/3675094.3678494">Exploring Large-Scale Language Models to Evaluate EEG-Based Multimodal Data for Mental Health</a>" is accepted by <strong><a href="https://wellcomp2024.github.io/">WellComp 2024</a></strong> in conjunction with <strong><a href="https://www.ubicomp.org/ubicomp-iswc-2024/">UbiComp 2024</a></strong>. </p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2024/08</div>
+                    <div class="news-content">
+                        <p>One paper titled "<a href="https://www.repository.cam.ac.uk/items/bc81f841-1370-4cd3-962a-d6eb25459d9f">StatioCL: Contrastive Learning for Time Series via Non-Stationary and Temporal Contrast</a>" is accepted by <strong><a href="https://cikm2024.org/">ACM CIKM 2024</a></strong> (Core A).</p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2024/07</div>
-                        <div class="news-content">
-                            <p>Invited talk "Mobile Sensing Systems via Edge Intelligence" at the <a href="https://www.unsw.edu.au/engineering/our-schools/computer-science-and-engineering">
-                            UNSW</a>, invited by Prof. <a href="https://fsalim.github.io/">Flora Salim</a> and hosted by Dr. <a href="https://www.unsw.edu.au/staff/hao-xue"> Hao Xue</a>. </p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2024/07</div>
+                    <div class="news-content">
+                        <p><a href="https://dl.acm.org/doi/10.1145/3675094.3678494">Exploring Large-Scale Language Models to Evaluate EEG-Based Multimodal Data for Mental Health</a>" is accepted by <strong><a href="https://wellcomp2024.github.io/">WellComp 2024</a></strong> in conjunction with <strong><a href="https://www.ubicomp.org/ubicomp-iswc-2024/">UbiComp 2024</a></strong>. </p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2024/06</div>
-                        <div class="news-content">
-                            <p>Two demo papers using personalized on-device LLMs to analyze human behavior and provide recommendation are accepted by <strong><a href="https://www.ubicomp.org/ubicomp-iswc-2024/">UbiComp 2024</a></strong>(Core A*). </p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2024/07</div>
+                    <div class="news-content">
+                        <p>Invited talk "Mobile Sensing Systems via Edge Intelligence" at the <a href="https://www.unsw.edu.au/engineering/our-schools/computer-science-and-engineering">
+                        UNSW</a>, invited by Prof. <a href="https://fsalim.github.io/">Flora Salim</a> and hosted by Dr. <a href="https://www.unsw.edu.au/staff/hao-xue"> Hao Xue</a>. </p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2024/05</div>
-                        <div class="news-content">
-                            <p>Our paper <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10577385">LiDARSpectra: Indoor Spectral Mapping with Low-cost LiDARs"</a> has been awarded as the
-                            <font class="caps" color=#F00> <strong>🏆 Best Paper Runner-up Award (2/93)</strong></font> by <a
-                                href="https://ipsn.acm.org/2024/awards.html"><strong>IPSN 2024</span></strong></a> (Core A*).</p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2024/06</div>
+                    <div class="news-content">
+                        <p>Two demo papers using personalized on-device LLMs to analyze human behavior and provide recommendation are accepted by <strong><a href="https://www.ubicomp.org/ubicomp-iswc-2024/">UbiComp 2024</a></strong>(Core A*). </p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2024/05</div>
-                        <div class="news-content">
-                            <p>Invited to serve as TPC in <a href="https://wellcomp2024.github.io/"><strong>WellComp 2024</strong></a>, in conjunction with <a href="https://www.ubicomp.org/ubicomp-iswc-2024/"><strong>UbiComp 2024</strong></a (Core A*).</p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2024/05</div>
+                    <div class="news-content">
+                        <p>Our paper <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10577385">LiDARSpectra: Indoor Spectral Mapping with Low-cost LiDARs"</a> has been awarded as the
+                        <font class="caps" color=#F00> <strong>🏆 Best Paper Runner-up Award (2/93)</strong></font> by <a
+                            href="https://ipsn.acm.org/2024/awards.html"><strong>IPSN 2024</span></strong></a> (Core A*).</p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2024/05</div>
-                        <div class="news-content">
-                            <p>General Chair and Organizer of the 1st <a href="https://eifcom.netlify.app">Mobile Computing with Efficient and Interactive Foundation Models (EIFCom)</a> workshop in conjunction with <strong>MobiCom 2024</strong> (Core A*).</p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2024/05</div>
+                    <div class="news-content">
+                        <p>Invited to serve as TPC in <a href="https://wellcomp2024.github.io/"><strong>WellComp 2024</strong></a>, in conjunction with <a href="https://www.ubicomp.org/ubicomp-iswc-2024/"><strong>UbiComp 2024</strong></a (Core A*).</p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2024/04</div>
-                        <div class="news-content">
-                            <p>Invited to serve as Guest Editor of 'Recent Advances in Signal Processing for Flexible and Wearable Electronics' at MDPI Electronics</p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2024/05</div>
+                    <div class="news-content">
+                        <p>General Chair and Organizer of the 1st <a href="https://eifcom.netlify.app">Mobile Computing with Efficient and Interactive Foundation Models (EIFCom)</a> workshop in conjunction with <strong>MobiCom 2024</strong> (Core A*).</p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2024/03</div>
-                        <div class="news-content">
-                            <p>I have joined the <a href="https://www.unimelb.edu.au">University of Melbourne</a> as a Research Fellow, working with Prof. <a href="https://people.eng.unimelb.edu.au/vkostakos/">Vassilis Kostakos</a>. Happy to be back in Australia with my family!</p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2024/04</div>
+                    <div class="news-content">
+                        <p>Invited to serve as Guest Editor of 'Recent Advances in Signal Processing for Flexible and Wearable Electronics' at MDPI Electronics</p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2024/01</div>
-                        <div class="news-content">
-                            <p>One paper "LiDARSpectra: Indoor Spectral Mapping with Low-cost LiDARs" has been conditionally accepted by <a
-                                href="https://ipsn.acm.org/2024"><strong>IPSN 2024</strong> </a></p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2024/03</div>
+                    <div class="news-content">
+                        <p>I have joined the <a href="https://www.unimelb.edu.au">University of Melbourne</a> as a Research Fellow, working with Prof. <a href="https://people.eng.unimelb.edu.au/vkostakos/">Vassilis Kostakos</a>. Happy to be back in Australia with my family!</p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2023/12</div>
-                        <div class="news-content">
-                            <p>One paper <a href="https://arxiv.org/pdf/2402.09264.pdf"> "UR2M: Uncertainty and Resource-Aware Event Detection on Microcontrollers"</a> has been accepted by <a
-                                href="https://www.percom.org/2024"><strong>PerCom 2024</span></strong> </a></p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2024/01</div>
+                    <div class="news-content">
+                        <p>One paper "LiDARSpectra: Indoor Spectral Mapping with Low-cost LiDARs" has been conditionally accepted by <a
+                            href="https://ipsn.acm.org/2024"><strong>IPSN 2024</strong> </a></p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2023/09</div>
-                        <div class="news-content">
-                            <p>One paper <a href="https://dl.acm.org/doi/pdf/10.1145/3625687.3625804">"LifeLearner: Hardware-Aware Meta Continual Learning System for Embedded Computing Platforms"</a> has been accepted by <a
-                                href="http://sensys.acm.org/2023/"><strong>SenSys 2023</strong> </a></p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2023/12</div>
+                    <div class="news-content">
+                        <p>One paper <a href="https://arxiv.org/pdf/2402.09264.pdf"> "UR2M: Uncertainty and Resource-Aware Event Detection on Microcontrollers"</a> has been accepted by <a
+                            href="https://www.percom.org/2024"><strong>PerCom 2024</span></strong> </a></p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2023/08</div>
-                        <div class="news-content">
-                            <p>Reviewer/TPC for <font class="caps" color=#A64D79>NeurIPS, TMC, TheWebConf, EWSN,
-                                UbiComp, IPSN etc.</font></p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2023/09</div>
+                    <div class="news-content">
+                        <p>One paper <a href="https://dl.acm.org/doi/pdf/10.1145/3625687.3625804">"LifeLearner: Hardware-Aware Meta Continual Learning System for Embedded Computing Platforms"</a> has been accepted by <a
+                            href="http://sensys.acm.org/2023/"><strong>SenSys 2023</strong> </a></p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2023/07</div>
-                        <div class="news-content">
-                            <p>One paper <a href="https://dl.acm.org/doi/10.1145/3580878">Spectral-Loc: Indoor Localization using Light Spectral
-                                Information</a> has been accepted by <a
-                                href="https://www.ubicomp.org/ubicomp-iswc-2023/"><strong>IMWUT/UbiComp 2023</span></strong></a> (Core A*).</p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2023/08</div>
+                    <div class="news-content">
+                        <p>Reviewer/TPC for <font class="caps" color=#A64D79>NeurIPS, TMC, TheWebConf, EWSN,
+                            UbiComp, IPSN etc.</font></p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2023/07</div>
-                        <div class="news-content">
-                            <p>One paper <a href="https://mobile-systems.cl.cam.ac.uk/papers/mlhc23.pdf">UDAMA:
-                                Unsupervised Domain Adaptation Through Multi Discriminator Adversarial Training With Noisy Labels
-                                Improves Cardio Fitness Prediction</a> has been accepted by <a
-                                href="https://www.mlforhc.org/2023-agenda"><strong>ML4H, NeurIPS 2023</a>
-                            </strong>.</p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2023/07</div>
+                    <div class="news-content">
+                        <p>One paper <a href="https://dl.acm.org/doi/10.1145/3580878">Spectral-Loc: Indoor Localization using Light Spectral
+                            Information</a> has been accepted by <a
+                            href="https://www.ubicomp.org/ubicomp-iswc-2023/"><strong>IMWUT/UbiComp 2023</span></strong></a> (Core A*).</p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2023/06</div>
-                        <div class="news-content">
-                            <p>Talk at <a href="https://www.sigmobile.org/mobisys/2023/index.html">
-                                MobiSys 2023</a> with the topic "<font class="caps" color=#A64D79>Ubiquitous, Secure, and Efficient Mobile
-                                Sensing Systems</font>" (Core A*).</p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2023/07</div>
+                    <div class="news-content">
+                        <p>One paper <a href="https://mobile-systems.cl.cam.ac.uk/papers/mlhc23.pdf">UDAMA:
+                            Unsupervised Domain Adaptation Through Multi Discriminator Adversarial Training With Noisy Labels
+                            Improves Cardio Fitness Prediction</a> has been accepted by <a
+                            href="https://www.mlforhc.org/2023-agenda"><strong>ML4H, NeurIPS 2023</a>
+                        </strong>.</p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2023/05</div>
-                        <div class="news-content">
-                            <p>I am honored to be selected as the <a href="https://www.sigmobile.org/mobisys/2023/rising.html">
-                                <font class="caps" color=#F00><strong>🏆 ACM MobiSys Rising Star (2023)</strong></font>
-                            </a>.</p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2023/06</div>
+                    <div class="news-content">
+                        <p>Talk at <a href="https://www.sigmobile.org/mobisys/2023/index.html">
+                            MobiSys 2023</a> with the topic "<font class="caps" color=#A64D79>Ubiquitous, Secure, and Efficient Mobile
+                            Sensing Systems</font>" (Core A*).</p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2023/02</div>
-                        <div class="news-content">
-                            <p>One paper <a href="https://dl.acm.org/doi/pdf/10.1145/3584986">Subject-Adaptive
-                                Loss-Fitting Smart Garment Platform for Human Activity Recognition</a> has been accepted by <a
-                                href="https://dl.acm.org/journal/tosn/"><strong>TOSN 2023</a>
-                            </strong> (Core A*).</p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2023/05</div>
+                    <div class="news-content">
+                        <p>I am honored to be selected as the <a href="https://www.sigmobile.org/mobisys/2023/rising.html">
+                            <font class="caps" color=#F00><strong>🏆 ACM MobiSys Rising Star (2023)</strong></font>
+                        </a>.</p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2023/01</div>
-                        <div class="news-content">
-                            <p>One paper on indoor localization <a
-                                href="https://dl.acm.org/doi/10.1145/3580878">Spectral-Loc: Indoor Localization using Light Spectral
-                                Information</a> has been accepted by <a
-                                href="https://www.ubicomp.org/ubicomp-iswc-2023/"><strong>IMWUT/UbiComp 2023</span></strong></a> (Core A*).</p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2023/02</div>
+                    <div class="news-content">
+                        <p>One paper <a href="https://dl.acm.org/doi/pdf/10.1145/3584986">Subject-Adaptive
+                            Loss-Fitting Smart Garment Platform for Human Activity Recognition</a> has been accepted by <a
+                            href="https://dl.acm.org/journal/tosn/"><strong>TOSN 2023</a>
+                        </strong> (Core A*).</p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2022/12</div>
-                        <div class="news-content">
-                            <p>One paper <a href="https://ieeexplore.ieee.org/document/9996544/">Pistis: Replay Attack
-                                and Liveness Detection for Gait-based User Authentication System on Wearable Devices Using Vibration</a>
-                            has been accepted by <a href="https://ieee-iotj.org/"><strong>IEEE Internet of Things
-                                Journal</strong></a>.</p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2023/01</div>
+                    <div class="news-content">
+                        <p>One paper on indoor localization <a
+                            href="https://dl.acm.org/doi/10.1145/3580878">Spectral-Loc: Indoor Localization using Light Spectral
+                            Information</a> has been accepted by <a
+                            href="https://www.ubicomp.org/ubicomp-iswc-2023/"><strong>IMWUT/UbiComp 2023</span></strong></a> (Core A*).</p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2022/11</div>
-                        <div class="news-content">
-                            <p>One paper <a href="https://arxiv.org/abs/2211.10475">Turning Silver into Gold: Domain
-                                Adaptation with Noisy Labels for Wearable Cardio-Respiratory Fitness Prediction
-                            </a> on domain adaptation has been accepted in <a href="https://ml4health.github.io/2022/"><strong>ML4H 2022</strong></a> (co-located with NeurIPS 2022)</a>.</p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2022/12</div>
+                    <div class="news-content">
+                        <p>One paper <a href="https://ieeexplore.ieee.org/document/9996544/">Pistis: Replay Attack
+                            and Liveness Detection for Gait-based User Authentication System on Wearable Devices Using Vibration</a>
+                        has been accepted by <a href="https://ieee-iotj.org/"><strong>IEEE Internet of Things
+                            Journal</strong></a>.</p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2022/10</div>
-                        <div class="news-content">
-                            <p>Our poster paper <a href="https://dl.acm.org/doi/10.1145/3495243.3558253">Passive Light
-                                Spectral Indoor Localization</a> has been awarded as the
-                            <font class="caps" color=#F00> <strong>🏆 Best Poster Runner-up Award (2/36)</strong></font> by <a
-                                href="https://www.sigmobile.org/mobicom/2022/"><strong>MobiCom 2022</span></strong></a> (Core A*).
-                            </p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2022/11</div>
+                    <div class="news-content">
+                        <p>One paper <a href="https://arxiv.org/abs/2211.10475">Turning Silver into Gold: Domain
+                            Adaptation with Noisy Labels for Wearable Cardio-Respiratory Fitness Prediction
+                        </a> on domain adaptation has been accepted in <a href="https://ml4health.github.io/2022/"><strong>ML4H 2022</strong></a> (co-located with NeurIPS 2022)</a>.</p>
                     </div>
+                </div>
 
-                    <div class="news-item">
-                        <div class="news-date">2022/09</div>
-                        <div class="news-content">
-                            <p>One paper <a href="https://dl.acm.org/doi/10.1145/3495243.3560533">PROS: An Efficient
-                                Pattern-Driven Compressive Sensing Framework For Low Power Biopotential-Based Wearables With On-Chip
-                                Intelligence</a> has been accepted by <a href="https://www.sigmobile.org/mobicom/2022/"><strong>MobiCom
-                                2022</strong></a>! ( <font class="caps" color=#A64D79>Acceptance rate: 17.8%</font>) (Core A*).</p>
-                        </div>
+                <div class="news-item">
+                    <div class="news-date">2022/10</div>
+                    <div class="news-content">
+                        <p>Our poster paper <a href="https://dl.acm.org/doi/10.1145/3495243.3558253">Passive Light
+                            Spectral Indoor Localization</a> has been awarded as the
+                        <font class="caps" color=#F00> <strong>🏆 Best Poster Runner-up Award (2/36)</strong></font> by <a
+                            href="https://www.sigmobile.org/mobicom/2022/"><strong>MobiCom 2022</span></strong></a> (Core A*).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="news-item">
+                    <div class="news-date">2022/09</div>
+                    <div class="news-content">
+                        <p>One paper <a href="https://dl.acm.org/doi/10.1145/3495243.3560533">PROS: An Efficient
+                            Pattern-Driven Compressive Sensing Framework For Low Power Biopotential-Based Wearables With On-Chip
+                            Intelligence</a> has been accepted by <a href="https://www.sigmobile.org/mobicom/2022/"><strong>MobiCom
+                            2022</strong></a>! ( <font class="caps" color=#A64D79>Acceptance rate: 17.8%</font>) (Core A*).</p>
                     </div>
                 </div>
             </div>

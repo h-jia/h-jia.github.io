@@ -17,10 +17,37 @@
         
         <style>
             .content-wrapper {
-                padding-top: 5px;
+                padding-top: 10px;
+                max-width: 1200px;
+                margin: 0 auto;
+                width: 100%;
+            }
+            .mentoring-section {
+                background-color: #f8f9fa;
+                border-radius: 10px;
+                padding: 10px 20px;
+                margin-bottom: 20px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            .mentoring-section h4 {
+                color: #34495e;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            .mentoring-category {
+                font-weight: bold;
+                color: #3498db; /* This is the blue color used in the service page */
+                margin-top: 20px;
+                margin-bottom: 10px;
+                border-bottom: 1px solid #3498db;
+                padding-bottom: 5px;
+            }
+            .mentoring-list {
+                list-style-type: none;
+                padding-left: 0;
             }
             .mentoring-item {
-                margin-bottom: 20px;
+                margin-bottom: 15px;
             }
             .mentoring-title {
                 font-weight: bold;
@@ -28,15 +55,8 @@
                 margin-bottom: 5px;
             }
             .mentoring-info {
-                color: #7f8c8d;
+                color: #333;
                 font-size: 0.9em;
-            }
-            .year-header {
-                margin-top: 30px;
-                margin-bottom: 15px;
-                color: #34495e;
-                border-bottom: 2px solid #ecf0f1;
-                padding-bottom: 5px;
             }
         </style>
     </head>
@@ -65,43 +85,44 @@
     </nav>
     
     <div class="container content-wrapper">
+        <h2>Students</h2>
         <div class="row">
-            <div class="col-md-9">
-                <div class="row content">
-                    <div class="col-md-12">
-                        <h3>Students</h3>
-                        <h4 class="year-header" style="margin-top: 10px;">PhD Supervising</h4>
-                        <ul>
-                            <li>Le Fang (University of Melbourne, co-supervising with Prof. Vassilis Kostakos and Prof. Jorge Goncalves) — Mobile Phone Over Usage Detection via On-Device LLMs</li>
-                            <li>Shiquan Zhang (University of Melbourne, co-supervising with Prof. Vassilis Kostakos and Dr. Simon D'Alfonso) — On-Device Foundation Models for Personalized Sensing</li>
-                        </ul>
+            <div class="col-md-12">
+                <div class="mentoring-section">
+                    <div class="mentoring-category">PhD Supervising</div>
+                    <ul class="mentoring-list">
+                        <li class="mentoring-item">Le Fang (University of Melbourne, co-supervising with Prof. Vassilis Kostakos and Prof. Jorge Goncalves) — Mobile Phone Over Usage Detection via On-Device LLMs</li>
+                        <li class="mentoring-item">Shiquan Zhang (University of Melbourne, co-supervising with Prof. Vassilis Kostakos and Dr. Simon D'Alfonso) — On-Device Foundation Models for Personalized Sensing</li>
+                    </ul>
+                </div>
 
-                        <h4 class="year-header">PhD Mentoring</h4>
-                        <ul>
-                            <li>Kirtan Bhatt (UNSW) — Differential Privacy for IoT Sensing via LLMs</li>
-                            <li>Tianyi (Tina) Zhang (University of Melbourne) — Digital Phenotyping for Mental Health and Well-Being Using LLMs</li>
-                            <li>Yu (Yvonne) Wu (University of Cambridge) — Weakly-Supervised Methods in Time Series Forecasting</li>
-                            <li>Mark Cardamis (UNSW) — Smart Farming via mmWave Sensing</li>
-                            <li>Yongquan Hu (UNSW) — Human-Computer Interaction through Mobile Sensing</li>
-                            <li>Yanxiang Wang (UNSW) — Spectral Information Sensing</li>
-                            <li>Jiawei Hu (UNSW) — Indoor Light Localization </li>
-                            <li>Song Wei (UNSW) — Mobile Authentication via Human Biometrics </li>
-                        </ul>
+                <div class="mentoring-section">
+                    <div class="mentoring-category">PhD Mentoring</div>
+                    <ul class="mentoring-list">
+                        <li class="mentoring-item">Kirtan Bhatt (UNSW) — Differential Privacy for IoT Sensing via LLMs</li>
+                        <li class="mentoring-item">Tianyi (Tina) Zhang (University of Melbourne) — Digital Phenotyping for Mental Health and Well-Being Using LLMs</li>
+                        <li class="mentoring-item">Yu (Yvonne) Wu (University of Cambridge) — Weakly-Supervised Methods in Time Series Forecasting</li>
+                        <li class="mentoring-item">Mark Cardamis (UNSW) — Smart Farming via mmWave Sensing</li>
+                        <li class="mentoring-item">Yongquan Hu (UNSW) — Human-Computer Interaction through Mobile Sensing</li>
+                        <li class="mentoring-item">Yanxiang Wang (UNSW) — Spectral Information Sensing</li>
+                        <li class="mentoring-item">Jiawei Hu (UNSW) — Indoor Light Localization</li>
+                        <li class="mentoring-item">Song Wei (UNSW) — Mobile Authentication via Human Biometrics</li>
+                    </ul>
+                </div>
 
-                        <h4 class="year-header">MPhil Supervising</h4>
-                        <ul>
-                            <li>Cynthia Dong (University of Cambridge, co-supervised with Prof. Cecilia Mascolo) — Efficient and Robust Test-time adaptation</li>
-                            <li>Zhongru Yang (SZU) — Facial authentication via RFID sensing</span></li>
-                            <li>Shiya Fu (University of Melbourne) — Personalized Mental Health Monitoring via Mobile LLMs (principal supervising)</li>
-                            <li>Xin Wang (University of Melbourne) — Personalized Healthcare Monitoring via Mobile LLMs (principal supervising)</li>
-                            <li>Sheng Guang (Andy) Wang (University of Melbourne) — On-Device Test-time Adaptation Using VLMs (principal supervising)</li>
-                            <li>Hanwen Jiang (University of Melbourne) — Efficient and Robust Tiny VLMs (principal supervising)</li>
-                            <li>Jiaheng Dong (University of Melbourne) — Continuous Adaptation for Automatic Speech Recognition in Noisy Environments (co-supervising with Dr. Ting Dang)</li>
-                            <li>Xuanang Li (University of Melbourne) — Continuous Adaptation for SAR in Noisy Environments (co-supervising with Dr. Ting Dang)</li>
-                            <li>Zhuoran Wei (University of Melbourne) — Gesture-based locomotion techniques in virtual reality (co-supervising with Dr. Andrew Irlitti)</li>
-                        </ul>
-
-                    </div>
+                <div class="mentoring-section">
+                    <div class="mentoring-category">MPhil Supervising</div>
+                    <ul class="mentoring-list">
+                        <li class="mentoring-item">Cynthia Dong (University of Cambridge, co-supervised with Prof. Cecilia Mascolo) — Efficient and Robust Test-time adaptation</li>
+                        <li class="mentoring-item">Zhongru Yang (SZU) — Facial authentication via RFID sensing</li>
+                        <li class="mentoring-item">Shiya Fu (University of Melbourne) — Personalized Mental Health Monitoring via Mobile LLMs (principal supervising)</li>
+                        <li class="mentoring-item">Xin Wang (University of Melbourne) — Personalized Healthcare Monitoring via Mobile LLMs (principal supervising)</li>
+                        <li class="mentoring-item">Sheng Guang (Andy) Wang (University of Melbourne) — On-Device Test-time Adaptation Using VLMs (principal supervising)</li>
+                        <li class="mentoring-item">Hanwen Jiang (University of Melbourne) — Efficient and Robust Tiny VLMs (principal supervising)</li>
+                        <li class="mentoring-item">Jiaheng Dong (University of Melbourne) — Continuous Adaptation for Automatic Speech Recognition in Noisy Environments (co-supervising with Dr. Ting Dang)</li>
+                        <li class="mentoring-item">Xuanang Li (University of Melbourne) — Continuous Adaptation for SAR in Noisy Environments (co-supervising with Dr. Ting Dang)</li>
+                        <li class="mentoring-item">Zhuoran Wei (University of Melbourne) — Gesture-based locomotion techniques in virtual reality (co-supervising with Dr. Andrew Irlitti)</li>
+                    </ul>
                 </div>
             </div>
         </div>
