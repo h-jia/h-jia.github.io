@@ -67,13 +67,39 @@
                 margin-left: 10px;
             }
             .publication-links a {
-                margin-right: 5px;
-                color: #3498db;
+                display: inline-block;
+                margin-right: 10px;
+                padding: 5px 10px;
+                border-radius: 20px;
                 text-decoration: none;
                 font-size: 0.9em;
+                transition: all 0.3s ease;
+                color: #333; /* Dark text color */
+                font-weight: bold;
+            }
+            .publication-links a[href*="Paper"] {
+                background-color: #e6f3ff; /* Light blue background */
+                border: 1px solid #3498db;
+            }
+            .publication-links a[href*="Code"] {
+                background-color: #e6fff2; /* Light green background */
+                border: 1px solid #2ecc71;
             }
             .publication-links a:hover {
-                text-decoration: underline;
+                opacity: 0.8;
+                transform: translateY(-2px);
+                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            }
+            .publication-links a::before {
+                font-family: 'FontAwesome';
+                margin-right: 5px;
+                color: #333; /* Dark color for icons */
+            }
+            .publication-links a[href*="Paper"]::before {
+                content: "\f15c"; /* Document icon */
+            }
+            .publication-links a[href*="Code"]::before {
+                content: "\f121"; /* Code icon */
             }
             .core-rank {
                 font-weight: bold;
@@ -131,11 +157,14 @@
 
             .section-header {
                 font-size: 1.5em;
-                color: #3498db; /* Changed to match the service-category color */
+                color: #3498db;
                 border-bottom: 2px solid #3498db;
                 padding-bottom: 5px;
                 margin-top: 30px;
                 margin-bottom: 20px;
+            }
+            body {
+                color: #333; /* Ensure default text color is dark */
             }
         </style>
     </head>
@@ -184,8 +213,8 @@
                             <p class="publication-info">
                                 <span class="conference-tag">NeurIPS 2024</span>
                                 <span class="publication-links">
-                                    <a href="#">[To appear]</a>
-                                    <a href="#">[Code]</a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer">Code</a>
                                 </span>
                             </p>
                         </div>
@@ -196,8 +225,8 @@
                             <p class="publication-info">
                                 <span class="conference-tag">IEEE PerCom 2024</span>
                                 <span class="publication-links">
-                                    <a href="https://ieeexplore.ieee.org/abstract/document/10494467" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                                    <a href="#">[Code]</a>
+                                    <a href="https://ieeexplore.ieee.org/abstract/document/10494467" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="#">Code</a>
                                 </span>
                             </p>
                         </div>
@@ -208,8 +237,8 @@
                             <p class="publication-info">
                                 <span class="conference-tag">ArXiv 2024 Preprint</span>
                                 <span class="publication-links">
-                                    <a href="#">[Paper]</a>
-                                    <a href="#">[Code]</a>
+                                    <a href="#">Paper</a>
+                                    <a href="#">Code</a>
                                 </span>
                             </p>
                         </div>                        
@@ -220,8 +249,8 @@
                             <p class="publication-info">
                                 <span class="conference-tag">PMCJ 2024</span>
                                 <span class="publication-links">
-                                    <a href="#">[Paper]</a>
-                                    <a href="#">[Code]</a>
+                                    <a href="#">Paper</a>
+                                    <a href="#">Code</a>
                                 </span>
                             </p>
                         </div>
@@ -233,8 +262,8 @@
                             <p class="publication-info">
                                 <span class="conference-tag">ACM EIFCom 2024</span>
                                 <span class="publication-links">
-                                    <a href="#">[Paper]</a>
-                                    <a href="#">[Code]</a>
+                                    <a href="#">Paper</a>
+                                    <a href="#">Code</a>
                                 </span>
                             </p>
                         </div>
@@ -245,8 +274,8 @@
                             <p class="publication-info">
                                 <span class="conference-tag"> ACM Wellcomp 2024</span>
                                 <span class="publication-links">
-                                    <a href="https://dl.acm.org/doi/abs/10.1145/3675094.3678494" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                                    <a href="#">[Code]</a>
+                                    <a href="https://dl.acm.org/doi/abs/10.1145/3675094.3678494" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="#">Code</a>
                                 </span>
                             </p>
                         </div>
@@ -257,8 +286,8 @@
                             <p class="publication-info">
                                 <span class="conference-tag"> ACM UbiComp --- Mental Health Workshop 2024</span>
                                 <span class="publication-links">
-                                    <a href="https://dl.acm.org/doi/abs/10.1145/3675094.3678420" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                                    <a href="#">[Code]</a>
+                                    <a href="https://dl.acm.org/doi/abs/10.1145/3675094.3678420" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="#">Code</a>
                                 </span>
                             </p>
                         </div>
@@ -276,8 +305,8 @@
                                 <span class="conference-tag">ACM MobiSys 2023</span>
                                 <i class="fas fa-medal award-icon"></i><span class="award-text">MobiSys Rising Star</span>
                                 <span class="publication-links">
-                                    <a href="https://dl.acm.org/doi/10.1145/3581791.3597511" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                                    <a href="#">[Code]</a>
+                                    <a href="https://dl.acm.org/doi/10.1145/3581791.3597511" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="#">Code</a>
                                 </span>
                             </p>
                         </div>
@@ -288,8 +317,8 @@
                             <p class="publication-info">
                                 <span class="conference-tag">ACM SenSys 2023</span>
                                 <span class="publication-links">
-                                    <a href="https://dl.acm.org/doi/abs/10.1145/3625687.3625804" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                                    <a href="https://github.com/theyoungkwon/LifeLearner" target="_blank" rel="noopener noreferrer">[Code]</a>
+                                    <a href="https://dl.acm.org/doi/abs/10.1145/3625687.3625804" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="https://github.com/theyoungkwon/LifeLearner" target="_blank" rel="noopener noreferrer">Code</a>
                                 </span>
                             </p>
                         </div>
@@ -300,8 +329,32 @@
                             <p class="publication-info">
                                 <span class="conference-tag">MLHC 2023</span>
                                 <span class="publication-links">
-                                    <a href="https://proceedings.mlr.press/v219/wu23a/wu23a.pdf" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                                    <a href="https://github.com/yvonneywu/UDAMA" target="_blank" rel="noopener noreferrer">[Code]</a>
+                                    <a href="https://proceedings.mlr.press/v219/wu23a/wu23a.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="https://github.com/yvonneywu/UDAMA" target="_blank" rel="noopener noreferrer">Code</a>
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="publication-item">
+                            <p class="publication-title">Spectral-Loc: Indoor Localization using Light Spectral Information</p>
+                            <p class="publication-authors"><u>Yanxiang Wang</u>, <u>Jiawei Hu</u>, <strong>Hong Jia</strong>, Wen Hu, Mahbub Hassan, Ashraf Uddin, Brano Kusy, Moustafa Youssef</p>
+                            <p class="publication-info">
+                                <span class="conference-tag">ACM IMWUT/UbiComp 2023</span>
+                                <span class="publication-links">
+                                    <a href="https://dl.acm.org/doi/abs/10.1145/3580878" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="#">Code</a>
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="publication-item">
+                            <p class="publication-title">Subject Adaptive Loose Fitting Smart Garment Platform For Human Activity Recognition</p>
+                            <p class="publication-authors">Qi Lin, Shuhua Peng, Yuezhong Wu, Jun Liu, <strong>Hong Jia</strong>, Wen Hu, Mahbub Hassan, Aruna Seneviratne, Chun H Wang</p>
+                            <p class="publication-info">
+                                <span class="conference-tag">ACM Transactions on Sensor Networks 2023</span>
+                                <span class="publication-links">
+                                    <a href="https://dl.acm.org/doi/full/10.1145/3584986" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="#">Code</a>
                                 </span>
                             </p>
                         </div>
@@ -318,9 +371,9 @@
                             <p class="publication-info">
                                 <span class="conference-tag">ACM MobiCom 2022</span>
                                 <span class="publication-links">
-                                    <a href="https://dl.acm.org/doi/abs/10.1145/3495243.3560533" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                                    <a href="https://drive.google.com/file/d/1de0XodESjjimPFsv_hJ3vbe1qK9CIFQe/view" target="_blank" rel="noopener noreferrer">[Slides]</a>
-                                    <a href="https://github.com/PROS-public/pros" target="_blank" rel="noopener noreferrer">[Code]</a>
+                                    <a href="https://dl.acm.org/doi/abs/10.1145/3495243.3560533" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="https://drive.google.com/file/d/1de0XodESjjimPFsv_hJ3vbe1qK9CIFQe/view" target="_blank" rel="noopener noreferrer">Slides</a>
+                                    <a href="https://github.com/PROS-public/pros" target="_blank" rel="noopener noreferrer">Code</a>
                                 </span>
                             </p>
                         </div>
@@ -332,8 +385,8 @@
                                 <span class="conference-tag">ML4H 2022</span>
                                 <i class="fas fa-award award-icon"></i><span class="award-text">Google DeepMind Travel Award</span>
                                 <span class="publication-links">
-                                    <a href="https://arxiv.org/pdf/2211.10475" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                                    <a href="#">[Code]</a>
+                                    <a href="https://arxiv.org/pdf/2211.10475" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="#">Code</a>
                                 </span>
                             </p>
                         </div>
@@ -345,8 +398,8 @@
                                 <span class="conference-tag">ACM MobiCom 2022</span>
                                 <i class="fas fa-trophy award-icon"></i><span class="award-text">Best Poster Runner-up Award</span>
                                 <span class="publication-links">
-                                    <a href="https://dl.acm.org/doi/abs/10.1145/3495243.3558253" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                                    <a href="#">[Code]</a>
+                                    <a href="https://dl.acm.org/doi/abs/10.1145/3495243.3558253" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="#">Code</a>
                                 </span>
                             </p>
                         </div>
@@ -357,8 +410,8 @@
                             <p class="publication-info">
                                 <span class="conference-tag">IEEE Internet of Things Journal 2022</span>
                                 <span class="publication-links">
-                                    <a href="https://ieeexplore.ieee.org/abstract/document/9996544" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                                    <a href="#">[Code]</a>
+                                    <a href="https://ieeexplore.ieee.org/abstract/document/9996544" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="#">Code</a>
                                 </span>
                             </p>
                         </div>
@@ -375,8 +428,8 @@
                             <p class="publication-info">
                                 <span class="conference-tag">ACM UbiComp 2021</span>
                                 <span class="publication-links">
-                                    <a href="https://dl.acm.org/doi/abs/10.1145/3478082" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                                    <a href="#">[Code]</a>
+                                    <a href="https://dl.acm.org/doi/abs/10.1145/3478082" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="#">Code</a>
                                 </span>
                             </p>
                         </div>
@@ -387,8 +440,8 @@
                             <p class="publication-info">
                                 <span class="conference-tag">ACM EWSN 2021</span>
                                 <span class="publication-links">
-                                    <a href="https://www.ewsn.org/file-repository/ewsn2021/Article4.pdf" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                                    <a href="#">[Code]</a>
+                                    <a href="https://www.ewsn.org/file-repository/ewsn2021/Article4.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="#">Code</a>
                                 </span>
                             </p>
                         </div>
@@ -399,8 +452,8 @@
                             <p class="publication-info">
                                 <span class="conference-tag">IFAC 2021</span>
                                 <span class="publication-links">
-                                    <a href="https://drive.google.com/file/d/1rF4MFjhpuJu0Lg6VW1iXw96wBYBy0UYN/view" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                                    <a href="#">[Code]</a>
+                                    <a href="https://drive.google.com/file/d/1rF4MFjhpuJu0Lg6VW1iXw96wBYBy0UYN/view" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="#">Code</a>
                                 </span>
                             </p>
                         </div>
@@ -411,8 +464,20 @@
                             <p class="publication-info">
                                 <span class="conference-tag">ACM IMWUT/UbiComp 2021</span>
                                 <span class="publication-links">
-                                    <a href="https://dl.acm.org/doi/abs/10.1145/3494985" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                                    <a href="#">[Code]</a>
+                                    <a href="https://dl.acm.org/doi/abs/10.1145/3494985" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="#">Code</a>
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="publication-item">
+                            <p class="publication-title">Artificial Intelligence Of Things For Ubiquitous Sports Analytics</p>
+                            <p class="publication-authors"><strong>Hong Jia</strong></p>
+                            <p class="publication-info">
+                                <span class="conference-tag">ArXiv 2021 Preprint</span>
+                                <span class="publication-links">
+                                    <a href="#" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="#">Code</a>
                                 </span>
                             </p>
                         </div>
@@ -429,8 +494,8 @@
                             <p class="publication-info">
                                 <span class="conference-tag">ACM IMWUT/UbiComp 2020</span>
                                 <span class="publication-links">
-                                    <a href="https://dl.acm.org/doi/abs/10.1145/3381754" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                                    <a href="#">[Code]</a>
+                                    <a href="https://dl.acm.org/doi/abs/10.1145/3381754" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="#">Code</a>
                                 </span>
                             </p>
                         </div>
@@ -441,8 +506,8 @@
                             <p class="publication-info">
                                 <span class="conference-tag">ACM IMWUT/UbiComp 2020</span>
                                 <span class="publication-links">
-                                    <a href="https://dl.acm.org/doi/abs/10.1145/3381004" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                                    <a href="#">[Code]</a>
+                                    <a href="https://dl.acm.org/doi/abs/10.1145/3381004" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="#">Code</a>
                                 </span>
                             </p>
                         </div>
