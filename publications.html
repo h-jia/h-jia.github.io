@@ -74,16 +74,17 @@
                 text-decoration: none;
                 font-size: 0.9em;
                 transition: all 0.3s ease;
-                color: #333; /* Dark text color */
+                color: #fff; /* White text color */
                 font-weight: bold;
             }
             .publication-links a[href*="Paper"] {
-                background-color: #e6f3ff; /* Light blue background */
-                border: 1px solid #3498db;
+                background-color: #3498db; /* Blue background */
             }
             .publication-links a[href*="Code"] {
-                background-color: #e6fff2; /* Light green background */
-                border: 1px solid #2ecc71;
+                background-color: #2ecc71; /* Green background */
+            }
+            .publication-links a[href*="Slides"] {
+                background-color: #e74c3c; /* Red background */
             }
             .publication-links a:hover {
                 opacity: 0.8;
@@ -93,13 +94,16 @@
             .publication-links a::before {
                 font-family: 'FontAwesome';
                 margin-right: 5px;
-                color: #333; /* Dark color for icons */
+                color: #fff; /* White color for icons */
             }
             .publication-links a[href*="Paper"]::before {
                 content: "\f15c"; /* Document icon */
             }
             .publication-links a[href*="Code"]::before {
                 content: "\f121"; /* Code icon */
+            }
+            .publication-links a[href*="Slides"]::before {
+                content: "\f1c4"; /* Presentation icon */
             }
             .core-rank {
                 font-weight: bold;
@@ -213,8 +217,8 @@
                             <p class="publication-info">
                                 <span class="conference-tag">NeurIPS 2024</span>
                                 <span class="publication-links">
-                                    <a href="#" target="_blank" rel="noopener noreferrer">Paper</a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer">Code</a>
+                                    <a href="https://neurips.cc/virtual/2024/poster/94778" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="#">Code</a>
                                 </span>
                             </p>
                         </div>
