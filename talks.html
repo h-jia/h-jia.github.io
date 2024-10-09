@@ -62,6 +62,19 @@
                 color: #3498db;
                 margin-right: 5px;
             }
+            
+            /* Add these new styles */
+            .navbar-nav {
+                margin-left: 0 !important; /* Remove the fixed left margin */
+            }
+            .navbar-collapse {
+                padding-left: 0; /* Remove left padding */
+            }
+            @media (min-width: 768px) {
+                .navbar-nav {
+                    float: left; /* Ensure items float left on larger screens */
+                }
+            }
         </style>
     </head>
     
@@ -76,7 +89,7 @@
                 </button>
             </div>
             <div class="navbar-collapse collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-left" style="margin-left: 113px;">
+                <ul class="nav navbar-nav">
                     <li><a href="index.html#about">About</a></li>
                     <li><a href="publications.html">Publications</a></li>
                     <li><a href="service.html">Service</a></li>
