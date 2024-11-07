@@ -109,6 +109,54 @@
                     margin-bottom: 15px;
                 }
             }
+
+            .publication-info {
+                display: block;
+                color: #666;
+                font-size: 0.9em;
+                margin-left: 0px;
+                line-height: 1.8;
+            }
+            
+            .pub-badge {
+                display: inline-block;
+                padding: 1px 8px;
+                margin: 2px 4px 2px 0;
+                border-radius: 12px;
+                font-size: 0.8em;
+                font-weight: 500;  /* Slightly bolder */
+                background-color: transparent;
+                color: #2563eb;  /* Clear blue for better readability */
+                border: 1px solid #93c5fd;  /* Light blue border */
+                transition: all 0.2s ease;
+            }
+            
+            .pub-badge:hover {
+                background-color: #eff6ff;  /* Very light blue hover */
+            }
+            
+            .award-badge {
+                color: #b45309;  /* Darker amber for better contrast */
+                border-color: #fbbf24;  /* Brighter amber border */
+                font-weight: 600;  /* Make awards slightly bolder */
+            }
+            
+            .award-badge:hover {
+                background-color: #fffbeb;  /* Light amber hover */
+            }
+
+            .student-info {
+                display: block;
+                margin-bottom: 8px;
+                color: #1f2937;  /* Darker text for better contrast */
+                font-weight: 400;
+            }
+
+            .publication-info {
+                display: block;
+                margin-left: 0px;
+                line-height: 2;  /* Increased line height for better spacing */
+            }
         </style>
     </head>
     
@@ -149,6 +197,9 @@
                                 <div>University of Melbourne</div>
                                 <div>Co-supervising with Prof. Jorge Goncalves and Prof. Vassilis Kostakos</div>
                                 <div class="phd-topic">Mobile Phone Over Usage Detection via On-Device LLMs</div>
+                                <span class="publication-info">
+                                    <span class="pub-badge">UbiComp 24'</span>
+                                </span>
                             </div>
                         </div>
                         <div class="phd-info">
@@ -158,6 +209,9 @@
                                 <div>University of Melbourne</div>
                                 <div>Co-supervising with Dr. Simon D'Alfonso and Prof. Vassilis Kostakos</div>
                                 <div class="phd-topic">On-Device Foundation Models for Personalized Sensing</div>
+                                <span class="publication-info">
+                                    <span class="pub-badge">UbiComp 24'</span>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -166,30 +220,83 @@
                 <div class="mentoring-section">
                     <div class="mentoring-category">PhD Mentoring</div>
                     <ul class="mentoring-list">
-
-                        <li class="mentoring-item">Tianyi (Tina) Zhang (University of Melbourne) — Digital Phenotyping for Mental Health and Well-Being Using LLMs</li>
-                        <li class="mentoring-item">Yu (Yvonne) Wu (University of Cambridge) — Weakly-Supervised Methods in Time Series Forecasting</li>
-                        <li class="mentoring-item">Mark Cardamis (UNSW) — Smart Farming via mmWave Sensing</li>
-                        <!-- <li class="mentoring-item">Yongquan Hu (UNSW) — Human-Computer Interaction through Mobile Sensing</li> -->
-                        <!-- <li class="mentoring-item">Yanxiang Wang (UNSW) — Spectral Information Sensing</li> -->
-                        <li class="mentoring-item">Jiawei Hu (UNSW) — Indoor Light Localization</li>
-                        <li class="mentoring-item">Kirtan Bhatt (UNSW) — Differential Privacy for IoT Sensing via LLMs</li>
-                        <!-- <li class="mentoring-item">Song Wei (UNSW) — Mobile Authentication via Human Biometrics</li> -->
+                        <li class="mentoring-item">
+                            <span class="student-info">Jiawei Hu (UNSW) — Toward Adaptive Visible Light Positioning</span>
+                            <span class="publication-info">
+                                <span class="pub-badge award-badge">Best Paper Runner-up @ IPSN 24'</span>
+                                <span class="pub-badge award-badge">Best Poster @ MobiCom 22'</span>
+                                <span class="pub-badge award-badge">Best PhD @ SenSys 24'</span>
+                                <span class="pub-badge">UbiComp 23'</span>
+                                <span class="pub-badge">IPSN 23'</span>
+                                <span class="pub-badge">MobiCom 22'</span>
+                            </span>
+                        </li>
+                        <li class="mentoring-item">
+                            <span class="student-info">Yu (Yvonne) Wu (University of Cambridge) — Weakly-Supervised Methods in Time Series Forecasting</span>
+                            <span class="publication-info">
+                                <span class="pub-badge">CIKM 24'</span>
+                                <span class="pub-badge">MLHC 24'</span>
+                                <span class="pub-badge">NeurIPS Adjunct 23'</span>
+                            </span>
+                        </li>
+                        <li class="mentoring-item">
+                            <span class="student-info">Tianyi (Tina) Zhang (University of Melbourne) — Digital Phenotyping for Mental Health and Well-Being Using LLMs</span>
+                            <span class="publication-info">
+                                <span class="pub-badge">UbiComp Adjunct 24'</span>
+                                <span class="pub-badge">EIFCom 24'</span>
+                            </span>
+                        </li>
+                        <li class="mentoring-item">
+                            <span class="student-info">Mark Cardamis (UNSW) — Smart Farming via mmWave Sensing</span>
+                            <!-- <span class="publication-info">
+                                <span class="pub-badge">UbiComp 24'</span>
+                            </span> -->
+                        </li>
+                        <li class="mentoring-item">
+                            <span class="student-info">Kirtan Bhatt (UNSW) — Differential Privacy for IoT Sensing via LLMs</span>
+                            <!-- <span class="publication-info">
+                                <span class="pub-badge">UbiComp 24'</span>
+                            </span> -->
+                        </li>
                     </ul>
                 </div>
 
                 <div class="mentoring-section">
                     <div class="mentoring-category">MPhil Supervising</div>
                     <ul class="mentoring-list">
-                        <li class="mentoring-item">Cynthia Dong (University of Cambridge, co-supervised with Prof. Cecilia Mascolo) — Efficient and Robust Test-time adaptation</li>
-                        <li class="mentoring-item">Zhongru Yang (SZU) — Facial authentication via RFID sensing</li>
-                        <li class="mentoring-item">Shiya Fu (University of Melbourne, principal supervising) — Personalized Mental Health Monitoring via Mobile LLMs</li>
-                        <li class="mentoring-item">Xin Wang (University of Melbourne, principal supervising) — Personalized Healthcare Monitoring via Mobile LLMs</li>
-                        <li class="mentoring-item">Sheng Guang (Andy) Wang (University of Melbourne, principal supervising) — On-Device Test-time Adaptation Using VLMs</li>
-                        <li class="mentoring-item">Hanwen Jiang (University of Melbourne, principal supervising) — Efficient and Robust Tiny VLMs</li>
-                        <li class="mentoring-item">Jiaheng Dong (University of Melbourne, co-supervising with Dr. Ting Dang) — Continuous Adaptation for Automatic Speech Recognition in Noisy Environments</li>
-                        <li class="mentoring-item">Xuanang Li (University of Melbourne, co-supervising with Dr. Ting Dang) — Continuous Adaptation for SAR in Noisy Environments</li>
-                        <li class="mentoring-item">Zhuoran Wei (University of Melbourne, co-supervising with Dr. Andrew Irlitti) — Gesture-based locomotion techniques in virtual reality</li>
+                        <li class="mentoring-item">
+                            <span class="student-info">Xin Wang (University of Melbourne, principal supervising) — Personalized Healthcare Monitoring via Mobile LLMs</span>
+                            <span class="publication-info">
+                                <span class="pub-badge">EIFCom 24'</span>
+                            </span>
+                        </li>
+                        <li class="mentoring-item">
+                            <span class="student-info">Cynthia Dong (University of Cambridge, co-supervised with Prof. Cecilia Mascolo) — Efficient and Robust Test-time adaptation</span>
+                        </li>
+                        <li class="mentoring-item">
+                            <span class="student-info">Zhongru Yang (SZU) — Facial authentication via RFID sensing</span>
+                            <span class="publication-info">
+                                <span class="pub-badge">UbiComp 23'</span>
+                            </span>
+                        </li>
+                        <li class="mentoring-item">
+                            <span class="student-info">Shiya Fu (University of Melbourne, principal supervising) — Personalized Mental Health Monitoring via Mobile LLMs</span>
+                        </li>
+                        <li class="mentoring-item">
+                            <span class="student-info">Sheng Guang (Andy) Wang (University of Melbourne, principal supervising) — On-Device Test-time Adaptation Using VLMs</span>
+                        </li>
+                        <li class="mentoring-item">
+                            <span class="student-info">Hanwen Jiang (University of Melbourne, principal supervising) — Efficient and Robust Tiny VLMs</span>
+                        </li>
+                        <li class="mentoring-item">
+                            <span class="student-info">Jiaheng Dong (University of Melbourne, co-supervising with Dr. Ting Dang) — Continuous Adaptation for Automatic Speech Recognition in Noisy Environments</span>
+                        </li>
+                        <li class="mentoring-item">
+                            <span class="student-info">Xuanang Li (University of Melbourne, co-supervising with Dr. Ting Dang) — Continuous Adaptation for SAR in Noisy Environments</span>
+                        </li>
+                        <li class="mentoring-item">
+                            <span class="student-info">Zhuoran Wei (University of Melbourne, co-supervising with Dr. Andrew Irlitti) — Gesture-based locomotion techniques in virtual reality</span>
+                        </li>
                     </ul>
                 </div>
             </div>
