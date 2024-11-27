@@ -11,6 +11,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-right: 15px;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 h4 {
@@ -280,12 +285,17 @@ nav.navbar {
 /* Remove any conflicting styles for .profile-photo if they exist elsewhere in the CSS */
 
 .navbar-fixed-top {
+    position: fixed;
+    top: 0;
     right: 0;
     left: 0;
-    width: 100%;
-    padding-right: 0;
+    z-index: 1030;
 }
 
-.navbar-fixed-top .container {
-    padding-right: 17px;
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    position: relative;
 }
