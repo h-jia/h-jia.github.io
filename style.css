@@ -1,8 +1,16 @@
 html {
-  overflow-y: scroll;
-  margin-right: calc(-1 * (100vw - 100%));
-  margin-right: -17px;
   font-size: 100%;
+}
+
+body {
+  font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 15px;
+  padding-top: 50px;
+  color: #222;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h4 {
@@ -19,17 +27,6 @@ h2 {
 
 h3 {
     font-weight:bold;
-}
-
-body {
-	font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	font-size: 15px;
-	padding-top: 50px;
-	color: #222;
-	background: #fff;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 }
 
 body.dark-theme {
@@ -175,9 +172,10 @@ a.anchor{
 
 .container {
     width: 100%;
-    max-width: 1200px; // Increased from 1000px to 1200px to match content-wrapper
+    max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
+    position: relative;
 }
 
 nav.navbar {
@@ -280,3 +278,14 @@ nav.navbar {
 }
 
 /* Remove any conflicting styles for .profile-photo if they exist elsewhere in the CSS */
+
+.navbar-fixed-top {
+    right: 0;
+    left: 0;
+    width: 100%;
+    padding-right: 0;
+}
+
+.navbar-fixed-top .container {
+    padding-right: 17px;
+}
