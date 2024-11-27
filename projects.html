@@ -1,0 +1,352 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+    <title>Hong Jia | Projects</title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Hong Jia">
+    <meta name="description" content="University of Melbourne, Australia">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/mel.png" type="image/x-icon">
+    
+    <style>
+        html {
+            overflow-y: scroll;
+            margin-right: calc(-1 * (100vw - 100%));
+            margin-right: -17px;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            border-bottom: 1px solid #eee;
+            padding: 10px;
+            background: #f8f9fa;
+        }
+        
+        .project-content {
+            padding: 20px;
+        }
+        
+        .project-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .project-description {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .project-tag {
+            background: #e1f5fe;
+            color: #0288d1;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+        }
+        
+        .project-links {
+            margin-top: 15px;
+        }
+        
+        .project-links a {
+            margin-right: 15px;
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .project-links a:hover {
+            color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Copy the same navbar from other pages -->
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                    <li><a href="mentoring.html">Advising</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container content-wrapper">
+        <h2>Research Projects</h2>
+        
+        <div class="project-grid">
+            <!-- First/Last Author Projects First -->
+            
+            <!-- TinyTTA Project (First Author) -->
+            <div class="project-card">
+                <a href="https://openreview.net/pdf?id=XIcBCBe6C3">
+                    <img src="img/tinytta.png" class="project-image" alt="TinyTTA Project">
+                </a>
+                <div class="project-content">
+                    <div class="project-title">TinyTTA: Efficient Test-time Adaptation via Early-exit Ensembles on Edge Devices</div>
+                    <div class="project-description">
+                        Novel approach for efficient test-time adaptation using early-exit ensembles, specifically designed for resource-constrained edge devices.
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">NeurIPS 2024</span>
+                        <span class="project-tag">Edge ML</span>
+                        <span class="project-tag">TinyML</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UR2M Project (First Author) -->
+            <div class="project-card">
+                <img src="img/ur2m.png" class="project-image" alt="UR2M Project">
+                <div class="project-content">
+                    <div class="project-title">UR2M: Uncertainty and Resource-Aware Event Detection on Microcontrollers</div>
+                    <div class="project-description">
+                        Framework for efficient and reliable event detection on resource-constrained microcontrollers.
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">PerCom 2024</span>
+                        <span class="project-tag">Edge Computing</span>
+                        <span class="project-tag">IoT</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LightLLM Project (moved up, removed code link) -->
+            <div class="project-card">
+                <a href="https://arxiv.org/pdf/2411.15211">
+                    <img src="img/lightllm.png" class="project-image" alt="LightLLM Project">
+                </a>
+                <div class="project-content">
+                    <div class="project-title">LightLLM: A Versatile Large Language Model for Predictive Light Sensing</div>
+                    <div class="project-description">
+                        Novel approach using large language models for predictive light sensing and analysis, enabling intelligent environmental monitoring.
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">arXiv 2024</span>
+                        <span class="project-tag">Light Sensing</span>
+                        <span class="project-tag">LLMs</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SwingNet Project (First Author) -->
+            <div class="project-card">
+                <a href="https://dl.acm.org/doi/pdf/10.1145/3478082">
+                    <img src="img/swingnet.png" class="project-image" alt="SwingNet Project">
+                </a>
+                <div class="project-content">
+                    <div class="project-title">SwingNet: Ubiquitous Fine-Grained Swing Tracking Framework</div>
+                    <div class="project-description">
+                        Novel framework for fine-grained swing tracking using stochastic neural architecture search and adversarial learning.
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">UbiComp 2021</span>
+                        <span class="project-tag">Sports Analytics</span>
+                        <span class="project-tag">NAS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Then Other Projects -->
+            
+            <!-- LiDARSpectra Project -->
+            <div class="project-card">
+                <img src="img/gary-ubicomp.png" class="project-image" alt="LiDARSpectra Project">
+                <div class="project-content">
+                    <div class="project-title">LiDARSpectra: Synthetic Indoor Spectral Mapping with Low-cost LiDARs</div>
+                    <div class="project-description">
+                        Novel approach for indoor spectral mapping using low-cost LiDARs, achieving high accuracy in indoor positioning.
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">IPSN 2024</span>
+                        <span class="project-tag">Best Paper Runner-up</span>
+                        <span class="project-tag">Indoor Sensing</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leafeon Project -->
+            <div class="project-card">
+                <img src="img/leafon.png" class="project-image" alt="Leafeon Project">
+                <div class="project-content">
+                    <div class="project-title">Leafeon: Accurate and Robust Leaf Water Content Sensing Using mmWave Radar</div>
+                    <div class="project-description">
+                        Low-cost and accurate approach for measuring leaf water content using millimeter-wave radar technology.
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">ArXiv 2024</span>
+                        <span class="project-tag">mmWave Sensing</span>
+                        <span class="project-tag">Agriculture</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROS Project -->
+            <div class="project-card">
+                <a href="https://dl.acm.org/doi/abs/10.1145/3495243.3560533">
+                    <img src="img/pros.png" class="project-image" alt="PROS Project">
+                </a>
+                <div class="project-content">
+                    <div class="project-title">PROS: Pattern-driven Compressive Sensing for Wearables</div>
+                    <div class="project-description">
+                        Efficient pattern-driven compressive sensing framework for low-power biopotential-based wearables with on-chip intelligence.
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">MobiCom 2022</span>
+                        <span class="project-tag">Wearables</span>
+                        <span class="project-tag">Edge AI</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LifeLearner Project -->
+            <div class="project-card">
+                <img src="img/lifelearner.jpeg" class="project-image" alt="LifeLearner Project">
+                <div class="project-content">
+                    <div class="project-title">LifeLearner: Hardware-Aware Meta Continual Learning</div>
+                    <div class="project-description">
+                        Hardware-aware meta continual learning system designed for embedded computing platforms.
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">SenSys 2023</span>
+                        <span class="project-tag">Continual Learning</span>
+                        <span class="project-tag">Edge Computing</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UDAMA Project -->
+            <div class="project-card">
+                <img src="img/udama.png" class="project-image" alt="UDAMA Project">
+                <div class="project-content">
+                    <div class="project-title">UDAMA: Unsupervised Domain Adaptation for Cardio-fitness Prediction</div>
+                    <div class="project-description">
+                        Multi-discriminator adversarial training approach for improved cardio-fitness prediction with noisy labels.
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">MLHC 2023</span>
+                        <span class="project-tag">Healthcare</span>
+                        <span class="project-tag">Domain Adaptation</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Condor Project -->
+            <div class="project-card">
+                <img src="img/ewsn.png" class="project-image" alt="Condor Project">
+                <div class="project-content">
+                    <div class="project-title">Condor: Mobile Golf Swing Tracking via Sensor Fusion</div>
+                    <div class="project-description">
+                        Mobile golf swing tracking system using sensor fusion and conditional generative adversarial networks.
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">EWSN 2021</span>
+                        <span class="project-tag">Sports Analytics</span>
+                        <span class="project-tag">Sensor Fusion</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Iris Project -->
+            <div class="project-card">
+                <img src="img/gary-ubicomp.png" class="project-image" alt="Iris Project">
+                <div class="project-content">
+                    <div class="project-title">Iris: Passive Visible Light Positioning using Light Spectral Information</div>
+                    <div class="project-description">
+                        Novel indoor positioning system using passive light spectral information for accurate and efficient localization.
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">UbiComp 2023</span>
+                        <span class="project-tag">Indoor Positioning</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pistis Project -->
+            <div class="project-card">
+                <img src="img/pistis.jpg" class="project-image" alt="Pistis Project">
+                <div class="project-content">
+                    <div class="project-title">Pistis: Replay Attack and Liveness Detection for Wearables</div>
+                    <div class="project-description">
+                        Security system for gait-based user authentication on wearable devices using vibration detection.
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">IoTJ 2022</span>
+                        <span class="project-tag">Security</span>
+                        <span class="project-tag">Wearables</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RFaceID Project -->
+            <div class="project-card">
+                <img src="img/RFID.jpg" class="project-image" alt="RFaceID Project">
+                <div class="project-content">
+                    <div class="project-title">RFaceID: Towards RFID-based Facial Recognition</div>
+                    <div class="project-description">
+                        Novel approach for facial recognition using RFID technology, enabling contactless and efficient authentication.
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">UbiComp 2021</span>
+                        <span class="project-tag">RFID Sensing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html> 
