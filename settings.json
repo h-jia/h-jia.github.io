@@ -1,0 +1,6 @@
+{
+    // ... other settings ...
+    "workbench.activityBar.iconClickBehavior": "hidden",
+    "workbench.activityBar.visible": false
+    // ... other settings ...
+} 
