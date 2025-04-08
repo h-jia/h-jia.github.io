@@ -2,6 +2,7 @@ html {
   font-size: 100%;
 }
 
+/* Base styles */
 body {
   font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 15px;
@@ -10,7 +11,6 @@ body {
   background: #fff;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-right: 15px;
 }
 
@@ -141,11 +141,14 @@ a.anchor{
     text-decoration: underline;
 }
 
+/* Container and navigation styles */
 .content-wrapper {
-    padding-top: 0px;
+    padding-top: 0;
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .row {
@@ -185,31 +188,50 @@ a.anchor{
 
 nav.navbar {
     width: 100%;
+    background-color: #222;
 }
 
 .navbar .container {
-    padding-left: 10.5px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
     display: flex;
     justify-content: flex-start;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .navbar-collapse {
-    padding-left: 0;
+    padding: 0;
 }
 
 .navbar-nav {
-    float: left;
-    margin: 0 !important;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-nav > li > a {
+    padding: 15px;
     padding-left: 0;
     margin-right: 20px;
 }
 
-@media (min-width: 768px) {
-    .navbar-nav > li {
-        float: left;
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar .container,
+    .content-wrapper {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .navbar-nav {
+        width: 100%;
+    }
+    
+    .navbar-nav > li > a {
+        padding: 10px 0;
     }
 }
 
