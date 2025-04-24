@@ -69,6 +69,47 @@
                 color: #333;
                 font-size: 0.9em;
             }
+            
+            /* Enhanced styling for conferences and journals */
+            .service-subcategory {
+                font-weight: 500;
+                color: #7f8c8d;
+                margin: 8px 0;
+                font-style: italic;
+                position: relative;
+                padding-left: 15px;
+            }
+            
+            .service-subcategory:before {
+                content: "▹";
+                position: absolute;
+                left: 0;
+                color: #3498db;
+            }
+            
+            .service-item p.service-title {
+                position: relative;
+                transition: all 0.2s ease;
+                padding-left: 20px;
+                display: inline-block;
+            }
+            
+            .service-item p.service-title:before {
+                content: "";
+                position: absolute;
+                left: 5px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 6px;
+                height: 6px;
+                background-color: #3498db;
+                border-radius: 50%;
+            }
+            
+            .service-item p.service-title:hover {
+                transform: translateX(5px);
+                color: #3498db;
+            }
 
             /* Add these new responsive styles */
             @media (max-width: 767px) {
@@ -184,6 +225,7 @@
                     <h4>Reviewer</h4>
 
                     <div class="service-category">Machine Learning</div>
+                    <div class="service-subcategory">Conferences</div>
                     <ul class="service-list">
                         <li class="service-item"><p class="service-title">NeurIPS (since 2023)</p></li>
                         <li class="service-item"><p class="service-title">ICML (since 2024)</p></li>
@@ -192,25 +234,32 @@
                     </ul>
 
                     <div class="service-category">UbiComp & HCI</div>
+                    <div class="service-subcategory">Conferences</div>
                     <ul class="service-list">
-                        <li class="service-item"><p class="service-title">ACM IMWUT (since 2020)</p></li>
                         <li class="service-item"><p class="service-title">ACM CHI (since 2024)</p></li>
                         <li class="service-item"><p class="service-title">ACM UIST (since 2024)</p></li>
                         <li class="service-item"><p class="service-title">ACM MobileHCI (since 2025)</p></li>
+                    </ul>
+                    <div class="service-subcategory">Journals</div>
+                    <ul class="service-list">
+                        <li class="service-item"><p class="service-title">ACM IMWUT (since 2020)</p></li>
                         <li class="service-item"><p class="service-title">IEEE Internet of Things Journal (since 2021)</p></li>
                         <li class="service-item"><p class="service-title">Pervasive and Mobile Computing (since 2024)</p></li>
                         <li class="service-item"><p class="service-title">IEEE Pervasive Computing (since 2024)</p></li>
                     </ul>
 
-
                     <div class="service-category">Mobile & Sensing</div>
+                    <div class="service-subcategory">Conferences</div>
                     <ul class="service-list">
                         <li class="service-item"><p class="service-title">ACM MobiSys (since 2024)</p></li>
                         <li class="service-item"><p class="service-title">IEEE ICASSP (since 2025)</p></li>
-                        <li class="service-item"><p class="service-title">IEEE Transactions on Mobile Computing (since 2021)</p></li>
                         <li class="service-item"><p class="service-title">ACM IPSN (since 2020)</p></li>
                         <li class="service-item"><p class="service-title">ACM EWSN (since 2020)</p></li>
                         <li class="service-item"><p class="service-title">ACM SenSys (since 2020)</p></li>
+                    </ul>
+                    <div class="service-subcategory">Journals</div>
+                    <ul class="service-list">
+                        <li class="service-item"><p class="service-title">IEEE Transactions on Mobile Computing (since 2021)</p></li>
                     </ul>
 
                 </div>
