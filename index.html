@@ -212,15 +212,20 @@
                 font-size: 30px; /* Keep the original size for the name */
             }
 
-            /* Hide scrollbar for Chrome, Safari and Opera */
-            body::-webkit-scrollbar {
-                display: none;
+            /* Reserve space for scrollbar while hiding its visuals to avoid layout shift */
+            html {
+                scrollbar-gutter: stable;    /* Keeps scrollbar gutter even when hidden */
             }
 
-            /* Hide scrollbar for IE, Edge and Firefox */
             body {
-                -ms-overflow-style: none;  /* IE and Edge */
-                scrollbar-width: none;  /* Firefox */
+                overflow-y: scroll;          /* Always reserve scrollbar gutter */
+                -ms-overflow-style: none;    /* Hide scrollbar for IE/Edge */
+                scrollbar-width: none;       /* Hide scrollbar for Firefox */
+            }
+
+            body::-webkit-scrollbar {
+                width: 0;                    /* Hide scrollbar for Chrome/Safari/Opera but keep gutter */
+                background: transparent;
             }
         </style>
     </head>
